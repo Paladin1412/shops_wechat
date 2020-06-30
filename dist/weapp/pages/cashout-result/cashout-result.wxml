@@ -1,0 +1,15 @@
+<block wx:if="{{$taroCompReady}}">
+    <block wx:if="{{!type}}">
+        <view></view>
+    </block>
+    <view class="{{styles.container + ' pageBorder'}}" wx:else>
+        <view class="{{styles.content}}">
+            <image src="{{type == 'success' ? Assets.other.success : Assets.other.failed}}" class="{{styles.img}}"></image>
+            <view class="{{styles.title}}">{{type == 'success' ? '提现成功' : '提现失败'}}</view>
+            <view class="{{styles.label}}">
+                <ellipsis compid="{{$compid__155}}">预计会在1-2个工作日内到账,以银行的实际处理结果为准。</ellipsis>
+            </view>
+        </view>
+        <view class="{{styles.btn}}" bindtap="btnClick">{{type == 'success' ? '我知道了' : '重新提现'}}</view>
+    </view>
+</block>

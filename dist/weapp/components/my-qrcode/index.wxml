@@ -1,0 +1,20 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.content}}">
+        <view class="{{styles.code_box}}">
+            <view class="{{styles.black_bar}}"></view>
+            <view class="{{styles.code_content}}">
+                <view class="{{styles.title}}">推荐码</view>
+                <view class="{{styles.font}}">{{code}}</view>
+                <view class="{{styles.copy}}" bindtap="copys">复制</view>
+                <view class="{{styles.code_imgbox}}">
+                    <view class="{{styles.qrcode_box}}">
+                        <image class="{{styles.sharQRImg}}" src="{{wxcode}}"></image>
+                    </view>
+                    <view class="{{styles.desc}}">您的专属二维码，可让您的朋友直接扫码注册</view>
+                </view>
+            </view>
+            <share compid="{{$compid__161}}"></share>
+            <view class="{{styles.yq_list_button}}" bindtap="goList">我的邀请记录</view>
+        </view>
+    </view>
+</block>

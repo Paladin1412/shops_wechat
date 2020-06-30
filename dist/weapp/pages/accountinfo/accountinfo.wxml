@@ -1,0 +1,89 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.back}}"></view>
+        <at-tabs compid="{{$compid__127}}">
+            <at-tabs-pane compid="{{$compid__128}}">
+                <view class="{{styles.income}}">
+                    <view class="{{styles.income_name}}">累计收入</view>
+                    <view>¥ {{showInfo.totalIncome}}</view>
+                </view>
+                <view class="{{styles.type_box}}">
+                    <view class="{{' ' + (add == 0 ? styles.active : '') + ' ' + styles.type}}" bindtap="anonymousFunc0">
+                        <view class="{{styles.type_name}}">已结算</view>
+                        <view class="{{styles.type_price}}">¥ {{showInfo.totalIncome}}</view>
+                        <block wx:if="{{add == 0}}">
+                            <view class="{{'iconfont iconsanjiaoxing ' + styles.icon}}"></view>
+                        </block>
+                    </view>
+                    <view class="{{' ' + (add == 1 ? styles.active : '') + ' ' + styles.type}}" bindtap="anonymousFunc1">
+                        <view class="{{styles.type_name}}">待结算</view>
+                        <view class="{{styles.type_price}}">¥ {{showInfo.pendingSettle}}</view>
+                        <block wx:if="{{add == 1}}">
+                            <view class="{{'iconfont iconsanjiaoxing ' + styles.icon}}"></view>
+                        </block>
+                    </view>
+                </view>
+            </at-tabs-pane>
+            <at-tabs-pane compid="{{$compid__129}}">
+                <view class="{{styles.income}}">
+                    <view class="{{styles.income_name}}">可提现金额</view>
+                    <view>¥ {{showInfo.balanceAccount}}</view>
+                    <view class="{{styles.go_btn}}" bindtap="goCash">提现</view>
+                </view>
+            </at-tabs-pane>
+            <at-tabs-pane compid="{{$compid__130}}">
+                <view class="{{styles.income}}">
+                    <view class="{{styles.income_name}}">今日预计收益</view>
+                    <view>¥ {{showInfo.todayIncome}}</view>
+                </view>
+            </at-tabs-pane>
+        </at-tabs>
+        <list-view id="hhzzz" compid="{{$compid__131}}">
+            <block wx:if="{{current === 0}}">
+                <view class="{{styles.list_box}}" wx:for="{{loopArray59}}" wx:for-item="v" wx:for-index="_anonIdx2">
+                    <view class="{{styles.list + ' last'}}">
+                        <view>
+                            <view>订单号：{{v.$original.relationOrderId}}</view>
+                            <view class="{{styles.list_name}}">{{v.$original.costTypeDesc}}</view>
+                            <view>时间：{{v.$loopState__temp5}}</view>
+                        </view>
+                        <view class="{{styles.list_price}}">¥ {{v.$original.amount}}</view>
+                    </view>
+                </view>
+            </block>
+            <block wx:if="{{current === 2}}">
+                <view class="{{styles.list_box}}" wx:for="{{loopArray60}}" wx:for-item="v" wx:for-index="_anonIdx4">
+                    <view class="{{styles.list + ' last'}}">
+                        <view>
+                            <view>订单号：{{v.$original.relationOrderId}}</view>
+                            <view class="{{styles.list_name}}">{{v.$original.costTypeDesc}}</view>
+                            <view>时间：{{v.$loopState__temp7}}</view>
+                        </view>
+                        <view class="{{styles.list_price}}">¥ {{v.$original.amount}}</view>
+                    </view>
+                </view>
+            </block>
+            <block wx:if="{{current === 1}}">
+                <view class="{{styles.list_box}}" wx:for="{{loopArray61}}" wx:for-item="v" wx:for-index="_anonIdx6">
+                    <view class="{{styles.list + ' last'}}">
+                        <view class="{{styles.left}}">
+                            <view>{{v.$original.costTypeDesc}}</view>
+                            <view class="{{styles.list_name}}"><text class="{{styles.red}}">¥ {{v.$original.amount}}</text><text>  (含{{v.$original.serviceFeeAmount}}元手续费)</text>
+                            </view>
+                            <block wx:if="{{v.$original.tradeStatus === 3}}">
+                                <view class="{{styles.mes}}">失败原因：{{v.$original.tradeMessage}}</view>
+                            </block>
+                            <view>时间：{{v.$loopState__temp9}}</view>
+                        </view>
+                        <view class="{{styles.list_price + ' ' + (v.$original.tradeStatus === 2 && styles.green) + ' ' + (v.$original.tradeStatus === 1 && styles.yellow)}}">{{v.$original.tradeStatusDesc}}</view>
+                    </view>
+                </view>
+            </block>
+            <view slot="empty">
+                <view class="{{styles.grid_empty}}">
+                    <empty compid="{{$compid__132}}"></empty>
+                </view>
+            </view>
+        </list-view>
+    </view>
+</block>

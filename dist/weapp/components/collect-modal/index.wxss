@@ -1,0 +1,78 @@
+.index-module__wx_shareicon___3EWw1 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.index-module__wx_shareicon___3EWw1 .index-module__icon_item___16Dzq {
+  text-align: center;
+  font-size: 24rpx;
+}
+.index-module__wx_shareicon___3EWw1 .index-module__icon_item___16Dzq+.index-module__icon_item___16Dzq {
+  margin-left: 50rpx;
+}
+.index-module__share_wx_box___1ObJW .index-module__share_tip_box___x9eA6 {
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20rpx 0;
+}
+.index-module__share_wx_box___1ObJW .index-module__share_tip_box___x9eA6 .index-module__icon_box___1hNYt {
+  background: #fff;
+  width: 120rpx;
+  height: 120rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30rpx;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin: 0 auto 10rpx auto;
+}
+.index-module__share_wx_box___1ObJW .index-module__share_tip_box___x9eA6 .index-module__icon_box___1hNYt .iconfont {
+  font-size: 60rpx;
+  line-height: 60rpx;
+  color: #08c163;
+}
+.index-module__share_wx_box___1ObJW .index-module__share_tip_box___x9eA6 .index-module__big___1myzE {
+  font-size: 28rpx;
+  font-weight: 600;
+  margin: 30rpx 40rpx 0 40rpx;
+  text-align: center;
+  line-height: 38rpx;
+}
+.index-module__share_wx_box___1ObJW .index-module__share_tip_box___x9eA6 .index-module__small___3TcoX {
+  font-size: 24rpx;
+  color: #b3b3b3;
+  margin-top: 20rpx;
+  text-align: center;
+  line-height: 24rpx;
+}
+.index-module__share_wx_box___1ObJW .index-module__arrow___oXwpM {
+  width: 55rpx;
+  height: 114rpx;
+  position: absolute;
+  right: -90rpx;
+  top: -80rpx;
+  display: block;
+  z-index: 9999;
+}

@@ -1,0 +1,72 @@
+/**
+ * @Author: limin.zhang
+ * @Email: limin.zhang@jdxiaokang.com
+ * @Update: 2020-03-02 11:54:29
+ * @Description: 未登录公共页
+ */
+.index-module__reset_btn___3z2aK {
+  padding: 0;
+  background-color: transparent;
+  line-height: 1;
+  font-size: 24rpx;
+  color: #333;
+}
+.index-module__reset_btn___3z2aK::after {
+  display: none;
+}
+.index-module__container___3U17T {
+  width: 100%;
+  min-height: 132rpx;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 40rpx;
+}
+.index-module__container___3U17T:after {
+  content: attr(data-msg);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  color: #9a9a9a;
+  font-size: 28rpx;
+}
+.index-module__empty_img___1t9KK {
+  width: 100%;
+  height: auto;
+}
+.index-module__label___H-xDr {
+  line-height: 50rpx;
+  color: #333;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.index-module__btn___3M6nK {
+  width: 204rpx;
+  height: 72rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2rpx solid #f9482e;
+  color: #f9482e;
+  font-size: 28rpx;
+  font-weight: 500;
+  border-radius: 49rpx;
+  margin-top: 48rpx;
+}

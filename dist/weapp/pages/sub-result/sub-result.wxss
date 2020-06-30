@@ -1,0 +1,165 @@
+/**
+ * @Author: cai.ping
+ * @Email: cai.ping@jdxiaokang.com
+ * @Update: 2020-02-25 12:14:58
+ * @Description: 提交结果界面
+ */
+.sub-result-module__content___tDVZd {
+  width: 100%;
+  overflow: hidden;
+  background: #f7f7f7;
+  text-align: center;
+}
+.sub-result-module__pay_success___nQbhU {
+  background: #fff;
+  padding: 88rpx;
+  text-align: center;
+}
+.sub-result-module__title___2Jlpo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sub-result-module__title___2Jlpo .iconfont {
+  font-size: 40rpx;
+  color: #0abd15;
+  margin-right: 24rpx;
+  line-height: 40rpx;
+}
+.sub-result-module__title___2Jlpo .sub-result-module__status___bbbqf {
+  font-size: 34rpx;
+  line-height: 40rpx;
+  color: #656565;
+}
+.sub-result-module__gray___3DGfA {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #b8b8b8;
+  margin-top: 36rpx;
+}
+.sub-result-module__button_box___AE2NG {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 48rpx;
+}
+.sub-result-module__button_box___AE2NG .sub-result-module__button___1gQJf {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #f9482e;
+  background: #feecea;
+  padding: 18rpx 36rpx;
+  border-radius: 34rpx;
+}
+.sub-result-module__button_box___AE2NG .sub-result-module__button___1gQJf+.sub-result-module__button___1gQJf {
+  margin-left: 30rpx;
+  color: #fff;
+  background: #f9482e;
+}
+.sub-result-module__pay_false___qHna2 .sub-result-module__title___2Jlpo .iconfont {
+  color: #f9482e;
+}
+.sub-result-module__tj_out___8p6xQ {
+  text-align: center;
+}
+.sub-result-module__tj_out___8p6xQ .at-divider {
+  height: 112rpx;
+}
+.sub-result-module__tj_out___8p6xQ .at-divider__content {
+  background: transparent;
+}
+.sub-result-module__tuijian_box___3h4Fq {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: -10rpx;
+}
+.sub-result-module__tuijian_box___3h4Fq .sub-result-module__item___2LbMy {
+  width: 351rpx;
+  margin-left: 20rpx;
+  background: #fff;
+  border-radius: 6rpx;
+  margin-bottom: 16rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  text-align: left;
+}
+.sub-result-module__tuijian_box___3h4Fq .sub-result-module__item___2LbMy .sub-result-module__img___osyyM {
+  width: 100%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  height: auto;
+  border-radius: 6rpx 6rpx 0 0;
+  margin-bottom: 0;
+  display: block;
+}
+.sub-result-module__tuijian_box___3h4Fq .sub-result-module__item___2LbMy .sub-result-module__bottom___3xZzG {
+  padding: 16rpx 20rpx;
+}
+.sub-result-module__tuijian_box___3h4Fq .sub-result-module__item___2LbMy .sub-result-module__bottom___3xZzG .sub-result-module__title___2Jlpo {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 35rpx;
+}
+.sub-result-module__tuijian_box___3h4Fq .sub-result-module__item___2LbMy .sub-result-module__bottom___3xZzG .sub-result-module__price_box___2neHV {
+  margin-top: 25rpx;
+  color: #f9482e;
+  font-size: 24rpx;
+}
+.sub-result-module__tuijian_box___3h4Fq .sub-result-module__item___2LbMy .sub-result-module__bottom___3xZzG .sub-result-module__price_box___2neHV .sub-result-module__num___3dhHJ {
+  font-size: 40rpx;
+}
+.sub-result-module__tuijian_box___3h4Fq .sub-result-module__item___2LbMy .sub-result-module__bottom___3xZzG .sub-result-module__price_box___2neHV .sub-result-module__small_num___Wtp1Q {
+  color: #b3b3b3;
+  margin-left: 10rpx;
+  text-decoration: line-through;
+}
+.sub-result-module__tuijian_box___3h4Fq .sub-result-module__item___2LbMy .sub-result-module__bottom___3xZzG .sub-result-module__tag___1jNFQ {
+  font-size: 20rpx;
+  line-height: 20rpx;
+  color: #f9482e;
+  background: #feecea;
+  display: inline-block;
+  padding: 4rpx;
+  margin-top: 20rpx;
+}
+.sub-result-module__goback___TLkIy {
+  color: #f9482e;
+  border: 2rpx solid #f9482e;
+  font-size: 28rpx;
+  border-radius: 36rpx;
+  background: #fff;
+  line-height: 28rpx;
+  padding: 25rpx 130rpx;
+  display: inline-block;
+  margin: 50rpx auto;
+}
+.sub-result-module__back___U3Tiw {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}

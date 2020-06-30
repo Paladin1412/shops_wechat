@@ -1,0 +1,100 @@
+/**
+ * @Author: cai.ping
+ * @Email: cai.ping@jdxiaokang.com
+ * @Update: 2020-02-27 10:24:17
+ * @Description: true
+ */
+.my-qrcode-module__content___-iltm {
+  background: #f8f8f8;
+  position: relative;
+}
+.my-qrcode-module__code_box___3ukN1 {
+  text-align: center;
+  padding: 71rpx 0;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__black_bar___2v9t0 {
+  width: 670rpx;
+  height: 46rpx;
+  background: #343434;
+  border-radius: 23rpx;
+  margin: 0 auto;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e {
+  background: #fff;
+  padding: 48rpx 0;
+  width: 614rpx;
+  margin: 0 auto;
+  position: relative;
+  top: -20rpx;
+  border-radius: 8rpx;
+  z-index: 1;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e .my-qrcode-module__title___2ewKC {
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #9a9a9a;
+  font-weight: bold;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e .my-qrcode-module__font___3MrUC {
+  color: #333;
+  font-size: 48rpx;
+  line-height: 48rpx;
+  margin-top: 35rpx;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e .my-qrcode-module__copy___1qTmb {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #fff;
+  background: #f9482e;
+  padding: 18rpx 0;
+  width: 184rpx;
+  text-align: center;
+  margin: 35rpx auto 0 auto;
+  border-radius: 34rpx;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e .my-qrcode-module__code_imgbox___163SA {
+  border-top: 2rpx dashed #d2d2d2;
+  text-align: center;
+  margin-top: 48rpx;
+  padding: 48rpx 0 0 0;
+  z-index: 2;
+  position: relative;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e .my-qrcode-module__code_imgbox___163SA:before,
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e .my-qrcode-module__code_imgbox___163SA:after {
+  position: absolute;
+  content: '';
+  top: -24rpx;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background: #f8f8f8;
+  z-index: 9;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e .my-qrcode-module__code_imgbox___163SA:before {
+  left: -24rpx;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e .my-qrcode-module__code_imgbox___163SA:after {
+  right: -24rpx;
+}
+.my-qrcode-module__code_box___3ukN1 .my-qrcode-module__code_content___e494e .my-qrcode-module__code_imgbox___163SA .my-qrcode-module__desc___ClOzU {
+  font-size: 24rpx;
+  margin-top: 36rpx;
+  color: #666;
+}
+.my-qrcode-module__qrcode_box___3ZfoZ {
+  height: 180Px;
+}
+.my-qrcode-module__sharQRImg___3qLPQ {
+  width: 180Px;
+  height: 180Px;
+}
+.my-qrcode-module__yq_list_button___3oKqV {
+  font-size: 24rpx;
+  color: #f9482e;
+  padding: 22rpx;
+  background: #fff;
+  border-radius: 6rpx;
+  width: 614rpx;
+  margin: 20rpx auto 60rpx auto;
+}

@@ -1,0 +1,42 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.listContainer}}">
+        <list-view id="ihzzz" compid="{{$compid__175}}">
+            <view class="{{styles.firInner}}">
+                <view class="{{styles.turnList}}">
+                    <view class="{{styles.turn_Data_List}}" wx:key="$loopState__temp3" wx:for="{{loopArray71}}" wx:for-item="v" wx:for-index="index">
+                        <view class="{{styles.fixed_style}}" bindtap="anonymousFunc0" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey}}">
+                            <image class="{{styles.fixed_style_img}}" src="{{v.$original.adverImgUrl}}"></image>
+                            <view class="{{styles.liveText}}">
+                                <block>
+                                    <block wx:if="{{v.$original.liveStatus == 2}}">
+                                        <view class="{{styles.liveLeftText + ' ' + styles.turnLeftText}}">
+                                            <image class="{{styles.imgStyle}}" src="{{Assets.my.shopgif}}"></image><text>{{v.$original.streamStatus == 0 ? '直播中' : '主播已离开'}}</text>
+                                        </view>
+                                    </block>
+                                    <block wx:else>
+                                        <view class="{{styles.liveLeftText + ' ' + styles.preLeftText}}"><text><block><block wx:if="{{v.$original.liveStatus !== 2}}">{{'直播预告'}}</block><block wx:else><view></view></block></block></text>
+                                        </view>
+                                    </block>
+                                </block>
+                            </view>
+                            <view class="{{styles.bot_style}}">
+                                <block wx:if="{{v.$original.liveStatus == 1}}">
+                                    <view class="{{styles.liveRightText}}">{{v.$loopState__temp5}}开播</view>
+                                </block>
+                                <block wx:if="{{v.$original.liveStatus == 2 && v.$original.viewCount != 0}}">
+                                    <view class="{{styles.liveRightText}}">{{(v.$original.viewCount || 0) + '人正在观看'}}</view>
+                                </block>
+                                <ellipsis compid="{{v.$compid__174}}">{{v.$original.name}}</ellipsis>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view slot="empty">
+                <view class="{{styles.empty_box}}">
+                    <empty></empty>
+                </view>
+            </view>
+        </list-view>
+    </view>
+</block>

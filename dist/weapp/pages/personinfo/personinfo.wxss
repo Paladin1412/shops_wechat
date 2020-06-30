@@ -1,0 +1,67 @@
+/**
+ * @Author: chunxiao.zhang
+ * @Email: chunxiao.zhang@jdxiaokang.com
+ * @Update: 2020-02-25 18:23:38
+ * @Description: 修改个人资料
+ */
+page {
+  background-color: #f7f8fa;
+}
+.personinfo-module__container___tnUzl {
+  padding: 8rpx 32rpx 0;
+  background-color: #fff;
+}
+.personinfo-module__list_____tag {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 32rpx 0;
+}
+.personinfo-module__cellTitle___3bgEA {
+  line-height: 45rpx;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+}
+.personinfo-module__head_img___2Kv6u {
+  width: 120rpx;
+  height: 120rpx;
+  background: #f6f6f6;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin-right: 42rpx;
+}
+.personinfo-module__user_photo___1fnpk {
+  width: 100%;
+  height: 100%;
+}
+.personinfo-module__upload___3U6Z_ {
+  width: 540rpx;
+  height: 540rpx;
+  left: -20rpx;
+  top: -10rpx;
+  position: absolute;
+  opacity: 0;
+}
+.personinfo-module__nickname___2uICq {
+  text-align: right;
+  margin-right: 42rpx;
+}
+.personinfo-module__icon___M3FyX {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 16rpx;
+  color: #333;
+}

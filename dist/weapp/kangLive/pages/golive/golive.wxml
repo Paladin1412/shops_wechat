@@ -1,0 +1,168 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.liveMes}}" style="{{anonymousState__temp}}">
+        <block wx:if="{{playbackUrl && isbackLive == 1}}">
+            <video src="{{playbackUrl}}" controls="{{false}}" mode="RTC" autoplay="{{true}}" initial-time="0" object-fit="fill" show-fullscreen-btn="{{false}}" id="myVideo" loop="{{false}}" muted="{{false}}" style="{{anonymousState__temp2}}" bindplay="onPlayItem" bindtimeupdate="anonymousFunc0" bindended="onEndItem"></video>
+        </block>
+        <block wx:if="{{!(playbackUrl && isbackLive == 1)}}">
+            <live-player src="{{clientPullUrl}}" mode="RTC" autoplay="{{true}}" object-fit="fillCrop" bindstatechange="anonymousFunc1" bindnetstatus="anonymousFunc2" style="{{anonymousState__temp3}}"></live-player>
+        </block>
+        <block wx:if="{{liveStatus == 2}}">
+            <view class="{{styles.live_end_style}}" bindtap="backIndexPage" bindtouchmove="handleTochMove">
+                <view class="{{styles.live_end_style}}">
+                    <image class="{{styles.live_start_mes + ' no-loading'}}" src="{{anonymousState__temp4}}"></image>
+                    <view class="{{styles.top_text}}">主播直播已结束</view>
+                    <view class="{{styles.center_text}}">
+                        <view class="{{styles.top_bottom_text}}">回到首页</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="{{styles.maskFixed}}">
+            <view class="{{styles.headTop}}" style="{{anonymousState__temp5}}">
+                <view class="{{styles.left_back_mes}}">
+                    <view class="{{'iconfont iconfanhui1 ' + styles.icon_back}}" bindtap="backIndexPage"></view>
+                    <view class="{{styles.headleft}}">
+                        <view class="{{styles.lefthead}}">
+                            <image class="{{styles.headInnerImg + ' no-loading'}}" src="{{anonymousState__temp6}}" alt=""></image>
+                        </view>
+                        <view class="{{styles.righthead}}">
+                            <view class="{{styles.topText}}">{{companyMes.shopName || '京小铺'}}</view>
+                            <view class="{{styles.botText}}">{{viewCount || '0'}}人观看</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="{{styles.head_mes}}" style="{{anonymousState__temp7}}">
+                <view class="{{styles.headRight}}">
+                    <view class="{{styles.topImg}}">
+                        <image class="{{styles.topImg_img + ' no-loading'}}" src="{{Assets.common.shopLive}}" alt=""></image>
+                    </view>
+                    <view class="{{styles.botImg}}">ID:{{liveDetail.roomId || '112344'}}</view>
+                </view>
+            </view>
+            <block wx:if="{{recommendItemVOList.length != 0}}">
+                <view class="{{styles.goodsList}}">
+                    <view class="{{styles.live_list_Img}}">
+                        <image class="{{styles.live_img + ' no-loading'}}" src="{{Assets.common.goods_list}}"></image>
+                    </view>
+                    <view class="{{styles.recom_mes}}">
+                        <view class="{{styles.evegoods}}" wx:key="$loopState__temp9" bindtap="anonymousFunc3" wx:for="{{loopArray76}}" wx:for-item="v" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey}}">
+                            <view class="{{styles.leftHeadImg}}">
+                                <image class="{{styles.left_img_head}}" src="{{v.$loopState__temp11}}"></image>
+                            </view>
+                            <view class="{{styles.rightHeadImg}}">
+                                <ellipsis>{{v.$original.itemTitle}}</ellipsis>
+                                <view class="{{styles.botHeadImg}}">¥{{v.$original.minTradePrice}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <view class="{{styles.enjoyMes}}">
+                <view class="{{styles.animateMes}}" style="{{anonymousState__temp12}}">{{persnolaMes}}进入直播间</view>
+            </view>
+            <view>
+                <scroll-view class="{{styles.barrageMes}}" scroll-y="{{true}}" scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}">
+                    <view id="hihi" class="{{styles.mes_style}}">
+                        <view wx:key="$loopState__temp14" wx:for="{{loopArray77}}" wx:for-item="v" wx:for-index="index">
+                            <block wx:if="{{v.$original.type == 'IM_NOTICE_TEXT'}}">
+                                <view wx:key="$loopState__temp16" class="{{styles.noticeMes + ' ' + styles.newnoticeMes}}">{{v.$original.name}}:{{v.$original.text}}</view>
+                            </block>
+                            <block wx:if="{{v.$original.type == 'CHAT_MSG'}}">
+                                <view>
+                                    <view class="{{styles.newnoticeMes}}">
+                                        <block wx:if="{{v.$original.userType == 1}}"><text class="{{styles.anchor}}">主播</text>
+                                        </block><text class="{{styles.textName + ' ' + (v.$original.type == 1 ? styles.ancher : null)}}">{{v.$original.name ? v.$original.name + '：' : ''}}</text><text class="{{styles.textInner}}">{{v.$original.text}}</text>
+                                    </view>
+                                </view>
+                            </block>
+                            <block wx:if="{{v.$original.type == 'SHARE_MSG' || v.$original.type == 'ORDER_MSG' || v.$original.type == 'SHOW_BUY_SHOP'}}">
+                                <view>
+                                    <view class="{{v.$original.type == 'SHARE_MSG' ? styles.shareMes : v.$original.type == 'ORDER_MSG' ? styles.orderMes : styles.showbuyMes}}">
+                                        <image class="{{styles.shareImg + ' no-loading'}}" src="{{Assets.common.buyItem}}"></image><text class="{{styles.textInner}}">{{v.$original.msgContent}}</text>
+                                    </view>
+                                </view>
+                            </block>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="{{styles.product_lay}}">
+                <at-float-layout compid="{{$compid__181}}">
+                    <scroll-view>
+                        <view class="{{styles.eveInner}}" wx:key="id" bindtap="anonymousFunc4" wx:for="{{loopArray78}}" wx:for-item="v" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey2}}">
+                            <view class="{{styles.leftInner}}">
+                                <image class="{{styles.leftInner_Img + ' no-loading'}}" src="{{v.$loopState__temp18}}" alt=""></image>
+                                <view class="{{styles.shopNum}}" style="{{v.$loopState__temp20}}">{{index + 1}}</view>
+                            </view>
+                            <view class="{{styles.RightInner}}">
+                                <view class="{{styles.titleInner}}">
+                                    <ellipsis compid="{{v.$compid__180}}">{{v.$original.itemTitle}}</ellipsis>
+                                </view>
+                                <view class="{{styles.priceInner}}">
+                                    <view class="{{styles.priceMes}}"><text class="{{styles.priLogo}}">¥</text><text class="{{styles.priStyle}}">{{v.$original.minTradePrice}}</text>
+                                    </view>
+                                    <view class="{{styles.twoButton}}">
+                                        <view class="{{styles.shareButton}}">分享</view>
+                                        <view class="{{styles.getButton}}">抢购</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <block wx:if="{{goodslist.length == 0}}">
+                            <view class="{{styles.nogoodsContainer}}">
+                                <image class="{{styles.nogoodsImg}}" src="{{Assets.goods.defalutNoGoods}}"></image>
+                                <view class="{{styles.nogoodsLabel}}">直播间暂无商品...</view>
+                            </view>
+                        </block>
+                    </scroll-view>
+                </at-float-layout>
+            </view>
+            <view class="{{styles.shop}}" style="{{anonymousState__temp21}}">
+                <view class="{{styles.logoImg}}" bindtap="openisOpened">
+                    <image class="{{styles.logoImg_img + ' no-loading'}}" src="{{'' + Assets.common.shopStore}}" alt=""></image>
+                    <view class="{{styles.goodlist_style}}">{{goodslist.length}}</view>
+                </view>
+                <block>
+                    <block wx:if="{{playbackUrl && isbackLive == 1}}">
+                        <view class="{{styles.newInputMes}}">
+                            <at-slider compid="{{$compid__182}}"></at-slider>
+                            <view class="{{styles.timeMes}}">{{currentTime}}</view>
+                            <view class="{{styles.totalTimeMes}}">{{minutes}}:{{seconds}}</view>
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <view class="{{styles.inputMes}}" bindtap="showPopUp">
+                            <view>想问些什么...</view>
+                        </view>
+                    </block>
+                </block>
+                <view class="{{styles.rightShare}}" bindtap="share_item_mes">
+                    <image class="{{styles.right_share_img + ' no-loading'}}" src="{{'' + Assets.common.share}}"></image>
+                </view>
+            </view>
+            <view class="{{styles.share_popup + ' ' + (isOpenShare ? styles.visibility : null)}}" bindtap="anonymousFunc7">
+                <view class="{{styles.share_inner}}" catchtap="anonymousFunc8">
+                    <view class="{{styles.share_title + ' last'}}">分享店铺到</view>
+                    <view class="{{styles.share_content}}">
+                        <share-tool id="jizzz" compid="{{$compid__183}}"></share-tool>
+                        <view class="{{styles.cancalItem}}">
+                            <view class="{{styles.cancalBtn}}" bindtap="anonymousFunc9">取消</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <block wx:if="{{chatInputPopup}}">
+                <view class="{{styles.chat_container}}">
+                    <view class="{{styles.chat_popup}}" bindtap="anonymousFunc10"></view>
+                    <view class="{{styles.chat_body}}" style="{{anonymousState__temp23}}">
+                        <view class="{{styles.input_inner}}">
+                            <at-input compid="{{$compid__184}}"></at-input>
+                        </view>
+                        <view class="{{styles.chat_text}}" bindtap="dealSendMessage">发送</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</block>

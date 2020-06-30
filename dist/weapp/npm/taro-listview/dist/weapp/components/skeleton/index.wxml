@@ -1,0 +1,14 @@
+<block wx:if="{{$taroCompReady}}">
+    <view>
+        <view style="{{anonymousState__temp}}">
+            <slot></slot>
+        </view>
+        <block wx:if="{{!isLoaded}}">
+            <view style="{{anonymousState__temp2}}">
+                <view wx:key="$original" style="{{item.$loopState__temp4}}" wx:for="{{loopArray79}}" wx:for-item="item" wx:for-index="_anonIdx2"></view>
+                <view wx:key="$original" class="skeletonBg" style="{{item.$loopState__temp6}}" wx:for="{{loopArray80}}" wx:for-item="item" wx:for-index="_anonIdx4"></view>
+                <view wx:key="$original" class="skeletonBg" style="{{item.$loopState__temp8}}" wx:for="{{loopArray81}}" wx:for-item="item" wx:for-index="_anonIdx6"></view>
+            </view>
+        </block>
+    </view>
+</block>

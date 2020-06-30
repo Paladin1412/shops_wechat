@@ -1,0 +1,247 @@
+/**
+ * @Author: chunxiao.zhang
+ * @Email: chunxiao.zhang@jdxiaokang.com
+ * @Update: 2020-02-18 15:13:03
+ * @Description: 登陆页面
+ */
+.login-module__reset_btn___3ffGP {
+  padding: 0;
+  background-color: transparent;
+  line-height: 1;
+  font-size: 24rpx;
+  color: #333;
+}
+.login-module__reset_btn___3ffGP::after {
+  display: none;
+}
+.login-module__container___31yvi {
+  padding: 0 32rpx;
+}
+.login-module__container___31yvi .at-input::after {
+  display: none;
+}
+.login-module__container___31yvi .at-input {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #4d4d4d;
+  background: transparent;
+}
+.login-module__container___31yvi .at-input input {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.login-module__container___31yvi .placeholder {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 32rpx;
+}
+.login-module__container___31yvi .at-modal__content {
+  padding-top: 0;
+}
+.login-module__store_name___2ziYN {
+  line-height: 48rpx;
+  font-size: 48rpx;
+  font-weight: 600;
+  color: #333;
+  margin-top: 122rpx;
+}
+.login-module__store_desc___2-W87 {
+  font-size: 28rpx;
+  color: #999;
+  line-height: 28rpx;
+  padding-top: 32rpx;
+}
+.login-module__form_box___37yu5 {
+  margin-top: 135rpx;
+}
+.login-module__info_box___3GfT9 {
+  position: relative;
+  font-size: 28rpx;
+  color: #b3b3b3;
+  line-height: 28rpx;
+  padding-bottom: 20rpx;
+}
+.login-module__info_box___3GfT9::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 2rpx;
+  background: #f5f3f2;
+}
+.login-module__phone_box___1bAFI {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.login-module__phone_box___1bAFI .login-module__area_code___31OTz {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 0 16rpx 0 28rpx;
+  font-size: 32rpx;
+  line-height: 40rpx;
+  color: #333;
+  border-right: 1Px solid #eaeaea;
+}
+.login-module__phone_box___1bAFI .login-module__phone_inner___xr7KG {
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.login-module__info_insert___3XlVi {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #4d4d4d;
+  margin: 30rpx 0 0 0;
+}
+.login-module__info_insert_phone___TTTU4 {
+  width: 100%;
+}
+.login-module__info_insert_phone___TTTU4 .at-input__input {
+  padding-left: 20rpx;
+}
+.login-module__info_insert_code___15wWu {
+  width: 50%;
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #4d4d4d;
+}
+.login-module__info_insert_code___15wWu .login-module__placeholder___1aCqS {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 32rpx;
+}
+.login-module__btn_disable___xqyqe {
+  height: 88rpx;
+  background: #f9482e;
+  border-radius: 44rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  opacity: 0.4;
+  margin-top: 80rpx;
+}
+.login-module__btn_able___2Q-PF {
+  height: 88rpx;
+  background: #f9482e;
+  border-radius: 44rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  margin-top: 80rpx;
+}
+.login-module__code_box___30Oxs {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 70rpx 24rpx 0 24rpx;
+}
+.login-module__code___2-rfv {
+  line-height: 36rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 26rpx;
+  border: 1Px solid #333;
+  font-size: 26rpx;
+  color: #333;
+}
+.login-module__time___3pGXf {
+  height: 28rpx;
+  font-size: 28rpx;
+  color: #b3b3b3;
+  line-height: 28rpx;
+}
+.login-module__wechat_btn___3N5ef {
+  width: 100%;
+  position: fixed;
+  bottom: 164rpx;
+  left: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.login-module__wechat_btn___3N5ef .login-module__wxIcon___nFHW9 {
+  font-size: 88rpx;
+  color: #21c064;
+}
+.login-module__wechat_btn___3N5ef .login-module__wxLabel___bxFBk {
+  line-height: 45rpx;
+  margin-top: 18rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #21c064;
+}
+.login-module__footerAgree___2WBWA {
+  width: 100%;
+  position: fixed;
+  bottom: 92rpx;
+  left: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.login-module__footerAgree___2WBWA .login-module__agree_img_container___3EugP {
+  line-height: 1;
+  padding: 0 24rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.login-module__footerAgree___2WBWA .login-module__agree_img___3qafZ {
+  font-size: 34rpx;
+  color: #f9482e;
+}
+.login-module__footerAgree___2WBWA .login-module__disagree_img___dR5vM {
+  font-size: 34rpx;
+  color: #999;
+}
+.login-module__footerAgree___2WBWA .login-module__agreement___2tNzo {
+  color: #999;
+  font-size: 24rpx;
+  text-align: center;
+}
+.login-module__footerAgree___2WBWA .login-module__agreement___2tNzo .login-module__agreement_btn___2jvZu {
+  color: #333;
+}

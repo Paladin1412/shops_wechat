@@ -1,0 +1,83 @@
+/**
+ * @Author: zhanglimin
+ * @Email: czhanglimin@126.com
+ * @Update: 2020-04-27 14:37:48
+ * @Description: 修改个人资料
+ */
+page {
+  background-color: #f7f8fa;
+}
+.edit-info-module__placeholderStyle___1eBIe {
+  color: #999;
+  font-size: 32rpx;
+}
+.edit-info-module__singleEllipsis___5aAHe {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.edit-info-module__title___2hpsc {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 32rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.edit-info-module__value___7R-d3 {
+  width: 100%;
+  height: 110rpx;
+  padding-left: 32rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+.edit-info-module__value___7R-d3 .edit-info-module__cellInput___XQ0Bh {
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: #999;
+  font-size: 32rpx;
+}
+.edit-info-module__value___7R-d3 .edit-info-module__icon___2UDkW {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-size: 30rpx;
+  padding: 32rpx;
+  color: #c9c9c9;
+}
+.edit-info-module__saveBtn___11FT6 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 686rpx;
+  height: 88rpx;
+  position: fixed;
+  bottom: 73rpx;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 49rpx;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: 500;
+  background-color: #f9482e;
+}

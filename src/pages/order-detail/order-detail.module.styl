@@ -1,0 +1,352 @@
+/**
+ * @Author: cai.ping
+ * @Email: cai.ping@jdxiaokang.com
+ * @Update: 2020-02-26 15:13:21
+ * @Description: true
+ */
+
+
+ .container
+  :global
+    .at-modal__content
+      text-align: center
+    .content-simple
+      line-height: 120px
+  ::-webkit-scrollbar
+    width: 0;
+    height: 0;
+    color: transparent;
+ .addres_box
+   color: #676767
+   font-size: 28px
+   text-align: center
+   padding: 36px 0
+   line-height: 28px
+   background: #ffffff
+   border-radius: 12px; 
+   .icon
+    display: inline-block
+    width: 60px
+    height 60px
+    line-height: 60px
+    text-align: center
+    font-size: 30px
+    color: #888888
+
+.transfee_box
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 24px
+  line-height: 24px 
+  .label
+    line-height: 40px
+    font-size: 28px
+  .red
+    margin-left: 10px
+    font-size: 28px
+    font-weight: 500
+.order_info
+  display: flex
+  align-items: center
+  font-size: 28px
+  line-height: 28px
+.order_info+.order_info
+  margin-top: 32px
+
+.product_box
+  padding: 32px 24px
+  background:rgba(255,255,255,1);
+  border-radius:12px;
+  margin-bottom: 24px
+  .title
+    font-size: 28px 
+    line-height: 40px
+    display: flex
+    align-items: center
+    position: relative
+    .icon_shop
+      font-size: 28px
+      color: rgba(50, 50, 50, 1)
+    .font
+      margin-left: 16px
+      color: rgba(50, 50, 50, 1)
+      max-width: 420px
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+    .status_box
+      position: absolute
+      right: 0
+      top: 0
+      font-size: 28px
+      color: #656565
+      display: flex
+      align-items: center
+      line-height: 40px
+    .red
+      color: #F9482E
+      font-weight: bold
+    :global
+      .turnright
+        margin-left: 10px
+  .info_box
+    display: flex
+    position: relative
+    margin-top: 24px
+    .img
+      width: 178px
+      height 178px
+      display: block
+      margin-bottom: 0
+      flex-shrink: 0
+      border-radius:6px;
+    .info_right
+      margin-left: 24px
+      flex: 1
+      .item_line_container
+        min-height: 52px
+      .item_line
+        display: flex
+        align-items: center
+        justify-content: space-between
+        font-size: 24px
+        line-height: 24px
+        padding-top: 16px
+        .info_title
+          width: 290px
+          display: block
+          color: rgba(51, 51, 51, 1)
+        .num
+          color: rgba(102, 102, 102, 1) 
+        .recv
+          background: #FEECEA
+          color: #F9482E
+          padding: 6px 10px
+          display: inline-block
+          margin-top: 8px
+          line-height: 1
+      .second
+        color: rgba(201, 201, 201, 1)
+      .all_price
+        text-align: right
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        font-size: 24px
+        color: rgba(101, 101, 101, 1)
+        line-height: 28px
+        .all_num
+          font-weight: bold
+          font-size: 28px
+          line-height: 28px
+.clock_box
+  display: flex
+  align-items: center
+  letter-spacing: -1px
+  :global
+    .iconfont
+      font-size: 35px
+      margin-right: 10px
+    .taro-text
+      background: transparent
+      color: #fff
+      font-size: 30px
+      padding: 0 1px
+    .taro-text:nth-child(1), .taro-text:nth-child(2), .taro-text:nth-child(3), .taro-text:nth-child(4),.taro-text:nth-child(5),
+    label 
+      display: none
+    .taro-text:nth-child(8)
+      position: relative
+      margin-right: 10px
+      &:after
+        position: absolute
+        content: ':'
+        left: 20px
+        top: -2px
+
+
+
+
+
+
+.gray
+    color: #B2B2B2
+.red
+    color: #F9482E
+    font-weight: bold
+    font-size: 28px
+
+.button_box
+  position: fixed
+  bottom: 0
+  left: 0
+  z-index: 99
+  background: #fff
+  width: 100%
+  .content
+    display: flex
+    align-items: flex-end
+    justify-content: flex-end
+    padding: 13px 32px 81px 32px
+    font-size: 24px
+    .red
+      font-size: 32px
+    .gray
+      font-size: 20px
+      margin-left: 10px
+    .rigth 
+      display: flex
+      align-items: center
+      justify-content: flex-end 
+      .button
+        background:rgba(249,72,46,1);
+        border-radius:36px;
+        color: #ffffff
+        font-size: 28px
+        padding: 22px 46px
+        line-height: 28px
+        margin-left: 20px
+        border: 2px solid rgba(249,72,46,1);
+        flex-shrink: 0
+      .gray_button
+        background: #ffffff
+        color: #B3B3B3
+        border-color: #B3B3B3
+
+
+.item
+  display: flex
+  align-items: center
+  margin: 0 28px
+  font-size: 28px
+  line-height: 28px
+  background: #ffffff
+  .left
+    width: calc(100% - 40px)
+    padding-right: 40px
+    color: #333333
+    .gray
+      color: #333333
+      margin-top: 18px
+      display: block 
+      line-height: 40px
+      font-size: 24px
+      text-align: left
+    .name_box
+      display: flex
+      align-items: center
+      font-weight: bold
+      .name
+        display: inline-block
+        text-align: left
+      .tel
+        margin-left: 20px
+        display: flex
+        align-items: center
+.copy_box
+  color: rgba(51, 51, 51, 1)
+  margin-left: 30px
+  font-size: 24px
+  background: rgba(244,244,244,1);
+  padding: 8px 16px
+  border-radius:18px;
+  line-height: 24px
+  font-weight: 400
+
+.red_back
+  background: #F9482E
+  padding: 206px 0 136px 0 // 212px 0 116px 0
+  text-align: center 
+  color: #fff
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 0
+  .status_line
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 34px
+    line-height: 34px
+    margin-bottom: 20px
+    padding-top: 10px
+    :global
+      .iconfont
+        font-size: 43px
+        margin-right: 15px
+        // color: #F9482E
+        // background: #fff
+  .clock_box
+    margin-left: 20px
+  .desc
+    opacity: 0.6
+    font-size: 26px
+
+.addres_box
+  position: relative
+  margin-bottom: 24px
+.trans_box
+  margin-top: 20px
+  text-align: left 
+  .left
+    .gray
+      font-weight: 500
+      color: #F9482E
+  .date
+    color: #B3B3B3
+    font-size: 20px
+    margin-top: 16px
+
+.back
+  background: #F7F7F7
+  width: 100%
+  height 100%
+  position: fixed
+  left :0
+  top: 0
+  z-index -1
+
+
+.top_box
+  position: fixed
+  width: 100%
+  left: 0
+  top: 0
+  z-index 999
+  color: #ffffff
+  .top_inner
+    position: relative
+    width: 100%
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 20px
+    .font 
+      font-size: 30px 
+      font-weight: bold
+    .go_back_icon
+      position: absolute
+      font-size: 30px
+      left: 10px
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 64px
+      height 64px
+      display: block
+      text-align: center
+      line-height: 64px
+      z-index 999
+  
+.scroll_box
+  position: fixed
+  width: calc(100% - 64px)
+  height: calc(100% - 510px)
+  top: 350px
+  left: 32px
+  border-radius: 12px
+  background-color: rgba(247, 248, 250, 1)
+  overflow: hidden

@@ -1,0 +1,45 @@
+/**
+ * @Author: chunxiao.zhang
+ * @Email: chunxiao.zhang@jdxiaokang.com
+ * @Update: 2020-02-25 19:22:00
+ * @Description: 邀请记录
+ */
+.inviterecord-module__container___1X3qR {
+  margin: 0 28rpx;
+}
+.inviterecord-module__list___M7ZCt {
+  padding: 28rpx 0;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+  line-height: 40rpx;
+}
+.inviterecord-module__head_img___2Ulvs {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  margin-right: 24rpx;
+  background: #ccc;
+}
+.inviterecord-module__year___2U40p {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-left: 24rpx;
+  display: inline-block;
+}
+.inviterecord-module__date___2UBd9 {
+  height: 28rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #666;
+  line-height: 28rpx;
+  margin-top: 16rpx;
+}

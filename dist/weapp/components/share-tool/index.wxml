@@ -1,0 +1,29 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.out}}">
+        <view class="{{styles.share_box}}">
+            <button class="{{styles.item}}" open-type="share">
+                <image src="{{Assets.share.wechat}}" class="{{styles.imgicon}}"></image>
+                <view class="{{styles.font}}">分享好友</view>
+            </button>
+            <block wx:if="{{showShareImg}}">
+                <button class="{{styles.item}}" bindtap="drawBall">
+                    <image src="{{Assets.share.wxMoments}}" class="{{styles.imgicon}}"></image>
+                    <view class="{{styles.font}}">生成分享图</view>
+                </button>
+            </block>
+        </view>
+        <view class="{{styles.qrModal + ' ' + (modalVisible ? styles.qrModal1 : '')}}" catchtap="closeImageShare">
+            <image src="{{Assets.share.close}}" class="{{styles.imgClose}}" catchtap="closeImageShare"></image>
+            <image src="{{tempFilePath}}" class="{{styles.canvasImg + ' ' + (type == 'live' ? styles.canvasLive : '')}}" catchtap="stopPropagation"></image>
+            <view class="{{styles.operation}}">
+                <view class="{{styles.shareBtn + ' ' + styles.downloadBtn}}" catchtap="saveImg">
+                    <image src="{{Assets.share.download}}" class="{{styles.loadicon}}"></image>
+                    <view class="{{styles.btnLabel}}">保存分享图</view>
+                </view>
+            </view>
+        </view>
+        <canvas class="{{styles.shareContainer}}" canvas-id="canvas" style="{{anonymousState__temp}}"></canvas>
+        <canvas class="{{styles.shareContainer}}" canvas-id="liveCanvas" style="{{anonymousState__temp2}}"></canvas>
+        <at-modal compid="{{$compid__160}}"></at-modal>
+    </view>
+</block>

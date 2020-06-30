@@ -1,0 +1,14 @@
+{
+  "miniprogramRoot": "./dist",
+  "projectname": "%E5%BA%B7%E5%B0%8F%E9%93%BAC%E7%AB%AF%E5%95%86%E9%93%BA",
+  "description": "小程序商品",
+  "appid": "wx2b9d7d5e14e53d1f",
+  "cloudfunctionRoot": "./funcs/",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}

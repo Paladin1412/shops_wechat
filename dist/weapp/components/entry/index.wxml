@@ -1,0 +1,7 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <image class="{{styles.empty_img}}" src="{{Assets.common.empty}}" mode="widthFix"></image>
+        <view class="{{styles.label}}">您好，请先去登录账号</view>
+        <button class="{{styles.reset_btn + ' ' + styles.btn}}" bindtap="gotoLogin">去登录</button>
+    </view>
+</block>

@@ -1,0 +1,86 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login-guide/login-guide",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/my-qrcode/my-qrcode",
+    "pages/collect/collect",
+    "pages/my/my",
+    "pages/submission/submission",
+    "pages/address/address",
+    "pages/edit-address/edit-address",
+    "pages/invitrecord/invitrecord",
+    "pages/goodsdetail/goodsdetail",
+    "pages/fans/fans",
+    "pages/shopstate/shopstate",
+    "pages/contactus/contactus",
+    "pages/fanscode/fanscode",
+    "pages/pay-result/pay-result",
+    "pages/sub-result/sub-result",
+    "pages/personinfo/personinfo",
+    "pages/setting/setting",
+    "pages/inviterecord/inviterecord",
+    "pages/my-order/my-order",
+    "pages/order-detail/order-detail",
+    "pages/logistics-detail/logistics-detail",
+    "pages/accountinfo/accountinfo",
+    "pages/after-sales/after-sales",
+    "pages/aftersales-detail/aftersales-detail",
+    "pages/yq-list/yq-list",
+    "pages/edit-info/edit-info",
+    "pages/order-search/order-search",
+    "pages/cashout/cashout",
+    "pages/cashout-result/cashout-result",
+    "pages/addBank/addBank"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "C端 - 康小铺",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#9A9A9A",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "./tab-icons/tab_1.png",
+        "selectedIconPath": "./tab-icons/tab_1_cur.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "./tab-icons/tab_2.png",
+        "selectedIconPath": "./tab-icons/tab_2_cur.png",
+        "pagePath": "pages/contactus/contactus",
+        "text": "联系店主"
+      },
+      {
+        "iconPath": "./tab-icons/tab_3.png",
+        "selectedIconPath": "./tab-icons/tab_3_cur.png",
+        "pagePath": "pages/collect/collect",
+        "text": "我的收藏"
+      },
+      {
+        "iconPath": "./tab-icons/tab_4.png",
+        "selectedIconPath": "./tab-icons/tab_4_cur.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "kangLive",
+      "pages": [
+        "pages/golive/golive",
+        "pages/prelive/prelive",
+        "pages/turn-live/turn-live",
+        "pages/backlive/backlive"
+      ]
+    }
+  ],
+  "sitemapLocation": "sitemap72.json"
+}

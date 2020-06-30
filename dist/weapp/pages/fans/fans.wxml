@@ -1,0 +1,29 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.info}}">
+            <view class="{{styles.head_img}}"></view>
+            <view class="{{styles.name}}"><text>塞外</text> 
+                <image src="{{Assets.home.jd}}" alt="" class="{{styles.icon_img}}"></image>
+            </view>
+            <view>欢迎加入我的粉丝圈，群内种草各种各种好用商品</view>
+            <view class="{{styles.btn_box}}">
+                <view><text class="{{styles.btn}}">店主</text><text class="{{styles.btn}}">群主</text>
+                </view>
+            </view>
+            <view class="{{styles.fans}}">
+                <view class="{{styles.box}}">
+                    <view class="{{'iconfont iconfensi ' + styles.mr10}}"></view>粉丝兴趣群</view>
+            </view>
+            <view class="{{styles.list_box}}">
+                <view class="{{styles.list}}" wx:for="{{loopArray51}}" wx:for-item="item" wx:for-index="_anonIdx2">
+                    <view class="{{styles.qun_icon}}">
+                        <view class="{{styles.pic}}" style="{{item.$loopState__temp2}}">1</view>
+                        <view class="{{styles.pic}}" style="{{item.$loopState__temp4}}">1</view>
+                        <view class="{{styles.pic}}" style="{{item.$loopState__temp6}}">1</view>
+                        <view class="{{styles.pic}}" style="{{item.$loopState__temp8}}">1</view>
+                    </view><text class="{{styles.qun_name}}">新人红包群新人红包群新人红包群新人红包群新人红包群新人红包群新人红包群新人红包群新人红包群</text><text class="{{styles.qun_tip}}">进群领红包</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>

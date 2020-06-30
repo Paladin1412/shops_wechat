@@ -1,0 +1,33 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.list}}" wx:for="{{loopArray52}}" wx:for-item="data" wx:for-index="_anonIdx4">
+            <view class="{{styles.date}}">
+                <view class="{{styles.day}}">11</view>
+                <view class="{{styles.month}}">2月</view>
+            </view>
+            <view class="{{styles.right}}">
+                <view class="{{styles.data}}" wx:for="{{data.$anonymousCallee__14}}" wx:for-item="item" wx:for-index="_anonIdx2">
+                    <view class="{{styles.head}}">
+                        <view class="{{styles.head_img}}"></view>
+                        <view>
+                            <view class="{{styles.name}}">塞外</view>
+                            <view class="{{styles.time}}">刚刚发布</view>
+                        </view>
+                    </view>
+                    <view class="{{styles.sell}}">我刚刚卖出“<text class="{{styles.detail}}">FFAN泛泛 闭眼入神裤 三季可穿 升级加长加绒款高腰九分烟管裤女</text>”</view>
+                    <view class="{{styles.product}}">
+                        <view class="{{styles.product_img}}"></view>
+                        <view class="{{styles.product_info}}">
+                            <view class="{{styles.product_title}}">商品标题商品标题最多一行商品标题商品标题最多一行</view>
+                            <view class="{{styles.price}}">
+                                <view><text class="{{styles.symbol}}">¥</text>  <text class="{{styles.price_red}}">899</text><text class="{{styles.del}}">¥ 1099</text>
+                                </view>
+                                <view class="{{styles.buy_btn}}">抢购</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>

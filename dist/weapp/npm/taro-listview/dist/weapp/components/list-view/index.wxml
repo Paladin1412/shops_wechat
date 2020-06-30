@@ -1,0 +1,52 @@
+<block wx:if="{{$taroCompReady}}">
+    <skeleton compid="{{$compid__185}}">
+        <scroll-view class="{{className + ' scrollView'}}" style="{{anonymousState__temp}}" scroll-y="{{canScrollY}}" lower-threshold="{{80}}" bindscrolltolower="handleScrollToLower" scroll-with-animation="{{true}}" bindscroll="onScroll" id="baazz">
+            <view style="{{anonymousState__temp2}}" bindtouchmove="anonymousFunc0" bindtouchend="anonymousFunc1" bindtouchstart="anonymousFunc2" bindtouchcancel="anonymousFunc3">
+                <view class="bodyView" id="bodyView">
+                    <view style="{{anonymousState__temp3}}">
+                        <view style="{{anonymousState__temp4}}" class="pullDownBlock">
+                            <view class="tip">
+                                <block wx:if="{{!downLoading}}">
+                                    <view id="tip-dampText">{{dampText}}</view>
+                                </block>
+                                <block wx:if="{{downLoading}}">
+                                    <block>
+                                        <block wx:if="{{customizeLoading}}">
+                                            <slot name="customizeloading"></slot>
+                                        </block>
+                                        <block wx:else>
+                                            <loading compid="{{$compid__186}}"></loading>
+                                        </block>
+                                    </block>
+                                </block>
+                            </view>
+                        </view>
+                        <block wx:if="{{showChildren}}">
+                            <slot></slot>
+                        </block>
+                        <result-page compid="{{$compid__187}}">
+                            <view slot="error">
+                                <slot name="error"></slot>
+                            </view>
+                            <view slot="empty">
+                                <slot name="empty"></slot>
+                            </view>
+                        </result-page>
+                        <block wx:if="{{footerLoading}}">
+                            <view class="loading">{{footerLoadingText}}</view>
+                        </block>
+                        <block wx:if="{{customFooterLoading}}">
+                            <slot name="footerloading"></slot>
+                        </block>
+                        <block wx:if="{{footerLoaded}}">
+                            <view class="loaded">{{noMore || footerLoadedText}}</view>
+                        </block>
+                        <block wx:if="{{customFooterLoaded}}">
+                            <slot name="footerloaded"></slot>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </skeleton>
+</block>

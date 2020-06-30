@@ -1,0 +1,35 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.invirecord}}">
+        <view class="{{styles.evestyle}}">
+            <view style="{{anonymousState__temp}}">账户余额</view>
+            <view class="{{styles.priceStyle}}">¥10394.00</view>
+            <view class="{{styles.eveprice}}">
+                <view>
+                    <view>总收益</view>
+                    <view>¥100000.00</view>
+                </view>
+                <view>
+                    <view>今日收益</view>
+                    <view>¥100000.00</view>
+                </view>
+                <view>
+                    <view>已提现</view>
+                    <view>¥100000.00</view>
+                </view>
+            </view>
+        </view>
+        <view class="{{styles.botInner}}">
+            <view class="{{styles.evebotstyle}}">
+                <view class="{{styles.leftstyle}}">资金明细</view>
+                <view class="chevron-right"></view>
+            </view>
+            <view class="{{styles.evebotstyle}}">
+                <view class="{{styles.leftstyle}}">提现记录</view>
+                <view class="chevron-right"></view>
+            </view>
+        </view>
+        <view class="{{styles.fixedBottom}}">
+            <view class="{{styles.buttonInner}}">提现</view>
+        </view>
+    </view>
+</block>

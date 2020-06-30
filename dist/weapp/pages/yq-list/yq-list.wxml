@@ -1,0 +1,27 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.list_out}}">
+        <list-view id="hjzzz" compid="{{$compid__149}}">
+            <view style="{{anonymousState__temp4}}">
+                <view class="{{styles.container}}">
+                    <view class="{{styles.item + ' last'}}" wx:for="{{loopArray62}}" wx:for-item="item" wx:for-index="_anonIdx2">
+                        <image class="{{styles.img}}" src="{{item.$loopState__temp6}}"></image>
+                        <view class="{{styles.right}}">
+                            <view class="{{styles.rightTop}}">
+                                <view class="{{styles.name}}">{{item.$original.inviteeName}}</view>
+                                <view class="{{styles.name}}">{{item.$loopState__temp8}}****{{item.$loopState__temp10}}</view>
+                            </view>
+                            <view class="{{styles.bottom}}"><text>{{item.$loopState__temp12}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view slot="empty">
+                <view style="{{anonymousState__temp3}}" class="{{styles.empty_box}}">
+                    <empty compid="{{$compid__150}}"></empty>
+                    <view bindtap="onInvite" class="{{styles.inviteBtn}}">邀请好友</view>
+                </view>
+            </view>
+        </list-view>
+    </view>
+</block>

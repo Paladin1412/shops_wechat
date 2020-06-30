@@ -1,0 +1,19 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.box}}">
+            <view class="{{styles.info}}">
+                <view class="{{styles.name_info}}">
+                    <view class="{{styles.qun_icon}}">
+                        <view class="{{styles.pic}}" style="{{anonymousState__temp}}">1</view>
+                        <view class="{{styles.pic}}" style="{{anonymousState__temp2}}">1</view>
+                        <view class="{{styles.pic}}" style="{{anonymousState__temp3}}">1</view>
+                        <view class="{{styles.pic}}" style="{{anonymousState__temp4}}">1</view>
+                    </view><text>新人红包群</text>
+                </view>
+                <view class="{{styles.code}}"></view>
+                <view class="{{styles.wechat}}">识别二维码进群，或截图保存</view>
+            </view>
+            <image src="{{Assets.other.close}}" alt="" class="{{styles.close}}"></image>
+        </view>
+    </view>
+</block>

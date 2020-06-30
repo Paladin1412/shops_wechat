@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <view>
+        <qr-code></qr-code>
+    </view>
+</block>

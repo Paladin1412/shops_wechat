@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <picker mode="multiSelector" range="{{range}}" range-key="areaName" bindchange="onChangeCity" bindcolumnchange="onColumnSelect" value="{{valueIndex || [0, 0, 0]}}">
+        <slot></slot>
+    </picker>
+</block>

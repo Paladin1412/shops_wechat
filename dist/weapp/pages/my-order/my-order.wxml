@@ -1,0 +1,126 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.order_content}}">
+        <view class="{{styles.back}}"></view>
+        <view class="{{styles.nav_out}}">
+            <view class="{{styles.top_inner}}" style="{{anonymousState__temp}}">
+                <view class="{{'iconfont ' + styles.go_back_icon}}" bindtap="goMy"></view>
+                <view class="{{styles.font}}">订单列表</view>
+            </view>
+        </view>
+        <block wx:if="{{isOrder === 1}}">
+            <view style="{{anonymousState__temp2}}" class="{{styles.search_out + ' ' + (isSearchResult === 2 ? styles.result_search_out : styles.default_search_out)}}">
+                <view class="{{styles.search_box}}" bindtap="geSearch">
+                    <view class="{{'iconfont ' + styles.icon}}"></view>
+                    <view>搜索</view>
+                </view>
+            </view>
+        </block>
+        <block wx:if="{{shopLevel >= 2 && isOrder === 1 && isSearchResult === 1}}">
+            <view class="{{styles.buy_type_box}}">
+                <view wx:key="$loopState__temp4" class="{{styles.item + ' ' + (buyType === it.$original.type ? styles.active : null)}}" bindtap="anonymousFunc0" wx:for="{{loopArray55}}" wx:for-item="it" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{it._$indexKey}}">{{it.$original.title}}</view>
+            </view>
+        </block>
+        <block wx:if="{{isOrder === 1 && isSearchResult === 1}}">
+            <view class="{{styles.tab_box + ' ' + (shopLevel < 2 ? styles.tab_style : null)}}">
+                <at-tabs compid="{{$compid__120}}"></at-tabs>
+            </view>
+        </block>
+        <block wx:if="{{isShow}}">
+            <list-view id="gizzz" compid="{{$compid__121}}">
+                <view>
+                    <block wx:if="{{isOrder === 2}}">
+                        <view class="{{styles.product_box}}" wx:key="$loopState__temp9" wx:for="{{loopArray56}}" wx:for-item="item" wx:for-index="i">
+                            <view class="{{styles.title}}">
+                                <view class="iconfont"></view><text class="{{styles.font}}" bindtap="goIndex">{{item.$loopState__temp11}}</text>
+                                <view class="iconfont turnright" bindtap="goIndex"></view><text class="{{styles.status_box + ' ' + styles.red}}">{{item.$loopState__temp13}}</text>
+                            </view>
+                            <view class="{{styles.info_box}}" bindtap="anonymousFunc1" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey2}}">
+                                <image class="{{styles.img}}" src="{{item.$loopState__temp15}}"></image>
+                                <view class="{{styles.info_right}}">
+                                    <view class="{{styles.item_line}}">
+                                        <view class="{{styles.info_title}}">
+                                            <ellipsis compid="{{item.$compid__118}}">{{item.$original.itemTitle}}</ellipsis>
+                                        </view>
+                                        <view class="{{styles.num}}">¥ {{item.$original.agentUnitPrice}}</view>
+                                    </view>
+                                    <view class="{{styles.item_line + ' ' + styles.second}}">
+                                        <view>{{item.$loopState__temp17}}</view>
+                                        <view class="{{styles.count_box}}">x{{item.$original.afterSaleCount}}</view>
+                                    </view>
+                                    <view class="{{'' + styles.item_line}}">
+                                        <view class="{{styles.after_Amount}}">退款金额 ￥{{item.$original.afterSaleAmount}}</view>
+                                        <view></view>
+                                    </view>
+                                    <view class="{{'' + styles.all_price}}" style="{{item.$loopState__temp19}}">总计:
+                                        <view class="{{styles.all_num}}">￥{{item.$loopState__temp21}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="{{styles.bottom_box}}">
+                                <view class="{{styles.button_box}}">
+                                    <block wx:if="{{item.$original.afterSaleStatus !== 53 && item.$original.afterSaleStatus !== 99 && item.$original.afterSaleStatus !== 97 && item.$original.afterSaleStatus !== 98}}">
+                                        <view class="{{styles.button + ' ' + styles.gray_button}}" bindtap="anonymousFunc2" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey3}}">取消售后</view>
+                                    </block>
+                                    <view class="{{styles.button + ' ' + styles.shouhuo}}" bindtap="anonymousFunc3" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey4}}">查看售后</view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                    <block wx:if="{{isOrder === 1}}">
+                        <view class="{{styles.product_box}}" wx:key="$loopState__temp23" wx:for="{{loopArray57}}" wx:for-item="item" wx:for-index="i">
+                            <view class="{{styles.title}}">
+                                <view class="iconfont"></view><text class="{{styles.font}}" bindtap="goIndex">{{item.$loopState__temp25}}</text>
+                                <view class="iconfont turnright" bindtap="goIndex"></view><text class="{{styles.status_box + ' ' + styles.red}}">{{item.$loopState__temp27}}</text>
+                            </view>
+                            <view class="{{styles.info_box}}" bindtap="anonymousFunc4" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey5}}">
+                                <image class="{{styles.img}}" src="{{item.$loopState__temp29}}"></image>
+                                <view class="{{styles.info_right}}">
+                                    <view class="{{styles.item_line}}">
+                                        <view class="{{styles.info_title}}">
+                                            <ellipsis compid="{{item.$compid__119}}">{{item.$original.itemTitle}}</ellipsis>
+                                        </view>
+                                        <view class="{{styles.num}}">¥ {{item.$original.agentUnitPrice}}</view>
+                                    </view>
+                                    <view class="{{styles.item_line + ' ' + styles.second}}">
+                                        <view>{{item.$loopState__temp31}}</view>
+                                        <view class="{{styles.count_box}}">x{{item.$original.count}}</view>
+                                    </view>
+                                    <view class="{{'' + styles.item_line_container}}">
+                                        <block wx:if="{{shopLevel >= 2}}">
+                                            <view class="{{'' + styles.item_line}}">
+                                                <view class="{{styles.recv}}">预计收益￥{{item.$original.income || 0}}</view>
+                                                <view></view>
+                                            </view>
+                                        </block>
+                                    </view>
+                                    <view class="{{'' + styles.all_price}}">总计:
+                                        <view class="{{styles.all_num}}">￥{{item.$loopState__temp33}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="{{styles.bottom_box}}">
+                                <block wx:if="{{buyType === 0}}">
+                                    <view class="{{styles.button_box}}">
+                                        <block wx:if="{{item.$original.orderStatus === 0}}">
+                                            <view class="{{styles.button + ' ' + styles.shouhuo}}" bindtap="anonymousFunc5" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey6}}">去付款</view>
+                                        </block>
+                                        <block wx:if="{{item.$original.orderStatus === 2 && item.$original.afterSale === 0}}">
+                                            <view class="{{styles.button + ' ' + styles.shouhuo}}" bindtap="anonymousFunc6" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey7}}">确认收货</view>
+                                        </block>
+                                    </view>
+                                </block>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+                <view slot="empty">
+                    <view class="{{styles.grid_empty}}">
+                        <empty compid="{{$compid__122}}"></empty>
+                        <view class="{{styles.to_buy_button}}" bindtap="goIndex">去购买商品</view>
+                    </view>
+                </view>
+            </list-view>
+        </block>
+        <at-modal compid="{{$compid__123}}"></at-modal>
+    </view>
+</block>

@@ -1,0 +1,189 @@
+/**
+ * @Author: chunxiao.zhang
+ * @Email: chunxiao.zhang@jdxiaokang.com
+ * @Update: 2020-02-28 14:19:17
+ * @Description: 账户信息详情
+ */
+.accountinfo-module__container___2eSpx {
+  padding: 0 24rpx 238rpx;
+}
+.accountinfo-module__container___2eSpx .at-tabs__item-underline {
+  background: #333;
+}
+.accountinfo-module__container___2eSpx .at-tabs__item {
+  color: #cbcbcb;
+}
+.accountinfo-module__container___2eSpx .at-tabs__item--active {
+  color: #333;
+  font-weight: 500;
+}
+.accountinfo-module__container___2eSpx .loaded,
+.accountinfo-module__container___2eSpx .loading,
+.accountinfo-module__container___2eSpx .pullDownBlock {
+  font-size: 24rpx;
+  color: #666;
+}
+.accountinfo-module__container___2eSpx .at-tabs-pane {
+  padding: 0 24rpx;
+}
+.accountinfo-module__income___3lmWv {
+  background: #fff;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  line-height: 45rpx;
+  text-align: center;
+  margin: 24rpx 0 18rpx 0;
+  overflow: hidden;
+  padding: 0 0 36rpx 0;
+}
+.accountinfo-module__income_name___jyfM6 {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 33rpx;
+  margin: 36rpx 0 18rpx 0;
+}
+.accountinfo-module__type_box___F6p79 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 33rpx;
+  margin: 0 0 18rpx 0;
+  text-align: center;
+}
+.accountinfo-module__active___o535d {
+  background: #fff;
+  border: 1rpx solid #fff !important;
+}
+.accountinfo-module__type___2OCs6 {
+  width: 342rpx;
+  position: relative;
+  border: 1rpx solid #b3b3b3;
+  border-radius: 8rpx;
+}
+.accountinfo-module__type_name___1C-7D {
+  padding: 24rpx 0 6rpx 0;
+}
+.accountinfo-module__type_price___3ejvI {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 40rpx;
+  padding-bottom: 24rpx;
+}
+.accountinfo-module__list___1AqTR {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24rpx;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 33rpx;
+}
+.accountinfo-module__list___1AqTR .accountinfo-module__mes___3tHHu {
+  margin-bottom: 5rpx;
+  padding: 5rpx;
+  border-radius: 4rpx;
+  background: #efefef;
+  line-height: 28rpx;
+  font-size: 24rpx;
+  display: inline-block;
+}
+.accountinfo-module__list_name___1BJOJ {
+  padding: 12rpx 0;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+}
+.accountinfo-module__list_price___Btjyo {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #f9482e;
+  line-height: 28rpx;
+}
+.accountinfo-module__go_btn___3EaDN {
+  margin: 28rpx 59rpx 0 59rpx;
+  height: 68rpx;
+  background: #f9482e;
+  border-radius: 34rpx;
+  line-height: 68rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+.accountinfo-module__icon___14wCK {
+  color: #fff;
+  font-size: 16rpx;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+      -ms-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+}
+.accountinfo-module__tab_box___L4Knz {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.accountinfo-module__green___2jVwq {
+  color: #20ac30;
+}
+.accountinfo-module__red___1EERD {
+  color: #f9482e;
+}
+.accountinfo-module__gray___1jki6 {
+  color: #999;
+}
+.accountinfo-module__yellow___11qRc {
+  color: #f90;
+}
+.accountinfo-module__scroll_content___CA2Z0 {
+  border-radius: 12rpx;
+  background: #fff;
+  width: calc(100% - 48rpx) !important;
+  position: fixed !important;
+  left: 24rpx;
+}
+.accountinfo-module__lj_scroll___28SXo {
+  top: 445rpx;
+  height: calc(100% - 495rpx) !important;
+}
+.accountinfo-module__tx_scroll___1x-cT {
+  top: 450rpx;
+  height: calc(100% - 470rpx) !important;
+}
+.accountinfo-module__tx_1_scroll___SqEHy {
+  top: 395rpx;
+  height: calc(100% - 445rpx) !important;
+}
+.accountinfo-module__js_scroll___1JPdj {
+  top: 300rpx;
+  height: calc(100% - 350rpx) !important;
+}
+.accountinfo-module__back___c_2Vw {
+  background: #f0f0f0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+.accountinfo-module__grid_empty___3-qey {
+  padding: 120rpx 0;
+  background: #fff;
+  border-radius: 18rpx;
+}

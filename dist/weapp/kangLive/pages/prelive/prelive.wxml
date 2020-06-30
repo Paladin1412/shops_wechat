@@ -1,0 +1,88 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.preLive}}">
+        <view class="{{styles.top_box + ' ' + (showTop === true ? styles.top_box_active : null)}}">
+            <view class="{{styles.top_inner}}" style="{{anonymousState__temp}}" bindtap="goIndex">
+                <image src="{{anonymousState__temp2}}" class="{{styles.back_img + ' no-loading'}}"></image>
+                <view class="{{'iconfont ' + styles.go_back_icon}}" bindtap="goIndex"></view>
+                <view class="{{styles.font}}">直播详情</view>
+            </view>
+        </view>
+        <view class="{{styles.pre_imgMes}}">
+            <image class="{{styles.pre_img_detail}}" src="{{anonymousState__temp3}}"></image>
+            <view class="{{styles.liveText}}" style="{{anonymousState__temp4}}">
+                <block wx:if="{{liveDetail.liveStatus == 1}}">
+                    <view class="{{styles.liveLeftText}}">
+                        <image class="{{styles.imgStyle}}" src="{{Assets.my.shopgif}}"></image><text>预告</text>
+                    </view>
+                </block>
+                <block wx:if="{{liveDetail.liveStatus == 2}}">
+                    <view class="{{styles.liveLeftText_livemes}}">
+                        <image class="{{styles.imgStyle}}" src="{{Assets.my.shopgif}}"></image><text>{{liveMes == 0 ? "直播中" : '主播暂时离开'}}</text>
+                    </view>
+                </block>
+                <block wx:if="{{liveDetail.liveStatus == 1}}">
+                    <view class="{{styles.liveRightText}}">{{anonymousState__temp5}}开播</view>
+                </block>
+                <block wx:if="{{liveDetail.liveStatus == 2}}">
+                    <view class="{{styles.liveRightText}}">{{(liveDetail.viewCount || 0) + '人正在观看'}}</view>
+                </block>
+            </view>
+            <block wx:if="{{liveDetail.liveStatus == 1}}">
+                <view class="{{styles.pre_time}}" style="{{anonymousState__temp6}}">
+                    <block wx:if="{{liveHad == 1}}">
+                        <view class="{{styles.pre_time_button}}">距离开播还有{{timeCount}}</view>
+                    </block>
+                </view>
+            </block>
+        </view>
+        <scroll-view class="{{styles.shop_list}}" scroll-y="{{true}}" scroll-with-animation="{{true}}" bindscroll="onScroll">
+            <view class="{{styles.live_style_top}}"></view>
+            <view class="{{styles.live_shop_mes}}">
+                <view class="{{styles.box_Top}}">
+                    <view class="{{styles.head_top}}">
+                        <view class="{{styles.head_left}}">
+                            <image class="{{styles.head_left_img}}" src="{{anonymousState__temp7}}"></image>
+                        </view>
+                        <view class="{{styles.head_right}}">{{companyMes.shopName}}</view>
+                    </view>
+                    <view class="{{styles.head_bottom}}">
+                        <view class="{{styles.live_line}}"></view>
+                        <view class="{{styles.live_title}}">
+                            <ellipsis>{{liveDetail.name}}</ellipsis>
+                        </view>
+                    </view>
+                </view>
+                <view style="{{anonymousState__temp8}}">
+                    <view class="{{styles.eveInner}}" wx:key="id" wx:for="{{loopArray70}}" wx:for-item="v" wx:for-index="_anonIdx2">
+                        <view class="{{styles.leftInner}}">
+                            <image class="{{styles.leftInnerImg}}" src="{{v.$loopState__temp10}}" alt=""></image>
+                        </view>
+                        <view class="{{styles.RightInner}}">
+                            <view class="{{styles.titleInner}}">
+                                <ellipsis compid="{{v.$compid__173}}">{{v.$original.itemTitle}}</ellipsis>
+                            </view>
+                            <view class="{{styles.priceInner}}">
+                                <block wx:if="{{!(liveDetail.liveStatus == 1)}}">
+                                    <view class="{{styles.priceMes}}"><text class="{{styles.priLogo}}">直播间价格：</text>
+                                        <block wx:if="{{liveDetail.liveStatus == 1}}"><text class="{{styles.priStyle}}">???</text>
+                                        </block>
+                                        <block wx:if="{{liveDetail.liveStatus == 2}}"><text class="{{styles.priStyle}}">¥{{v.$original.minTradePrice}}</text>
+                                        </block>
+                                    </view>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="{{styles.share_item_style}}">
+            <block wx:if="{{liveDetail.liveStatus == 1}}">
+                <button open-type="{{mark ? 'share' : ''}}" class="{{styles.share_item_Button}}" bindtap="anonymousFunc0">分享直播间预告</button>
+            </block>
+            <block wx:if="{{liveDetail.liveStatus == 2}}">
+                <view class="{{styles.share_item_Button_enter}}" bindtap="anonymousFunc1">{{liveMes == 0 ? '进入直播间' : ' 主播暂时离开'}}</view>
+            </block>
+        </view>
+    </view>
+</block>

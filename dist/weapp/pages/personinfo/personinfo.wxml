@@ -1,0 +1,17 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.list + ' last'}}">
+            <view class="{{styles.cellTitle}}">头像</view>
+            <view class="{{styles.head_img}}">
+                <image src="{{anonymousState__temp}}" class="{{styles.user_photo}}"></image>
+                <at-image-picker compid="{{$compid__116}}"></at-image-picker>
+            </view>
+            <view class="{{'iconfont ' + styles.icon}}"></view>
+        </view>
+        <view class="{{styles.list + ' last'}}" bindtap="enterEdit">
+            <view class="{{styles.cellTitle}}">昵称</view>
+            <view class="{{styles.cellTitle + ' ' + styles.nickname}}">{{formData.nickName}}</view>
+            <view class="{{'iconfont ' + styles.icon}}"></view>
+        </view>
+    </view>
+</block>

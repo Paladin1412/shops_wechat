@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.empty}}" data-msg="{{msg}}">
+        <image class="{{styles.empty_img}}" src="{{Assets.common[emptyImgName]}}" mode="widthFix"></image>
+    </view>
+</block>

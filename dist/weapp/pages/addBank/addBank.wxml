@@ -1,0 +1,32 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.out}}">
+        <view class="{{styles.back}}"></view>
+        <view class="{{styles.container}}">
+            <view class="{{styles.form_box}}">
+                <view class="{{styles.list + ' last'}}">
+                    <view class="{{styles.label_box}}"><text class="{{styles.symbol}}">*</text><text class="{{styles.name}}">真实姓名</text>
+                    </view>
+                    <input class="{{styles.insert}}" type="text" maxlength="{{10}}" bindblur="scroll" placeholder="请输入真实姓名" value="{{userName}}" bindinput="anonymousFunc0" />
+                </view>
+                <view class="{{styles.list + ' last'}}">
+                    <view class="{{styles.label_box}}"><text class="{{styles.symbol}}">*</text><text class="{{styles.name}}">银行卡号</text>
+                    </view>
+                    <input class="{{styles.insert}}" type="number" maxlength="{{19}}" placeholder="请输入银行卡号" bindblur="getBankNum" value="{{bankNum}}" bindinput="anonymousFunc1" />
+                </view>
+                <view class="{{styles.list_bank + ' last'}}">
+                    <view class="{{styles.label_box}}">
+                        <view class="{{styles.bank_title}}">所属银行</view>
+                    </view>
+                    <view style="{{anonymousState__temp}}">{{bankName}}</view>
+                </view>
+            </view>
+            <view class="{{styles.mes}}">*请添加一张您本人的银行卡(借记卡)用于提现，不支持信用卡</view>
+            <block wx:if="{{userName && bankNum && bankName}}">
+                <view class="{{styles.bind_btn}}" bindtap="getBind">绑定</view>
+            </block>
+            <block wx:if="{{!userName || !bankNum || !bankName}}">
+                <view class="{{styles.bind_btn + ' ' + styles.gray}}">绑定</view>
+            </block>
+        </view>
+    </view>
+</block>

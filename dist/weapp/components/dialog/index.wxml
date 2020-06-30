@@ -1,0 +1,11 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.dialog_box}}">
+        <view class="{{styles.box}}">
+            <view class="{{styles.content + ' last'}}">{{content}}</view>
+            <view class="{{styles.btn_box}}">
+                <view class="{{styles.btn + ' ' + styles.after}}" bindtap="cancle">{{cancleText}}</view>
+                <view class="{{styles.btn + ' ' + styles.red}}" bindtap="ok">{{okText}}</view>
+            </view>
+        </view>
+    </view>
+</block>

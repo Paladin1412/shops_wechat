@@ -1,0 +1,1 @@
+{"usingComponents":{"at-noticebar":"../../npm/taro-ui/dist/weapp/components/noticebar/index","at-input":"../../npm/taro-ui/dist/weapp/components/input/index","at-float-layout":"../../npm/taro-ui/dist/weapp/components/float-layout/index"},"navigationBarTitleText":"提现","navigationStyle":"custom","enablePullDownRefresh":false,"disableScroll":true}

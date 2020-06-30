@@ -1,0 +1,29 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.listContainer}}">
+        <list-view id="bafzz" compid="{{$compid__191}}">
+            <view class="{{styles.firInner}}">
+                <view class="{{styles.turnList}}">
+                    <view class="{{styles.turn_Data_List}}" wx:key="$loopState__temp3" wx:for="{{loopArray83}}" wx:for-item="v" wx:for-index="index">
+                        <view class="{{styles.fixed_style}}" bindtap="anonymousFunc0" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey}}">
+                            <image class="{{styles.fixed_style_img}}" src="{{v.$original.adverImgUrl}}"></image>
+                            <view class="{{styles.liveText}}">
+                                <view class="{{styles.liveLeftText + ' ' + styles.turnLeftText}}">
+                                    <image class="{{styles.imgStyle}}" src="{{Assets.my.shopgif}}"></image><text>回放</text>
+                                </view>
+                            </view>
+                            <view class="{{styles.bot_style}}">
+                                <view class="{{styles.liveRightText}}">{{(v.$original.viewCount || 0) + '人观看过'}}</view>
+                                <ellipsis compid="{{v.$compid__190}}">{{v.$original.name}}</ellipsis>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view slot="empty">
+                <view class="{{styles.empty_box}}">
+                    <empty></empty>
+                </view>
+            </view>
+        </list-view>
+    </view>
+</block>

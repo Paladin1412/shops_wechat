@@ -1,0 +1,20 @@
+/**
+ * @Author: limin.zhang
+ * @Email: limin.zhang@jdxiaokang.com
+ * @Update: 2020-04-14 16:25:25
+ * @Description: 用户协议
+ */
+.index-module__container___2fJfJ {
+  color: #333;
+  font-size: 22rpx;
+  padding: 32rpx 0 60rpx;
+}
+.index-module__title___3WvfD {
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 24rpx 0;
+}
+.index-module__content___3ideX {
+  line-height: 1.5;
+  text-indent: 40rpx;
+}

@@ -1,0 +1,228 @@
+<block wx:if="{{$taroCompReady}}">
+    <block wx:if="{{!statusBarHeight}}">
+        <view></view>
+    </block>
+    <view class="{{styles.allInner + ' ' + (shopList.length == 0 && isGoodsRequested ? styles.noLoaded : '')}}" wx:else>
+        <view class="{{'' + styles.header}}" style="{{anonymousState__temp}}">
+            <view class="{{'' + styles.headerInner}}" style="{{anonymousState__temp2}}">
+                <view class="{{styles.headerTitle}}">康小铺</view>
+                <image bindtap="backToHome" class="{{styles.indexBtn + ' no-loading'}}" src="{{Assets.common.indexBtn}}"></image>
+            </view>
+        </view>
+        <view class="{{styles.listContainer}}">
+            <list-view id="fczzz" compid="{{$compid__98}}">
+                <view style="{{anonymousState__temp5}}" class="{{styles.topInner}}">
+                    <view class="{{styles.indexInner}}">
+                        <view class="{{styles.titleTwoInner}}">
+                            <view class="{{styles.headInner}}">
+                                <image class="{{'' + styles.headInnerImg}}" src="{{anonymousState__temp6}}" alt=""></image>
+                            </view>
+                            <view class="{{styles.logoImg}}">
+                                <view class="{{styles.leftText}}">
+                                    <view class="{{styles.shopName}}">
+                                        <ellipsis compid="{{$compid__99}}">
+                                            <block>
+                                                <block wx:if="{{companyMes.shopName}}">{{companyMes.shopName}}</block>
+                                                <block wx:else>
+                                                    <view></view>
+                                                </block>
+                                            </block>
+                                        </ellipsis>
+                                    </view>
+                                </view>
+                                <view class="{{styles.bottomContainer}}">
+                                    <image class="{{styles.logoImgMes + ' no-loading'}}" src="{{Assets.other.indexJD}}"></image>
+                                    <view class="{{styles.fans}}">粉丝 {{companyMes.memberNum || 0}}</view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="{{styles.priceTwoInner}}" bindtap="anonymousFunc0">
+                            <view class="{{styles.shareLabel}}">分享店铺</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="{{styles.scroll_body}}">
+                    <block wx:if="{{noLive == 1}}">
+                        <view>
+                            <swiper style="{{anonymousState__temp7}}" bindchange="anonymousFunc1">
+                                <swiper-item wx:key="$loopState__temp9" wx:for="{{loopArray42}}" wx:for-item="v" wx:for-index="index">
+                                    <block wx:if="{{!v.$original.supportPlayBack}}">
+                                        <view class="{{styles.liveStyle}}" bindtap="anonymousFunc2" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey}}">
+                                            <view class="{{styles.liveLeft}}">
+                                                <image class="{{styles.imgTopStyle + ' no-loading'}}" src="{{v.$loopState__temp11}}"></image>{{v.$loopState__temp13}}
+                                                <block wx:if="{{v.$original.isReservation == 0}}">
+                                                    <view class="{{styles.liveText}}">
+                                                        <view class="{{styles.liveLeftText}}">
+                                                            <image class="{{styles.imgStyle + ' no-loading'}}" src="{{Assets.my.shopgif}}"></image><text>{{v.$original.streamStatus == 0 ? '直播中' : '主播已离开'}}</text>
+                                                        </view>
+                                                        <block wx:if="{{!(v.$original.viewCount == 0)}}">
+                                                            <view class="{{styles.liveRightText}}">{{v.$original.viewCount || 0}}人观看</view>
+                                                        </block>
+                                                    </view>
+                                                </block>
+                                                <block wx:if="{{v.$original.isReservation != 0}}">
+                                                    <view class="{{styles.liveText}}">
+                                                        <view class="{{styles.liveLeftText_pre}}"><text><block><block wx:if="{{v.$original.liveStatus !== 2}}">{{'直播预告'}}</block><block wx:else><view></view></block></block></text>
+                                                        </view>
+                                                        <view class="{{styles.liveRightText}}">{{v.$loopState__temp15}}</view>
+                                                    </view>
+                                                </block>
+                                            </view>
+                                            <view class="{{styles.liveRight}}">
+                                                <view class="{{styles.topHead}}">{{v.$original.name}}</view>
+                                                <view class="{{styles.botHead}}">
+                                                    <view class="{{styles.eveImg}}" wx:key="$loopState__temp17" wx:for="{{v.$anonymousCallee__10}}" wx:for-item="vs" wx:for-index="inx">
+                                                        <image class="{{styles.eveImg_mes}}" src="{{vs.$loopState__temp19}}"></image>
+                                                        <block wx:if="{{inx === v.$original.showItemList.length - 1}}">
+                                                            <view class="{{styles.eveNum}}">
+                                                                <view class="{{styles.numText}}">{{v.$original.itemCount < 100 ? v.$original.itemCount : '99+'}}</view>
+                                                                <view class="{{styles.numText}}">宝贝</view>
+                                                            </view>
+                                                        </block>
+                                                    </view>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </block>
+                                    <block wx:if="{{v.$original.supportPlayBack}}">
+                                        <view class="{{styles.liveStyle}}" bindtap="goBackLiveList">
+                                            <image class="{{styles.imgMes}}" src="{{v.$original.adverImgUrl}}"></image>
+                                        </view>
+                                    </block>
+                                </swiper-item>
+                            </swiper>
+                            <view class="{{styles.pro_style}}">
+                                <view class="{{styles.progress_mes}}" style="{{anonymousState__temp20}}">
+                                    <view class="{{styles.eveProess}}" style="{{anonymousState__temp21}}"></view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                    <block wx:if="{{turnLiveList.length !== 0}}">
+                        <view class="{{styles.turnLive}}">
+                            <view class="{{'' + styles.dailytMes_fir}}">
+                                <view class="{{styles.turnLive_mes}}">
+                                    <view class="{{styles.left_Point_img}}">
+                                        <image class="{{styles.leftpoint_Img + ' no-loading'}}" src="{{Assets.common.turnImg}}"></image>
+                                    </view>
+                                    <view class="{{styles.rightText}}">推荐直播</view>
+                                </view>
+                                <block wx:if="{{turnLiveList.length > 2}}">
+                                    <view class="{{styles.look_more_style}}" bindtap="lookMoreMes"><text class="{{styles.look_More}}">查看更多</text>
+                                        <view class="{{'iconfont icongengduo ' + styles.icon_style}}"></view>
+                                    </view>
+                                </block>
+                            </view>
+                            <view class="{{styles.turnList}}">
+                                <block wx:if="{{index < 2}}" wx:for="{{loopArray43}}" wx:for-item="v" wx:for-index="index" wx:key="$loopState__temp23">
+                                    <view class="{{styles.turn_Data_List}}">
+                                        <view class="{{styles.fixed_style}}" bindtap="anonymousFunc3" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey2}}">
+                                            <image class="{{styles.fixed_style_img}}" src="{{v.$original.adverImgUrl}}"></image>
+                                            <view class="{{styles.bgGradient}}"></view>
+                                            <view class="{{styles.liveText}}">
+                                                <block>
+                                                    <block wx:if="{{v.$original.liveStatus == 2}}">
+                                                        <view class="{{styles.liveLeftText + ' ' + styles.turnLeftText}}">
+                                                            <image class="{{styles.imgStyle + ' no-loading'}}" src="{{Assets.my.shopgif}}"></image><text>{{v.$original.streamStatus == 0 ? '直播中' : '主播已离开'}}</text>
+                                                        </view>
+                                                    </block>
+                                                    <block wx:else>
+                                                        <view class="{{styles.liveLeftText + ' ' + styles.preLeftText}}"><text><block><block wx:if="{{v.$original.liveStatus !== 2}}">{{'直播预告'}}</block><block wx:else><view></view></block></block></text>
+                                                        </view>
+                                                    </block>
+                                                </block>
+                                            </view>
+                                            <view class="{{styles.bot_style}}">
+                                                <ellipsis compid="{{v.$compid__95}}">
+                                                    <block wx:if="{{v.$original.liveStatus == 1}}">
+                                                        <view class="{{styles.liveRightText}}">{{v.$loopState__temp25}}开播</view>
+                                                    </block>
+                                                    <block wx:if="{{v.$original.liveStatus == 2 && v.$original.viewCount != 0}}">
+                                                        <view class="{{styles.liveRightText + ' ' + styles.turnLiveLabel}}">{{(v.$original.viewCount || 0) + '人正在观看'}}</view>
+                                                    </block>
+                                                </ellipsis>
+                                                <ellipsis compid="{{v.$compid__96}}">{{v.$original.name}}</ellipsis>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </block>
+                            </view>
+                        </view>
+                    </block>
+                    <view class="{{styles.firInner}}">
+                        <view class="{{'' + styles.dailytMes_sec}}">
+                            <view class="{{styles.left_Point_img}}">
+                                <image class="{{styles.leftpoint_Img + ' no-loading'}}" src="{{Assets.home.todayrot}}"></image>
+                            </view>
+                            <view class="{{styles.rightText}}">今日爆品</view>
+                        </view>
+                        <view class="{{styles.eveInner}}" wx:key="id" bindtap="anonymousFunc4" wx:for="{{loopArray44}}" wx:for-item="v" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey3}}">
+                            <view class="{{styles.topContent}}">
+                                <image class="{{styles.leftInner}}" src="{{v.$loopState__temp27}}" alt=""></image>
+                                <view class="{{styles.RightInner}}">
+                                    <view class="{{styles.titleInner}}">
+                                        <ellipsis compid="{{v.$compid__97}}">{{v.$original.itemTitle}}</ellipsis>
+                                    </view>
+                                    <view class="{{styles.sharePrice}}">
+                                        <block wx:if="{{!(shopLevel == 1)}}">
+                                            <block wx:if="{{v.$original.maxShareFee != 0}}">
+                                                <view class="{{styles.sharePriceInner}}">分享赚{{v.$original.maxShareFee}}元</view>
+                                            </block>
+                                        </block>
+                                    </view>
+                                    <view class="{{styles.priceInner}}">
+                                        <view class="{{styles.priceMes}}"><text class="{{styles.priLogo}}">¥</text><text class="{{styles.priStyle}}">{{v.$original.minTradePrice}}</text>
+                                            <block wx:if="{{v.$original.minScribingPrice}}"><text class="{{styles.botStyle}}">¥ {{v.$original.minScribingPrice}}</text>
+                                            </block>
+                                        </view>
+                                    </view>
+                                    <view class="{{styles.twoButton}}">
+                                        <view class="{{styles.shareButton}}">分享</view>
+                                        <view class="{{styles.getButton}}">抢购</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <block wx:if="{{shopList.length == 0 && isGoodsRequested}}">
+                            <view class="{{styles.nogoodsContainer}}">
+                                <image class="{{styles.nogoodsImg}}" src="{{Assets.goods.defalutNoGoods}}"></image>
+                                <view class="{{styles.nogoodsLabel}}">这个小店还没上新过商品呢...</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view slot="empty">
+                    <view class="{{styles.empty_box}}">
+                        <empty></empty>
+                    </view>
+                </view>
+            </list-view>
+        </view>
+        <view class="{{styles.share_popup + ' ' + (isOpenShare ? styles.visibility : null)}}" bindtap="anonymousFunc5">
+            <view class="{{styles.share_inner}}" catchtap="stopPropagation">
+                <view class="{{styles.share_title + ' last'}}">分享店铺到</view>
+                <view class="{{styles.share_content}}">
+                    <share-tool id="fgzzz" compid="{{$compid__100}}"></share-tool>
+                    <view class="{{styles.cancalItem}}">
+                        <view class="{{styles.cancalBtn}}" bindtap="anonymousFunc6">取消</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <collectmodal id="fhzzz"></collectmodal>
+        <view class="{{styles.upgrade_tip}}">
+            <at-modal compid="{{$compid__101}}">
+                <block wx:if="{{dialogGrade == 1}}">
+                    <image class="{{styles.silverImg}}" src="{{Assets.common.silverDialog}}" bindtap="onCloseUpgrade"></image>
+                </block>
+                <block wx:if="{{dialogGrade == 2}}">
+                    <image class="{{styles.img}}" src="{{Assets.common.goldDialog}}" bindtap="onCloseUpgrade"></image>
+                </block>
+                <block wx:if="{{dialogGrade == 3}}">
+                    <image class="{{styles.img}}" src="{{Assets.common.diamondDialog}}" bindtap="onCloseUpgrade"></image>
+                </block>
+                <view class="{{'iconfont iconguanbi1 ' + styles.close}}" bindtap="onCloseUpgrade"></view>
+            </at-modal>
+        </view>
+    </view>
+</block>

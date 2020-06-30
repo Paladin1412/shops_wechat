@@ -1,0 +1,188 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{'' + styles.imgturn}}" style="{{anonymousState__temp}}">
+        <view class="{{styles.top_box + '  ' + (showTop === true ? styles.top_box_active : null)}}">
+            <view class="{{styles.top_inner}}" style="{{anonymousState__temp2}}">
+                <block wx:if="{{!(pageFrom == 'goodsdetail')}}">
+                    <image src="{{anonymousState__temp3}}" class="{{styles.back_img + ' no-loading'}}" bindtap="goBack"></image>
+                </block>
+                <block wx:if="{{!(pageFrom == 'goodsdetail')}}">
+                    <view class="{{'iconfont ' + styles.go_back_icon}}" bindtap="goBack"></view>
+                </block>
+                <view class="{{styles.font}}">商品详情</view>
+            </view>
+        </view>
+        <scroll-view lower-threshold="{{0}}" upper-threshold="{{0}}" scroll-y="{{true}}" scroll-with-animation="{{true}}" class="{{styles.content_box}}" bindscroll="onScroll">
+            <view class="{{styles.bannerImg}}">
+                <swiper class="{{styles.bannerMes}}" indicator-color="#999" indicator-active-color="#333" bindanimationfinish="anonymousFunc0" autoplay="{{true}}">
+                    <swiper-item wx:for="{{loopArray46}}" wx:for-item="item" wx:for-index="_anonIdx2">
+                        <view class="{{styles.banner_img_items}}" style="{{item.$loopState__temp5}}"></view>
+                    </swiper-item>
+                </swiper>
+                <view class="{{styles.numPoint}}">{{currentIndex}}/{{bannerList.length}}</view>
+            </view>
+            <view class="{{styles.detailprice}}">
+                <view class="{{styles.topMes}}">
+                    <view class="{{styles.topleft}}">
+                        <block wx:if="{{defalutImgMes && defalutImgMes.agentVipTradePrice}}">
+                            <view><text class="{{styles.priceLogo}}">¥</text><text class="{{styles.priceNum}}">{{defalutImgMes.agentVipTradePrice || ''}}</text>
+                            </view>
+                        </block>
+                        <block wx:if="{{level >= 2 && defalutImgMes.maxFee > 0}}">
+                            <view style="{{anonymousState__temp6}}"><text class="{{styles.getPrice}}">赚¥{{defalutImgMes && defalutImgMes.maxFee}}</text>
+                            </view>
+                        </block>
+                    </view>
+                    <view><text class="{{styles.originPrice + ' ' + styles.volume_text}}">已售：</text><text class="{{styles.originpriceNum + ' ' + styles.volume_num}}">{{defalutImgMes && (defalutImgMes.saleTotal ? defalutImgMes.saleTotal : 0)}}</text>
+                    </view>
+                </view>
+                <view class="{{styles.goodsName}}">{{goodsDetail.itemTitle}}</view>
+            </view>
+            <block wx:if="{{tagList && tagList.length > 0}}">
+                <view class="{{styles.detailMes}}">
+                    <block wx:if="{{v.$original[1].length !== 0}}" wx:for="{{loopArray47}}" wx:for-item="v" wx:for-index="index" wx:key="$loopState__temp8">
+                        <view class="{{styles.inline_style}}">
+                            <view class="{{styles.label}}">{{v.$original[0]}}：</view>
+                            <view class="{{styles.inline_mes}}" wx:key="inx" wx:for="{{v.$original[1] || []}}" wx:for-item="item" wx:for-index="inx">{{item}}
+                                <block wx:if="{{!(v.$original[1].length - 1 == inx)}}">
+                                    <view class="{{styles.backpoint}}"></view>
+                                </block>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </block>
+            <block wx:if="{{noArea && noArea.length > 0}}">
+                <view class="{{styles.mes_item}}" bindtap="anonymousFunc1">
+                    <view class="{{styles.left}}">
+                        <view class="{{styles.title}}">不发货地区</view>
+                        <view class="{{styles.area}}">
+                            <ellipsis compid="{{$compid__110}}">{{anonymousState__temp9}}</ellipsis>
+                        </view>
+                    </view>
+                    <view class="{{'iconfont ' + styles.icon_more}}"></view>
+                </view>
+            </block>
+            <block wx:if="{{imgList.length > 0}}">
+                <view class="{{styles.detail_box}}">
+                    <view class="{{styles.titleGoods}}">商品详情</view>
+                    <view class="{{styles.allImg}}">
+                        <image wx:key="$loopState__temp11" mode="widthFix" src="{{v.$loopState__temp13}}" class="{{styles.img_item}}" alt="{{v.$original.name}}" wx:for="{{loopArray48}}" wx:for-item="v" wx:for-index="index"></image>
+                    </view>
+                </view>
+            </block>
+            <block wx:if="{{productList && productList.length > 0}}">
+                <view class="{{styles.titleGoods + ' ' + styles.tuijian_buy}}">大家都在买</view>
+            </block>
+            <view>
+                <item compid="{{$compid__111}}"></item>
+            </view>
+        </scroll-view>
+        <block wx:if="{{defalutImgMes && defalutImgMes.agentStatus == 'DOWN_SALES'}}">
+            <view class="{{styles.off_notice}}">该商品已下架，非常抱歉</view>
+        </block>
+        <block wx:if="{{defalutImgMes && defalutImgMes.agentStatus == 'INVALID'}}">
+            <view class="{{styles.off_notice}}">该商品已失效，非常抱歉</view>
+        </block>
+        <view class="{{styles.footbar}}">
+            <view class="{{styles.leftFootbar}}">
+                <view class="{{styles.btnfooter}}" bindtap="anonymousFunc2">
+                    <view class="iconfont icondianpuicon" style="{{anonymousState__temp14}}"></view>
+                    <view>首页</view>
+                </view>
+                <block wx:if="{{defalutImgMes && defalutImgMes.agentStatus == 'ON_SALES'}}">
+                    <view class="{{styles.btnfooter}}" bindtap="anonymousFunc3">
+                        <view class="{{'iconfont ' + (collectStatus ? 'iconyishoucang' : 'iconshoucang') + ' '}}" style="{{anonymousState__temp15}}"></view>
+                        <view>收藏</view>
+                    </view>
+                </block>
+                <view class="{{styles.btnfooter}}" bindtap="anonymousFunc4">
+                    <view class="iconfont iconzixun" style="{{anonymousState__temp16}}"></view>
+                    <view>咨询</view>
+                </view>
+            </view>
+            <block wx:if="{{defalutImgMes && defalutImgMes.agentStatus == 'ON_SALES'}}">
+                <view class="{{styles.rightFootbar}}">
+                    <block wx:if="{{defalutImgMes && defalutImgMes.agentStatus == 'ON_SALES'}}">
+                        <view class="{{styles.leftButton}}" bindtap="anonymousFunc11">立即购买</view>
+                    </block>
+                    <view class="{{styles.rightButton}}" bindtap="anonymousFunc5">分享赚</view>
+                </view>
+            </block>
+            <block wx:if="{{defalutImgMes && defalutImgMes.agentStatus != 'ON_SALES'}}">
+                <view class="{{styles.right_btn}}" bindtap="goIndex">
+                    <view>进首页选商品</view>
+                </view>
+            </block>
+        </view>
+        <view class="{{styles.buy_layout}}">
+            <at-float-layout compid="{{$compid__112}}">
+                <view class="{{styles.icon_box}}">
+                    <view class="{{'iconfont ' + styles.icon_close}}" bindtap="anonymousFunc7"></view>
+                </view>
+                <scroll-view scroll-y="{{true}}" class="{{styles.openInner}}">
+                    <view class="{{styles.pricePhoto}}">
+                        <view class="{{styles.leftPriceImg}}" style="{{anonymousState__temp18}}"></view>
+                        <view class="{{styles.rightPriceBtn}}">
+                            <view><text class="{{styles.priceLogo}}">¥</text><text class="{{styles.priceNum}}">{{defalutImgMes.agentVipTradePrice || ''}}</text>
+                            </view>
+                            <view class="{{styles.selectColor}}">已选：{{anonymousState__temp19}}</view>
+                        </view>
+                    </view>
+                    <view wx:key="$loopState__temp21" class="{{styles.eveMes}}" wx:for="{{loopArray49}}" wx:for-item="v" wx:for-index="index">
+                        <view class="{{styles.titleMes}}">{{v.$original.specsName}}</view>
+                        <view class="{{styles.spaceEve}}">
+                            <block wx:if="{{v.$original.propertyValueList}}">
+                                <view wx:key="$loopState__temp23" class="{{styles.eveStyle + ' ' + (defalutDetail && defalutDetail[index].propertyValue == v1.$original ? styles.activeColor : '')}}" bindtap="anonymousFunc8" wx:for="{{v.$anonymousCallee__12}}" wx:for-item="v1" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{v1._$indexKey}}">{{v1.$original}}</view>
+                            </block>
+                        </view>
+                    </view>
+                    <view class="{{styles.eveMes}}">
+                        <view class="{{styles.titleMes}}">数量</view>
+                        <view class="{{styles.spaceEve}}">
+                            <at-input-number compid="{{$compid__113}}"></at-input-number>
+                        </view>
+                    </view>
+                </scroll-view>
+                <view class="{{styles.button_box}}">
+                    <block wx:if="{{defalutImgMes.stockQty > 0}}">
+                        <view class="{{styles.buyButton}}" bindtap="hrefOdwnOrder">购买</view>
+                    </block>
+                    <block wx:if="{{defalutImgMes.stockQty <= 0}}">
+                        <view class="{{styles.buyButton + ' ' + styles.gray}}">此规格暂时无货</view>
+                    </block>
+                </view>
+            </at-float-layout>
+        </view>
+        <view class="{{styles.share_popup + ' ' + (isOpenShare ? styles.visibility : null)}}" bindtap="onCancalItem">
+            <view class="{{styles.share_inner}}" catchtap="stopPropagation">
+                <image class="{{styles.popup_header}}" src="{{anonymousState__temp24}}"></image>
+                <view class="{{styles.popup_body}}">
+                    <view class="{{styles.getMoney}}">
+                        <view class="{{styles.money_sign}}">￥</view>
+                        <view class="{{styles.money_num}}">{{defalutImgMes && defalutImgMes.agentVipTradePrice}}</view>
+                        <block wx:if="{{defalutImgMes && defalutImgMes.maxFee !== 0}}">
+                            <view class="{{styles.getPrice}}"><text>好友成单最高可赚</text><text class="{{styles.sign}}">￥</text><text>{{defalutImgMes && defalutImgMes.maxFee}}</text>
+                            </view>
+                        </block>
+                    </view>
+                    <view class="{{styles.share_title}}">{{goodsDetail.itemTitle}}</view>
+                    <view>
+                        <share compid="{{$compid__114}}"></share>
+                    </view>
+                    <view class="{{styles.cancalItem}}">
+                        <view class="{{styles.cancalBtn}}" bindtap="onCancalItem">取消</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="{{styles.noArea_box}}">
+            <at-float-layout compid="{{$compid__115}}">
+                <view class="{{styles.item}}" wx:for="{{loopArray50}}" wx:for-item="item" wx:for-index="_anonIdx4">
+                    <view class="{{styles.title}}">{{item.$original.areaName}}
+                        <view class="{{styles.mes}}">{{item.$loopState__temp27}}</view>
+                    </view>
+                </view>
+            </at-float-layout>
+        </view>
+    </view>
+</block>

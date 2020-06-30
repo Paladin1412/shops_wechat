@@ -1,0 +1,10 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.list}}" wx:key="$loopState__temp2" bindtap="anonymousFunc0" wx:for="{{loopArray69}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
+            <view style="{{item.$loopState__temp4}}" class="{{styles.product_image}}" alt="{{item.$original.itemTitle}}"></view>
+            <view class="{{styles.product_title}}">{{item.$original.itemTitle}}</view>
+            <view class="{{styles.price_box}}"><text class="{{styles.symbol}}">¥</text><text class="{{styles.small_price}}">{{item.$original.minTradePrice || 0}}</text>
+            </view><text class="{{styles.tag}}">包邮</text>
+        </view>
+    </view>
+</block>

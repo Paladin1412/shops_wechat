@@ -1,0 +1,13 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.content}}">
+        <view class="{{styles.back}}"></view>
+        <view class="{{styles.pay_success}}">
+            <view class="{{styles.title}}">
+                <view class="iconfont"></view>
+                <view class="{{styles.status}}">提交成功</view>
+            </view>
+            <view class="{{styles.gray}}">您的售后申请已提交，正在等待审核...</view>
+            <view class="{{styles.goback}}" bindtap="goOrder">好的</view>
+        </view>
+    </view>
+</block>

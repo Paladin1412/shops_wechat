@@ -1,0 +1,260 @@
+/**
+ * @Author: cai.ping
+ * @Email: cai.ping@jdxiaokang.com
+ * @Update: 2020-02-24 12:09:48
+ * @Description: 订单提交界面
+ */
+page {
+  background-color: #f7f8fa;
+}
+page:before {
+  display: none;
+}
+.submission-module__container___2x8AC {
+  padding: 24rpx 32rpx;
+  font-family: ' ';
+}
+.submission-module__addres_box___1qBQj {
+  color: #676767;
+  font-size: 28rpx;
+  text-align: center;
+  padding: 40rpx 0;
+  line-height: 28rpx;
+  background: #fff;
+  border-radius: 12rpx;
+}
+.submission-module__addres_box___1qBQj .submission-module__icon___3tiSo {
+  display: block;
+  margin-bottom: 16rpx;
+}
+.submission-module__product_box___1a6el {
+  padding: 32rpx 24rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  margin-top: 24rpx;
+}
+.submission-module__product_box___1a6el .submission-module__title___2Ooa2 {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #323232;
+}
+.submission-module__product_box___1a6el .submission-module__title___2Ooa2 .submission-module__font___3j6y0 {
+  margin-left: 16rpx;
+}
+.submission-module__product_box___1a6el .submission-module__title___2Ooa2 .submission-module__icon_shop___PYgG7 {
+  font-size: 26rpx;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 24rpx;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__img___18T3M {
+  width: 178rpx;
+  height: 178rpx;
+  display: block;
+  margin-bottom: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  border-radius: 6rpx;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__info_right___2UHEL {
+  margin-left: 24rpx;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 16rpx;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__info_right___2UHEL .submission-module__item_line___JrzIw {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__info_right___2UHEL .submission-module__item_line___JrzIw .submission-module__info_title___2SBZW {
+  width: 290rpx;
+  display: block;
+  color: #333;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__info_right___2UHEL .submission-module__item_line___JrzIw .submission-module__num___2GVlX {
+  color: #666;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__info_right___2UHEL .submission-module__item_line___JrzIw .submission-module__recv___3UVL4 {
+  background: #feecea;
+  color: #f9482e;
+  padding: 2rpx 10rpx;
+  display: inline-block;
+  margin-top: 24rpx;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__info_right___2UHEL .submission-module__second___3hyC7 {
+  color: #c9c9c9;
+  margin-top: 17rpx;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__info_right___2UHEL .submission-module__all_price___1gy9J {
+  text-align: right;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 24rpx;
+  color: #343434;
+  margin-top: 42rpx;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__info_right___2UHEL .submission-module__all_price___1gy9J .submission-module__all_num___1_aqc {
+  font-weight: bold;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+.submission-module__product_box___1a6el .submission-module__info_box___3A683 .submission-module__info_right___2UHEL .submission-module__count_box___1Y-oU {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20rpx;
+}
+.submission-module__transfee_box___1aG_B {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.submission-module__transfee_box___1aG_B .submission-module__red___2u0EM {
+  margin-left: 10rpx;
+}
+.submission-module__gray___1OWAP {
+  color: #c9c9c9;
+  font-size: 24rpx;
+  line-height: 28rpx;
+}
+.submission-module__red___2u0EM {
+  color: #f9482e;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+.submission-module__button_box___1J_gI {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: #fff;
+  width: 100%;
+}
+.submission-module__button_box___1J_gI .submission-module__content___25fFC {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 13rpx 32rpx 80rpx 32rpx;
+  font-size: 28rpx;
+}
+.submission-module__button_box___1J_gI .submission-module__content___25fFC .submission-module__red___2u0EM {
+  font-size: 32rpx;
+}
+.submission-module__button_box___1J_gI .submission-module__content___25fFC .submission-module__gray___1OWAP {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+.submission-module__button_box___1J_gI .submission-module__content___25fFC .submission-module__button___2Bsuz {
+  background: #f9482e;
+  border-radius: 36rpx;
+  color: #fff;
+  font-size: 28rpx;
+  padding: 16rpx 32rpx;
+  line-height: 40rpx;
+  font-weight: 500;
+}
+.submission-module__button_box___1J_gI .submission-module__content___25fFC .submission-module__gray_button___3AL1Y {
+  background: #dfdfdf;
+}
+.submission-module__item___Kcbqd {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 28rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  background: #fff;
+}
+.submission-module__item___Kcbqd .submission-module__left___1xO8_ {
+  width: calc(100% - 40rpx);
+  padding-right: 40rpx;
+  color: #333;
+}
+.submission-module__item___Kcbqd .submission-module__left___1xO8_ .submission-module__gray___1OWAP {
+  color: #333;
+  margin-top: 20rpx;
+  display: block;
+  line-height: 33rpx;
+  font-size: 24rpx;
+  text-align: left;
+}
+.submission-module__item___Kcbqd .submission-module__left___1xO8_ .submission-module__name_box___25ilT {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 40rpx;
+}
+.submission-module__item___Kcbqd .submission-module__left___1xO8_ .submission-module__name_box___25ilT .submission-module__name___2wNHs {
+  overflow: hidden;
+  display: inline-block;
+  text-align: left;
+  font-weight: 500;
+}
+.submission-module__item___Kcbqd .submission-module__left___1xO8_ .submission-module__name_box___25ilT .submission-module__tel___3TRCB {
+  margin-left: 20rpx;
+  font-weight: 600;
+}
+.at-input-number, .at-input-number__input, .at-input-number input {
+  border-color: #dfdfdf;
+}
+.at-input-number__btn-subtract, .at-input-number__btn-add {
+  font-size: 20rpx;
+  line-height: 20rpx;
+  padding: 5rpx;
+}
+.at-input-number__btn:not(.at-input-number--disabled) .at-input-number__btn-subtract, .at-input-number__btn:not(.at-input-number--disabled) .at-input-number__btn-add {
+  color: #666;
+}

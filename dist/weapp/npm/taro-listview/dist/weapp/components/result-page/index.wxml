@@ -1,0 +1,20 @@
+<block wx:if="{{$taroCompReady}}">
+    <view>
+        <block wx:if="{{showErrorText}}">
+            <view class="errorPage">
+                <view class="marginBottom30">啊哦，网络悄悄跑到外星球去了~</view>
+                <view class="button" bindtap="funPrivatebabzz">重新加载</view>
+            </view>
+        </block>
+        <block wx:if="{{showRenderError}}">
+            <slot name="error"></slot>
+        </block>
+        <block wx:if="{{showEmptyText}}">
+            <view class="noContentTips">
+                <image src="{{emptyImg}}" class="emptyBanner"></image>{{emptyText}}</view>
+        </block>
+        <block wx:if="{{showRenderEmpty}}">
+            <slot name="empty"></slot>
+        </block>
+    </view>
+</block>

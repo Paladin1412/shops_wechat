@@ -1,0 +1,29 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.out}}">
+        <view class="{{'' + styles.share_wx_box}}">
+            <at-modal compid="{{$compid__159}}">
+                <image src="{{Assets.other.arrow1}}" class="{{styles.arrow}}"></image>
+                <at-modal-content>
+                    <view class="{{styles.share_tip_box}}">
+                        <view class="{{styles.wx_shareicon}}">
+                            <view class="{{styles.icon_item}}">
+                                <view class="{{styles.icon_box}}">
+                                    <view class="iconfont"></view>
+                                </view>
+                                <view>发送给朋友</view>
+                            </view>
+                            <view class="{{styles.icon_item}}">
+                                <view class="{{styles.icon_box}}">
+                                    <view class="iconfont"></view>
+                                </view>
+                                <view>收藏</view>
+                            </view>
+                        </view>
+                        <view class="{{styles.big}}">微信内点击右上角就可以收藏店铺 分享给朋友和朋友圈了哦</view>
+                        <view class="{{styles.small}}">分享多多，收益多多</view>
+                    </view>
+                </at-modal-content>
+            </at-modal>
+        </view>
+    </view>
+</block>

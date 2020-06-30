@@ -1,0 +1,1 @@
+{"usingComponents":{"at-tabs":"../../npm/taro-ui/dist/weapp/components/tabs/index","at-tabs-pane":"../../npm/taro-ui/dist/weapp/components/tabs-pane/index","list-view":"../../npm/taro-listview/dist/weapp/components/list-view/index","empty":"../../components/empty/index"},"navigationBarTitleText":"康小铺","enablePullDownRefresh":false}

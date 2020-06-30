@@ -1,0 +1,196 @@
+/**
+ * @Author: cai.ping
+ * @Email: cai.ping@jdxiaokang.com
+ * @Update: 2020-02-24 16:40:32
+ * @Description: 地址新增/修改
+ */
+.edit-address-module__edit_box___3ITcY {
+  overflow: hidden;
+  padding: 0 24rpx;
+  background: #fff;
+}
+.edit-address-module__edit_box___3ITcY .at-input__title {
+  width: 152rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #333;
+  margin: 0;
+}
+.edit-address-module__edit_box___3ITcY .weui-input {
+  font-size: 28rpx;
+  height: 44rpx;
+}
+.edit-address-module__edit_box___3ITcY .at-input__input {
+  font-weight: bold;
+}
+.edit-address-module__edit_box___3ITcY .at-input {
+  padding: 24rpx 0;
+  margin-left: 0;
+}
+.edit-address-module__edit_box___3ITcY .at-input__container .placeholder {
+  font-size: 28rpx;
+  color: #b3b3b3;
+  font-weight: 400;
+}
+.edit-address-module__edit_box___3ITcY .at-switch {
+  margin-left: 0;
+}
+.edit-address-module__edit_box___3ITcY .at-switch__title {
+  font-size: 28rpx;
+}
+.edit-address-module__edit_box___3ITcY .at-switch::after {
+  display: none;
+}
+.edit-address-module__edit_box___3ITcY .weui-switch,
+.edit-address-module__edit_box___3ITcY .weui-switch-cp__box {
+  width: 88rpx;
+  height: 44rpx;
+  border-radius: 36rpx;
+}
+.edit-address-module__edit_box___3ITcY .weui-switch:after,
+.edit-address-module__edit_box___3ITcY .weui-switch-cp__box:after {
+  height: 33rpx;
+  width: 35rpx;
+  top: 3rpx;
+  left: 4rpx;
+  background-color: #ececec;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.edit-address-module__edit_box___3ITcY .weui-switch:before,
+.edit-address-module__edit_box___3ITcY .weui-switch-cp__box:before {
+  height: 44rpx;
+  width: 88rpx;
+}
+.edit-address-module__edit_box___3ITcY .weui-switch:checked,
+.edit-address-module__edit_box___3ITcY .weui-switch-cp__input:checked .weui-switch-cp__box {
+  border-color: #ff3013 !important;
+  background-color: #fff !important;
+}
+.edit-address-module__edit_box___3ITcY .at-input::after {
+  border: 0 solid #f0f0f0;
+  border-bottom-width: 1PX;
+}
+.edit-address-module__edit_box___3ITcY .at-form::after {
+  border: 0 solid #f0f0f0;
+  border-top-width: 1PX;
+}
+.edit-address-module__moren___3FjyY {
+  position: relative;
+}
+.edit-address-module__moren___3FjyY .weui-switch:after,
+.edit-address-module__moren___3FjyY .weui-switch-cp__box:after {
+  background-color: #ff3013;
+  background: #ff3013;
+  left: 9rpx;
+}
+.edit-address-module__switch___3fbwI {
+  position: relative;
+}
+.edit-address-module__area_content___yUXXq {
+  position: relative;
+  z-index: 1;
+  height: 106rpx;
+  padding-top: 34rpx;
+  width: 100%;
+}
+.edit-address-module__area_content___yUXXq .edit-address-module__icon_arrow___1e8Iv {
+  position: absolute;
+  right: 28rpx;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 18rpx;
+  color: #333;
+}
+.edit-address-module__area_content___yUXXq .edit-address-module__area_box___mNfjw {
+  position: absolute;
+  z-index: 999;
+  top: 23rpx;
+  left: 152rpx;
+  font-size: 28rpx;
+  width: 100%;
+  padding-right: 28rpx;
+}
+.edit-address-module__area_content___yUXXq .edit-address-module__area_box___mNfjw .iconfont {
+  position: absolute;
+  width: 95%;
+  text-align: right;
+  left: -250rpx;
+  padding-right: 28rpx;
+}
+.edit-address-module__show_area_box___27XWE {
+  width: 520rpx;
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-top: 10rpx;
+  color: #333;
+  font-weight: 500;
+}
+.edit-address-module__grayText___3KLz3 {
+  color: #b3b3b3;
+  font-weight: 400;
+}
+.edit-address-module__button_box___X4Wz2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 73rpx;
+  background: #fff;
+}
+.edit-address-module__button_box___X4Wz2 .at-button {
+  font-size: 32rpx;
+  line-height: 88rpx;
+  height: 88rpx;
+  background: #f9482e;
+  border-radius: 49rpx;
+  color: #fff;
+  border: 0;
+  width: 686rpx;
+  font-weight: 500;
+}
+.edit-address-module__del_address___2tZd8 {
+  font-size: 28rpx;
+  color: #f9482e;
+  line-height: 40rpx;
+  padding: 36rpx 0;
+  margin-top: 2rpx;
+}
+.edit-address-module__addressContainer___3ZU5D {
+  position: relative;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 32rpx 0;
+}
+.edit-address-module__addressContainer___3ZU5D .at-textarea {
+  padding: 0;
+  border-style: none;
+  font-size: 28rpx;
+}
+.edit-address-module__addressContainer___3ZU5D .at-textarea__counter {
+  display: none;
+}
+.edit-address-module__addressContainer___3ZU5D .at-textarea__textarea {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+}
+.edit-address-module__addressContainer___3ZU5D .placeholder {
+  font-size: 28rpx;
+  color: #b3b3b3;
+  font-weight: 400;
+}
+.edit-address-module__addressTitle___1HC90 {
+  width: 152rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.edit-address-module__textarea___1bxhb {
+  width: 500rpx;
+}

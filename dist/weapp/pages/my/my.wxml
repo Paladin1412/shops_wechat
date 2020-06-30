@@ -1,0 +1,196 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.top_back}}"></view>
+        <view class="{{styles.user_box}}" style="{{anonymousState__temp}}">
+            <button class="{{styles.reset_btn + ' ' + styles.user_box_inner}}" bindtap="onGotoModify">
+                <view class="{{styles.user_pic}}">
+                    <image src="{{anonymousState__temp2}}" class="{{styles.user_photo}}"></image>
+                </view>
+                <block wx:if="{{userInfo.token}}">
+                    <view class="{{styles.user_info}}">
+                        <view class="{{styles.desc}}"><text class="{{styles.name}}">{{userInfo.nickName}}</text>
+                            <block wx:if="{{memberLevel === 1}}">
+                                <view>
+                                    <image src="{{Assets.my.silver}}" class="{{styles.levelIcon + ' no-loading'}}"></image><text class="{{styles.levelText}}">白银会员</text>
+                                </view>
+                            </block>
+                            <block wx:if="{{memberLevel === 2}}">
+                                <view>
+                                    <image src="{{Assets.my.gold}}" class="{{styles.levelIcon + ' no-loading'}}"></image><text class="{{styles.levelText + ' ' + styles.goldLevelText}}">黄金会员</text>
+                                </view>
+                            </block>
+                            <block wx:if="{{memberLevel === 3}}">
+                                <view>
+                                    <image src="{{Assets.my.diamond}}" class="{{styles.levelIcon_diamond + ' no-loading'}}"></image><text class="{{styles.levelText + ' ' + styles.diamondLevelText}}">钻石会员</text>
+                                </view>
+                            </block>
+                        </view>
+                        <view class="{{styles.id}}">ID：{{userInfo.id}}-{{anonymousState__temp3}}</view>
+                    </view>
+                </block>
+                <block wx:if="{{!userInfo.token}}">
+                    <view class="{{styles.user_info}}">
+                        <view class="{{styles.name + ' ' + styles.nologinName}}">您好，请先登录</view>
+                    </view>
+                </block>
+                <view class="{{'iconfont icongengduo1 ' + styles.more}}"></view>
+            </button>
+            <block wx:if="{{memberLevel === 1 && !memberLevelInfo.invitationMemberNum && memberLevelInfo.nextMemberNeedInvitationNum}}">
+                <view class="{{styles.upgrade_container}}">
+                    <image src="{{Assets.my.silverBgNoInvite}}" class="{{styles.upgrade_img + ' ' + styles.silver_noinvite_img}}"></image>
+                    <view class="{{styles.upgradeHeader}}">
+                        <view class="{{styles.headerTitle}}">邀请{{memberLevelInfo.nextMemberNeedInvitationNum}}人注册即可升级为黄金会员</view>
+                        <view class="{{styles.headBtn}}" bindtap="showInvite">立即邀请</view>
+                    </view>
+                    <view class="{{styles.upgradeFooter}}">享受自购返佣和分享购物返佣权益</view>
+                </view>
+            </block>
+            <block wx:if="{{memberLevel === 1 && memberLevelInfo.invitationMemberNum && memberLevelInfo.nextMemberNeedInvitationNum}}">
+                <view class="{{styles.upgrade_container}}">
+                    <image src="{{Assets.my.silverBgInvited}}" class="{{styles.upgrade_img + ' ' + styles.silver_invited_img}}"></image>
+                    <view class="{{styles.upgradeHeader + ' ' + styles.headerPadding}}">
+                        <block wx:if="{{memberLevelInfo.invitationMemberNum}}">
+                            <view class="{{styles.percentInner}}" style="{{anonymousState__temp4}}">
+                                <image class="{{styles.innerBg + ' no-loading'}}" src="{{Assets.my.inviteNumBg}}"></image><text>{{memberLevelInfo.invitationMemberNum || 0}}</text>
+                            </view>
+                        </block>
+                        <at-progress compid="{{$compid__106}}"></at-progress>
+                        <view class="{{styles.headBtn + ' ' + styles.silverBtn}}" bindtap="showInvite">继续邀请</view>
+                    </view>
+                    <view class="{{styles.upgradeFooter + ' ' + styles.footerMargin}}">已邀请{{memberLevelInfo.invitationMemberNum}}人，再邀请{{memberLevelInfo.nextMemberNeedInvitationNum - memberLevelInfo.invitationMemberNum}}人就可以升级为黄金会员享受自购和分享购物返佣了</view>
+                </view>
+            </block>
+            <block wx:if="{{memberLevel === 2 && memberLevelInfo.nextMemberNeedInvitationNum}}">
+                <view class="{{styles.upgrade_container}}">
+                    <image src="{{Assets.my.goldBg}}" class="{{styles.upgrade_img + ' ' + styles.gold_img}}"></image>
+                    <view class="{{styles.upgradeHeader + ' ' + styles.headerPadding}}">
+                        <block wx:if="{{memberLevelInfo.invitationMemberNum}}">
+                            <view class="{{styles.percentInner}}" style="{{anonymousState__temp6}}">
+                                <image class="{{styles.innerBg + ' no-loading'}}" src="{{Assets.my.inviteNumBg}}"></image><text>{{memberLevelInfo.invitationMemberNum || 0}}</text>
+                            </view>
+                        </block>
+                        <at-progress compid="{{$compid__107}}"></at-progress>
+                        <view class="{{styles.headBtn + ' ' + styles.goldbtn}}" bindtap="showInvite">{{memberLevelInfo.invitationMemberNum ? '继续邀请' : '立即邀请'}}</view>
+                    </view>
+                    <view class="{{styles.upgradeFooter + ' ' + styles.goldFooter}}">已邀请{{memberLevelInfo.invitationMemberNum || 0}}人，再邀请{{memberLevelInfo.nextMemberNeedInvitationNum - memberLevelInfo.invitationMemberNum}}人就可以升级为钻石会员享受更高自购和分享购物返佣了</view>
+                </view>
+            </block>
+            <block wx:if="{{memberLevel === 3}}">
+                <view class="{{styles.upgrade_container}}">
+                    <image src="{{Assets.my.diamondBg}}" class="{{styles.upgrade_img + ' ' + styles.diamond_img}}"></image>
+                    <view class="{{styles.upgradeHeader + ' ' + styles.diamondHeader}}">
+                        <view class="{{styles.headerTitle + ' ' + styles.diamondTitle}}">您已尊享最高额自购、分享返佣</view>
+                        <view class="{{styles.headBtn + ' ' + styles.diamondbtn}}" bindtap="anonymousFunc0">查看会员</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <block wx:if="{{memberLevel == 2 || memberLevel == 3}}">
+            <view class="{{styles.account_info}}">
+                <view class="{{styles.whiteBg}}"></view>
+                <view class="{{styles.account_item}}" bindtap="anonymousFunc1">
+                    <view class="{{styles.account_price}}">{{profitDetail.totalIncome}}</view>
+                    <view class="{{styles.account_type}}">累计收入</view>
+                </view>
+                <view class="{{styles.account_item}}" bindtap="anonymousFunc2">
+                    <view class="{{styles.account_price}}">{{profitDetail.balanceAccount}}</view>
+                    <view class="{{styles.account_type}}">可提现</view>
+                </view>
+                <view class="{{styles.account_item}}" bindtap="anonymousFunc3">
+                    <view class="{{styles.account_price}}">{{profitDetail.todayIncome}}</view>
+                    <view class="{{styles.account_type}}">今日收益</view>
+                </view>
+            </view>
+        </block>
+        <view class="{{styles.order_box}}">
+            <view class="{{styles.order_header}}" bindtap="anonymousFunc4">
+                <view class="{{styles.header_title}}">我的订单</view>
+                <view class="{{styles.header_label}}">全部订单
+                    <view class="{{'iconfont iconwode-gengduo ' + styles.header_arrow}}"></view>
+                </view>
+            </view>
+            <view class="{{styles.order_list}}">
+                <view class="{{styles.order_item}}" bindtap="anonymousFunc5">
+                    <view class="{{'iconfont icondaifukuan ' + styles.icon}}"></view>
+                    <view class="{{styles.order_num}}" hidden="{{orderCount[1] === 0}}">{{orderCount[1]}}</view>待付款</view>
+                <view class="{{styles.order_item}}" bindtap="anonymousFunc6">
+                    <view class="{{'iconfont icondaifahuo ' + styles.icon}}"></view>
+                    <view class="{{styles.order_num}}" hidden="{{orderCount[2] === 0}}">{{orderCount[2]}}</view>待发货</view>
+                <view class="{{styles.order_item}}" bindtap="anonymousFunc7">
+                    <view class="{{'iconfont icondaishouhuo ' + styles.icon}}"></view>
+                    <view class="{{styles.order_num}}" hidden="{{orderCount[3] === 0}}">{{orderCount[3]}}</view>待收货</view>
+                <view class="{{styles.order_item}}" bindtap="anonymousFunc8">
+                    <view class="{{'iconfont icontuihuanhuo ' + styles.icon}}"></view>
+                    <view class="{{styles.order_num}}" hidden="{{orderCount[4] === 0}}">{{orderCount[4]}}</view>退换货</view>
+            </view>
+        </view>
+        <view class="{{styles.list_box}}">
+            <view class="{{'' + styles.list}}" bindtap="anonymousFunc9">
+                <view class="{{styles.list_header}}">
+                    <image class="{{styles.list_icon + ' no-loading'}}" src="{{Assets.my.collection}}"></image>
+                    <view class="{{styles.list_title}}">我的收藏</view>
+                </view>
+                <view class="{{'iconfont iconwode-gengduo ' + styles.arrow}}"></view>
+            </view>
+            <view class="{{'' + styles.list}}" bindtap="anonymousFunc10">
+                <view class="{{styles.list_header}}">
+                    <image class="{{styles.list_icon + ' no-loading'}}" src="{{Assets.my.adress}}"></image>
+                    <view class="{{styles.list_title}}">我的地址</view>
+                </view>
+                <view class="{{'iconfont iconwode-gengduo ' + styles.arrow}}"></view>
+            </view>
+            <view class="{{'' + styles.list}}" bindtap="anonymousFunc11">
+                <view class="{{styles.list_header}}">
+                    <image class="{{styles.list_icon + ' no-loading'}}" src="{{Assets.my.inviteCode}}"></image>
+                    <view class="{{styles.list_title}}">邀请码</view>
+                </view>
+                <view class="{{'iconfont iconwode-gengduo ' + styles.arrow}}"></view>
+            </view>
+            <view class="{{'' + styles.list}}" bindtap="anonymousFunc12">
+                <view class="{{styles.list_header}}">
+                    <image class="{{styles.list_icon + ' no-loading'}}" src="{{Assets.my.inviteList}}"></image>
+                    <view class="{{styles.list_title}}">邀请记录</view>
+                </view>
+                <view class="{{styles.num}}">
+                    <view class="{{'iconfont iconwode-gengduo ' + styles.arrow}}"></view>
+                </view>
+            </view>
+            <view class="{{'' + styles.list}}" bindtap="anonymousFunc13">
+                <view class="{{styles.list_header}}">
+                    <image class="{{styles.list_icon + ' no-loading'}}" src="{{Assets.my.config}}"></image>
+                    <view class="{{styles.list_title}}">设置</view>
+                </view>
+                <view class="{{'iconfont iconwode-gengduo ' + styles.arrow}}"></view>
+            </view>
+        </view>
+        <collectmodal id="gezzz"></collectmodal>
+        <view class="{{styles.upgrade_tip}}">
+            <at-modal compid="{{$compid__108}}">
+                <block wx:if="{{dialogGrade == 1}}">
+                    <image class="{{styles.silverImg}}" src="{{Assets.common.silverDialog}}" bindtap="onCloseUpgrade"></image>
+                </block>
+                <block wx:if="{{dialogGrade == 2}}">
+                    <image class="{{styles.img}}" src="{{Assets.common.goldDialog}}" bindtap="onCloseUpgrade"></image>
+                </block>
+                <block wx:if="{{dialogGrade == 3}}">
+                    <image class="{{styles.img}}" src="{{Assets.common.diamondDialog}}" bindtap="onCloseUpgrade"></image>
+                </block>
+                <view class="{{'iconfont iconguanbi1 ' + styles.close}}" bindtap="onCloseUpgrade"></view>
+            </at-modal>
+        </view>
+        <view class="{{styles.share_popup}}">
+            <at-float-layout compid="{{$compid__109}}">
+                <view class="{{styles.share_title + ' last'}}">邀请</view>
+                <view class="{{styles.share_container}}">
+                    <button class="{{styles.item}}" open-type="share">
+                        <image src="{{Assets.other.wx}}" class="{{styles.imgicon}}"></image>
+                        <view class="{{styles.font}}">微信</view>
+                    </button>
+                </view>
+                <view class="{{styles.cancalItem}}">
+                    <view class="{{styles.cancalBtn}}" bindtap="anonymousFunc15">取消</view>
+                </view>
+            </at-float-layout>
+        </view>
+    </view>
+</block>

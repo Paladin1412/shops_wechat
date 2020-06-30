@@ -1,0 +1,38 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.store_name}}">欢迎光临康小铺</view>
+        <view class="{{styles.store_desc}}">来了福利多多，既能省钱又能赚钱～</view>
+        <view class="{{styles.form_box}}">
+            <view class="{{styles.info_box + ' ' + styles.phone_box}}">
+                <view class="{{styles.area_code}}">+86</view>
+                <view class="{{styles.phone_inner}}">
+                    <at-input compid="{{$compid__102}}"></at-input>
+                </view>
+            </view>
+            <view class="{{styles.info_box}}">
+                <view class="{{styles.code_box}}">
+                    <input class="{{styles.info_insert_code}}" name="code" type="number" maxlength="{{6}}" bindinput="getCode" placeholder="请输入验证码" placeholder-class="{{styles.placeholder}}" bindblur="onCodeBlur" />
+                    <block wx:if="{{!send}}"><text class="{{styles.code}}" bindtap="sendCode">获取验证码</text>
+                    </block>
+                    <block wx:if="{{send}}"><text class="{{styles.time}}">{{second}}s后重发</text>
+                    </block>
+                </view>
+            </view>
+            <view class="{{isOkLogin ? styles.btn_able : styles.btn_disable}}" bindtap="anonymousFunc3">登录</view>
+        </view>
+        <button class="{{styles.reset_btn + ' ' + styles.wechat_btn}}" bindtap="getPhoneNumber" open-type="{{isAgree && !envUserInfo.mobilePhone ? 'getPhoneNumber' : null}}" bindgetphonenumber="getPhoneNumber">
+            <view class="{{'iconfont ' + styles.wxIcon}}"></view>
+            <view class="{{styles.wxLabel}}">微信一键登录</view>
+        </button>
+        <view class="{{styles.footerAgree}}">
+            <view class="{{styles.agreement}}">登录即代表已阅读并同意<text class="{{styles.agreement_btn}}" bindtap="anonymousFunc1">《康小铺用户协议》</text>
+            </view>
+        </view>
+        <at-modal compid="{{$compid__103}}">
+            <at-modal-header>康小铺用户注册协议</at-modal-header>
+            <at-modal-content>
+                <agreement></agreement>
+            </at-modal-content>
+        </at-modal>
+    </view>
+</block>

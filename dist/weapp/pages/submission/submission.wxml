@@ -1,0 +1,66 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <block wx:if="{{!address}}">
+            <view class="{{styles.addres_box}}" bindtap="goAddress">
+                <at-icon compid="{{$compid__124}}"></at-icon><text>添加收货地址</text>
+            </view>
+        </block>
+        <block wx:if="{{address}}">
+            <view class="{{styles.addres_box}}" bindtap="checkAddress">
+                <view class="{{styles.item}}">
+                    <view class="{{styles.left}}">
+                        <view class="{{styles.name_box}}"><text class="{{styles.name}}">{{anonymousState__temp}}<block><block wx:if="{{address.receiver.length > 12}}">{{'...'}}</block><block wx:else><view></view></block></block></text><text class="{{styles.tel}}">{{address.phone}}</text>
+                        </view><text class="{{styles.gray}}">{{address.address || address.house}}</text>
+                    </view>
+                    <view class="iconfont"></view>
+                </view>
+            </view>
+        </block>
+        <view class="{{styles.product_box}}">
+            <view class="{{styles.title}}">
+                <view class="{{'iconfont ' + styles.icon_shop}}"></view><text class="{{styles.font}}">{{info.shopName}}</text>
+            </view>
+            <view class="{{styles.info_box}}">
+                <image class="{{styles.img}}" src="{{anonymousState__temp2}}"></image>
+                <view class="{{styles.info_right}}">
+                    <view class="{{styles.item_line}}">
+                        <view class="{{styles.info_title}}">
+                            <ellipsis compid="{{$compid__125}}">{{info.itemTitle}}</ellipsis>
+                        </view>
+                        <view class="{{styles.num}}">¥ {{info.tradePrice}}</view>
+                    </view>
+                    <view class="{{styles.item_line + ' ' + styles.second}}">
+                        <view>{{info.propsValue}}</view>
+                        <view>x{{info.count}}</view>
+                    </view>
+                    <view class="{{styles.count_box}}">
+                        <at-input-number compid="{{$compid__126}}"></at-input-number>
+                    </view>
+                    <view class="{{'' + styles.all_price}}">总计:
+                        <view class="{{styles.all_num + ' ' + styles.red}}">￥{{anonymousState__temp3}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="{{styles.product_box}}">
+            <view class="{{styles.transfee_box}}"><text>运费</text><text class="{{styles.gray}}">免运费<text class="{{styles.red}}">¥ 0.00</text></text>
+            </view>
+        </view>
+        <view class="{{styles.product_box}}">
+            <view class="{{styles.transfee_box}}"><text>支付</text><text>微信支付</text>
+            </view>
+        </view>
+        <view class="{{styles.button_box}}">
+            <view class="{{styles.content}}">
+                <view class="{{styles.left}}"><text>应付：</text><text class="{{styles.red}}">¥ {{anonymousState__temp4}}</text><text class="{{styles.gray}}">(包含运费)</text>
+                </view>
+                <block wx:if="{{info && address}}">
+                    <view class="{{styles.button}}" bindtap="onCallPay">提交订单</view>
+                </block>
+                <block wx:if="{{!info || !address}}">
+                    <view class="{{styles.button + ' ' + styles.gray_button}}">提交订单</view>
+                </block>
+            </view>
+        </view>
+    </view>
+</block>

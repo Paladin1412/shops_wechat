@@ -1,0 +1,287 @@
+/**
+ * @Author: zhanglimin
+ * @Email: czhanglimin@126.com
+ * @Update: 2020-04-20 11:05:32
+ * @Description: 提现
+ */
+.cashout
+  :global
+    .at-noticebar
+      color: rgba(255, 96, 16, 1)
+      background: rgba(255, 249, 237, 1)
+      padding: 21px 28px
+    .layout-body
+      padding: 0
+    .at-float-layout .layout-body__content
+      min-height: 860px
+.AtNoticebar
+  position: relative
+  .hideNotice
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 25px
+    padding: 16px 28px 16px 38px
+.pricetitle
+  font-size:32px
+  font-weight:400
+  color:rgba(51,51,51,1)
+  line-height:36px
+  padding:45px 0 0 32px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: relative
+  z-index 10
+.pricelist
+  padding: 0 32px
+  :global
+    .at-input
+      margin-left:0
+    .at-input__title
+      width:auto
+      font-size: 72px
+    .at-input input
+      font-size: 72px
+      height:auto
+  .priceTop
+    display: flex
+    justify-content: space-between
+    margin-top: 32px
+    position relative
+    z-index: 10
+    .allCanPrice
+      font-size:28px;
+      font-weight:400;
+      color:rgba(255, 96, 16, 1)
+      line-height:36px;
+    .canprice
+      font-size:28px;
+      font-weight:400;
+      color:rgba(101,101,101,1);
+      line-height:36px
+.allbanks
+  width:684px
+  margin:0 32px
+  .eveback
+    width:100%
+    height:176px;
+    background:rgba(245,245,245,1);
+    border-radius:12px;
+    padding:40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .eveback+.eveback
+    margin-top: 24px
+  .eveleft
+    width:76px
+    height:76px
+    background:#ffffff
+    margin-right:20px
+    border-radius: 12px
+  .imageMes 
+    width:100%
+    height 100%
+    dsplay block
+  .leftMes
+    display: flex
+    align-items:center
+    .bankName
+      line-height: 45px
+      font-size:32px
+      color: rgba(51, 51, 51, 1)
+    .cardNum
+      line-height: 40px
+      color: rgba(102, 102, 102, 1)
+      font-size: 28px
+      margin-top: 7px
+.footerbar
+  width:100%
+  position: fixed
+  bottom 40px
+  left 0
+  height:88px
+  background:#fff
+  display: flex
+  align-items: center
+  justify-content: center
+.footerInner
+  width:686px;
+  height:88px;
+  background:#F9482E
+  border-radius:5px;
+  display: flex
+  align-items: center
+  justify-content: center
+  color:#fff
+  font-size:32px
+  font-weight: 500
+.gray
+  opacity 0.5
+.icon_color
+    color:#F9482E
+.cash_top
+  width:100%
+  height:96px
+  border-bottom:1px solid rgba(230, 230, 230, 0.5)
+  font-size:36px;
+  color:rgba(51,51,51,1);
+  display:flex
+  align-items: center
+  justify-content: space-between
+  .confirmTitle
+    font-size: 36px
+.fact
+  padding:34px 32px 3px
+.fact_price
+  width:100%
+  text-align: center
+  font-size:28px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  color:rgba(51,51,51,1);
+  line-height:40px;
+.fact_all
+  text-align: center
+  font-size: 28px
+  margin-top: 20px
+  .fact_num
+    font-size:60px;
+    display: inline-block
+    font-family:JDZhengHT-Regular,JDZhengHT;
+    font-weight:600;
+    color:rgba(51,51,51,1);
+    line-height:72px;
+.eveprice
+  margin-top: 30px
+  padding: 0 32px
+  .realContainer
+    display: flex
+    justify-content: space-between
+    padding:20px 24px 20px 0
+    border-bottom:1px solid rgba(0, 0, 0, 0.1)
+.evePrice_mes_container
+  border-bottom:1px solid rgba(0, 0, 0, 0.1)
+  padding: 0 24px 24px 0
+.evePrice_mes
+  display: flex
+  justify-content: space-between
+  padding:20px 0 10px
+.evePrice_mes_left
+  line-height: 40px
+  font-size:28px;
+  font-weight:400;
+  color:rgba(51, 51, 51, 1)
+.evePrice_mes_right
+  font-size:24px;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+.evePrice_text
+  text-align: right
+  font-size:24px
+  font-weight:400
+  color:rgba(187, 187, 187, 1)
+  line-height: 33px
+.cancalItem
+  width 100%
+  height 118px // 88+30
+  display flex
+  justify-content center
+  align-items center
+  position fixed
+  left 0
+  bottom 50px
+  .cancalBtn
+    width 686px
+    height 88px
+    background #F9482E
+    color:#fff
+    border-radius 5px
+    display flex
+    justify-content center
+    align-items center
+    font-size 32px
+    font-weight:500
+
+
+   
+.bankTit
+  font-size: 32px 
+  font-weight: bold
+.bankNum
+  color: rgba(102, 102, 102, 1)
+  font-size: 28px
+.scroll_content
+  position: fixed
+  width: 100%
+  top: 460px
+  left 0
+  height calc(100% - 640px)
+  z-index 9
+.mes
+  position: fixed
+  width: 100%
+  text-align: center
+  color: rgba(153, 153, 153, 1)
+  font-size: 24px
+  bottom: 140px
+.add_btn
+  font-size: 28px
+  color:#F9482E
+  padding-right: 32px
+.add_box
+  width: 654px
+  height: 176px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: rgba(245, 245, 245, 1)
+  color: rgba(151, 151, 151, 1)
+  font-size: 28px
+  margin: 32px auto
+  border-radius: 12px
+  .add_icon
+    font-size: 40px
+    margin-bottom: 10px
+
+.top_box
+  width: 100%
+  left: 0
+  top: 0
+  z-index 999
+  display: flex
+  text-align: center
+  justify-content: flex-start
+  align-items: center
+  background:#F9482E
+  color: #ffffff
+  z-index 2
+  position: fixed
+  .top_inner
+    position: relative
+    width: 100%
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    // margin-bottom: 20px
+    .font 
+      font-size: 32px 
+    .go_back_icon
+      color: #ffffff
+      font-size: 38px
+      position: absolute
+      left: 5px
+      top: 0
+      bottom: 0
+      margin: auto 0
+      line-height: 38px
+      display: inline-block
+      height: 38px
+      width: 60px
+      text-align: center
+      font-weight: bold
+
+    

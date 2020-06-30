@@ -1,0 +1,11 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.prelogin_container}}">
+        <image class="{{styles.logo}}" src="{{anonymousState__temp}}"></image>
+        <image class="{{styles.label + ' no-loading'}}" src="{{anonymousState__temp2}}"></image>
+        <image class="{{styles.guideMan}}" src="{{anonymousState__temp3}}"></image>
+        <button class="{{styles.reset_btn + ' ' + styles.wechat_btn}}" bindgetuserinfo="wechatLogin" open-type="getUserInfo">
+            <view class="{{styles.text}}">进入康小铺</view>
+        </button>
+        <view class="{{styles.returnBtn}}" bindtap="gotoBack">暂不登录，返回主页</view>
+    </view>
+</block>

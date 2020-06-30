@@ -1,0 +1,18 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.list + ' last'}}" bindtap="anonymousFunc0">
+            <view>投诉建议</view>
+            <view class="{{'iconfont iconwode-gengduo ' + styles.icon}}"></view>
+        </view>
+        <view class="{{styles.list + ' last'}}">
+            <view>当前版本号</view>
+            <view class="{{styles.right_text}}">v{{Config.version}}</view>
+        </view>
+        <view class="{{'' + styles.list}}" bindtap="onExit">
+            <view>退出登录</view>
+        </view>
+        <block wx:if="{{mask}}">
+            <mask compid="{{$compid__117}}"></mask>
+        </block>
+    </view>
+</block>

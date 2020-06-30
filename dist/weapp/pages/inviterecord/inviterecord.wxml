@@ -1,0 +1,23 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <block wx:if="{{anonymousState__temp}}">
+            <block>
+                <block wx:if="{{dataList.length}}">
+                    <view class="{{styles.list + ' last'}}" wx:for="{{dataList}}" wx:for-item="item" wx:for-index="_anonIdx2">
+                        <view class="{{styles.head_img}}">
+                            <image src="{{item.icon}}"></image>
+                        </view>
+                        <view>
+                            <view>{{item.inviteeName}}<text class="{{styles.year}}">{{item.phone}}</text>
+                            </view>
+                            <view class="{{styles.date}}">{{item.invitationTime}}</view>
+                        </view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view>暂无数据</view>
+                </block>
+            </block>
+        </block>
+    </view>
+</block>

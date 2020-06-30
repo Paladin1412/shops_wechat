@@ -1,0 +1,25 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <block>
+            <block wx:if="{{userInfo.token}}">
+                <view class="{{styles.box}}">
+                    <view class="{{styles.info}}" bindtap="toAllScreen">
+                        <block>
+                            <block wx:if="{{detail.weixnQrCode}}">
+                                <image src="{{anonymousState__temp}}" class="{{styles.qr_img}}" mode="widthFix"></image>
+                            </block>
+                            <block wx:else>
+                                <empty></empty>
+                            </block>
+                        </block>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="{{styles.nologin}}">
+                    <entry></entry>
+                </view>
+            </block>
+        </block>
+    </view>
+</block>

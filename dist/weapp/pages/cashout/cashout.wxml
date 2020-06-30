@@ -1,0 +1,93 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.cashout}}" style="{{anonymousState__temp}}">
+        <view class="{{styles.top_box}}">
+            <view class="{{styles.top_inner}}" style="{{anonymousState__temp2}}">
+                <view class="{{'iconfont ' + styles.go_back_icon}}" bindtap="goBack"></view>
+                <view class="{{styles.font}}">提现</view>
+            </view>
+        </view>
+        <at-noticebar compid="{{$compid__195}}">提现手续费：平台服务费{{rateMes.withdrawServiceRate || ''}}%(至少2元）
+            <view class="{{'iconfont ' + styles.hideNotice}}"></view>
+        </at-noticebar>
+        <view class="{{styles.pricetitle}}">提现金额</view>
+        <view class="{{styles.pricelist}}">
+            <at-input compid="{{$compid__196}}"></at-input>
+            <view class="{{styles.priceTop}}">
+                <view class="{{styles.canprice}}">可提现金额：¥ {{anonymousState__temp3}}</view>
+                <view class="{{styles.allCanPrice}}" bindtap="allMoney">全部提现</view>
+            </view>
+        </view>
+        <view class="{{styles.pricetitle}}">提现到银行卡
+            <block wx:if="{{bankList.length > 0 && bankList.length < 5}}">
+                <view class="{{styles.add_btn}}" bindtap="addbank">添加银行卡</view>
+            </block>
+        </view>
+        <block wx:if="{{bankList.length > 0}}">
+            <scroll-view class="{{styles.scroll_content}}" scroll-y="{{true}}" style="{{anonymousState__temp4}}">
+                <view class="{{styles.allbanks}}">
+                    <view class="{{styles.eveback}}" wx:key="$loopState__temp6" bindtap="anonymousFunc0" wx:for="{{loopArray85}}" wx:for-item="v" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey}}">
+                        <view class="{{styles.leftMes}}">
+                            <view class="{{styles.eveleft}}">
+                                <image class="{{styles.imageMes + ' no-loading'}}" src="{{Assets.other.backcard}}" alt=""></image>
+                            </view>
+                            <view>
+                                <view class="{{styles.bankTit}}">{{v.$original.bankName}}</view>
+                                <view class="{{styles.bankNum}}">{{v.$original.cardNum}}</view>
+                            </view>
+                        </view>
+                        <view class="{{'iconfont  ' + (current == index ? styles.icon_color : '')}}" style="{{v.$loopState__temp8}}"></view>
+                    </view>
+                </view>
+            </scroll-view>
+        </block>
+        <block wx:if="{{bankList.length === 0}}">
+            <view class="{{styles.add_box}}" bindtap="addbank">
+                <view class="{{'iconfont ' + styles.add_icon}}"></view>
+                <view>添加银行卡</view>
+            </view>
+        </block>
+        <view class="{{styles.mes}}">*最多支持绑定5张银行卡</view>
+        <view class="{{styles.footerbar}}">
+            <block wx:if="{{bankList.length > 0}}">
+                <view class="{{styles.footerInner}}" bindtap="cashItem">申请提现</view>
+            </block>
+            <block wx:if="{{bankList.length <= 0}}">
+                <view class="{{styles.footerInner + ' ' + styles.gray}}">申请提现</view>
+            </block>
+        </view>
+        <at-float-layout compid="{{$compid__197}}">
+            <view class="{{styles.cash_top}}">
+                <view style="{{anonymousState__temp9}}">demo</view><text class="{{styles.confirmTitle}}">确认提现</text>
+                <view class="iconfont iconguanbi1" style="{{anonymousState__temp10}}" bindtap="closeItem"></view>
+            </view>
+            <view class="{{styles.fact}}">
+                <view class="{{styles.fact_price}}">实际到账(元)</view>
+                <view class="{{styles.fact_all}}"><text class="{{styles.fact_num}}">{{anonymousState__temp11}}</text>
+                </view>
+            </view>
+            <view class="{{styles.eveprice}}">
+                <view class="{{styles.realContainer}}">
+                    <view class="{{styles.evePrice_mes_left}}">提现金额(元)</view>
+                    <view class="{{styles.evePrice_mes_right}}">{{formData.amount}}</view>
+                </view>
+                <view class="{{styles.evePrice_mes_container}}">
+                    <view class="{{styles.evePrice_mes}}">
+                        <view class="{{styles.evePrice_mes_left}}">手续费(元)</view>
+                        <view class="{{styles.evePrice_mes_right}}">{{serverFee}}</view>
+                    </view>
+                    <view class="{{styles.evePrice_text}}">(含{{rateMes.withdrawServiceRate}}%平台服务费（至少2元)</view>
+                </view>
+                <view class="{{styles.evePrice_mes_container}}">
+                    <view class="{{styles.evePrice_mes}}">
+                        <view class="{{styles.evePrice_mes_left}}">提现到</view>
+                        <view class="{{styles.evePrice_mes_right}}">{{formData.selectedBank.cardNum}}</view>
+                    </view>
+                    <view class="{{styles.evePrice_text}}">{{formData.selectedBank.bankName}}</view>
+                </view>
+            </view>
+            <view class="{{styles.cancalItem}}">
+                <view class="{{styles.cancalBtn}}" bindtap="onWithdraw">确认提现</view>
+            </view>
+        </at-float-layout>
+    </view>
+</block>

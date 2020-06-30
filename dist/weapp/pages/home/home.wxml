@@ -1,0 +1,78 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{'' + styles.header}}" bindtap="clickAvatar">
+            <view class="{{styles.headerLeft}}">
+                <block wx:if="{{isRequest}}">
+                    <view>
+                        <view class="{{styles.headerName}}">
+                            <ellipsis compid="{{$compid__94}}">您好，{{isTokenValid ? userInfo.nickName : '请先登录'}}</ellipsis>
+                        </view>
+                        <block wx:if="{{isTokenValid}}">
+                            <view class="{{styles.headerExtra}}">快去看看今天有没有你喜欢的宝贝～</view>
+                        </block>
+                    </view>
+                </block>
+            </view>
+            <button class="{{styles.reset_btn}}">
+                <image class="{{styles.headerImg + ' no-loading'}}" src="{{anonymousState__temp}}"></image>
+            </button>
+            <block wx:if="{{exitPopup}}">
+                <view class="{{styles.exit}}">
+                    <view class="{{styles.popup_items}}" bindtap="onClearStorage">
+                        <view class="{{'iconfont iconqingchu ' + styles.exitIcon}}"></view>
+                        <view class="{{styles.exitLabel}}">清除缓存数据</view>
+                    </view>
+                    <view class="{{styles.popup_items}}" bindtap="onExit">
+                        <view class="{{'iconfont icontuichudenglu ' + styles.exitIcon}}"></view>
+                        <view class="{{styles.exitLabel}}">退出当前账号</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="{{styles.body}}">
+            <view class="{{styles.bodyHeader}}">
+                <image class="{{styles.bodyHeaderImg + ' no-loading'}}" src="{{anonymousState__temp2}}"></image>
+                <view class="{{styles.bodyTitle}}">店铺记录</view>
+            </view>
+            <block>
+                <block wx:if="{{companyList.length || !isRequest}}">
+                    <view class="{{styles.bodyContent}}">
+                        <view class="{{styles.listItem}}" wx:key="$loopState__temp4" bindtap="anonymousFunc0" wx:for="{{loopArray41}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
+                            <image mode="aspectFill" src="{{item.$loopState__temp6}}" class="{{styles.imgBlur}}"></image>
+                            <view class="{{styles.itemHeader}}">
+                                <block wx:if="{{item.$original.shopMaster}}">
+                                    <view class="{{styles.shopMaster}}">我的店铺</view>
+                                </block>
+                                <image src="{{item.$loopState__temp8}}" class="{{styles.itemLogo}}"></image>
+                                <view class="{{styles.itemName}}">
+                                    <view class="{{styles.shopName}}">{{item.$original.shopName}}</view>
+                                    <image src="{{item.$loopState__temp10}}" class="{{styles.jdLogo + ' no-loading'}}"></image>
+                                </view>
+                            </view>
+                            <view class="{{styles.itemContent}}">
+                                <view class="{{styles.itemBody}}">
+                                    <view class="{{styles.imgContainer}}" wx:key="$loopState__temp12" wx:for="{{item.$anonymousCallee__9}}" wx:for-item="shop" wx:for-index="index">
+                                        <image mode="aspectFill" src="{{shop.$loopState__temp14}}" class="{{styles.bodyImg}}"></image>
+                                        <block wx:if="{{index === item.$original.goodsInfoList.length - 1}}">
+                                            <view class="{{styles.imgExtra}}">
+                                                <view>{{item.$original.goodsTotalNum > 99 ? '99+' : item.$original.goodsTotalNum || item.$original.goodsInfoList.length}}</view>
+                                                <view class="{{styles.label}}">宝贝</view>
+                                            </view>
+                                        </block>
+                                    </view>
+                                </view>
+                                <view class="{{styles.itemBtn}}">进入店铺</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view class="{{styles.nogoodsContainer}}">
+                        <image class="{{styles.nogoodsImg}}" src="{{Assets.goods.defalutNoGoods}}"></image>
+                        <view class="{{styles.nogoodsLabel}}">暂无店铺记录~</view>
+                    </view>
+                </block>
+            </block>
+        </view>
+    </view>
+</block>

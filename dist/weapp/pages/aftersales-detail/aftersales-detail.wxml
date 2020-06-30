@@ -1,0 +1,148 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.content}}">
+        <view class="{{styles.back}}"></view>
+        <scroll-view class="{{styles.body}}" scroll-y="{{true}}">
+            <view class="{{styles.scroll_content}}">
+                <view class="{{styles.info_box}}">
+                    <block wx:if="{{afterInfo.afterSaleType === 2 || afterInfo.afterSaleType === 3}}">
+                        <view class="{{styles.progress_bar}}">
+                            <view class="{{styles.state_item + ' ' + ((afterInfo.afterSaleType === 3 || afterInfo.afterSaleStatus === 98) && styles.state_item_large)}}" wx:for="{{loopArray63}}" wx:for-item="item" wx:for-index="index">
+                                <view class="{{styles.state_info}}">
+                                    <view class="{{styles.state_num + ' ' + (item.isFinish ? styles.finish_num : '')}}">{{index + 1}}</view>
+                                    <view class="{{styles.state_text + ' ' + (item.isFinish ? styles.finish_text : '')}}">{{item.$original.text}}</view>
+                                </view>
+                                <block wx:if="{{!(index === stateList.length - 1)}}">
+                                    <view class="{{'iconfont ' + styles.state_next + ' ' + (item.isFinish && styles.red)}}"></view>
+                                </block>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+                <view class="{{styles.header}}">
+                    <view class="{{styles.header_title}}">
+                        <view class="{{'iconfont ' + newObj.iconName + ' ' + styles.header_icon}}" style="{{anonymousState__temp}}"></view><text>{{newObj.title}}</text>
+                    </view>
+                    <view class="{{styles.header_content}}">{{newObj.desc}}</view>
+                </view>
+                <view class="{{styles.product_box}}">
+                    <view class="{{styles.title}}">
+                        <view class="iconfont"></view><text class="{{styles.font}}">{{anonymousState__temp2}}</text>
+                    </view>
+                    <view class="{{styles.info_box}}">
+                        <image class="{{styles.img + ' no-loading'}}" src="{{anonymousState__temp3}}"></image>
+                        <view class="{{styles.info_right}}">
+                            <view class="{{styles.item_line}}">
+                                <view class="{{styles.info_title}}">
+                                    <ellipsis compid="{{$compid__151}}">{{afterInfo.itemTitle}}</ellipsis>
+                                </view>
+                                <view class="{{styles.num}}">¥ {{afterInfo.unitPrice}}</view>
+                            </view>
+                            <view class="{{styles.item_line + ' ' + styles.second}}">
+                                <view>{{anonymousState__temp4}}</view>
+                                <view class="{{styles.count_box}}">x{{afterInfo.afterSaleCount}}</view>
+                            </view>
+                            <view class="{{'' + styles.all_price}}">总计:
+                                <view class="{{styles.all_num}}">￥{{anonymousState__temp5}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <block wx:if="{{afterInfo.afterSaleStatus === 98}}">
+                    <view class="{{styles.info_box}}">
+                        <view class="{{styles.return}}">驳回原因</view>
+                        <view class="{{styles.return_item}}"><text class="{{styles.return_title}}">卖家留言：</text><text class="{{styles.return_remarks}}">{{afterInfo.refuseReason}}</text>
+                        </view>
+                    </view>
+                </block>
+                <block wx:if="{{afterInfo.afterSaleStatus !== 98 && afterInfo.afterSaleStatus !== 97 && afterInfo.afterSaleType === 2}}">
+                    <view>
+                        <block wx:if="{{afterInfo.afterSaleStatus >= 52}}">
+                            <view class="{{styles.info_box}}">
+                                <view class="{{styles.return}}">退回物流</view>
+                                <view class="{{styles.return_item}}"><text class="{{styles.return_title}}">快递公司：</text><text class="{{styles.return_remarks}}">{{afterInfo.deliveryCompany}}</text>
+                                </view>
+                                <view class="{{styles.return_item + ' ' + styles.noborder_bottom}}"><text class="{{styles.return_title}}">快递单号：</text><text class="{{styles.return_remarks}}">{{afterInfo.deliveryNo}}</text>
+                                </view>
+                            </view>
+                        </block>
+                        <block wx:if="{{afterInfo.afterSaleStatus >= 21}}">
+                            <view class="{{styles.info_box}}">
+                                <view class="{{styles.return}}">商品退回</view>
+                                <view class="{{styles.return_item}}"><text class="{{styles.return_title}}">退回地址：</text><text class="{{styles.return_remarks}}">{{afterInfo.receiveDetailAddress}}</text>
+                                </view>
+                                <view class="{{styles.return_item}}"><text class="{{styles.return_title}}">收货人：</text><text class="{{styles.return_remarks}}">{{afterInfo.receivePerson || afterInfo.receiveName}}</text>
+                                </view>
+                                <view class="{{styles.return_item + ' ' + styles.noborder_bottom}}"><text class="{{styles.return_title}}">联系电话：</text><text class="{{styles.return_remarks}}">{{afterInfo.receivePhone}}</text>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </block>
+                <view class="{{styles.info_box}}">
+                    <view class="{{styles.info_box_title}}">您发起的</view>
+                    <view class="{{styles.refund_item}}"><text class="{{styles.refund_title}}">售后单ID：</text><text class="{{styles.refund_remarks}}">{{afterInfo.afterSaleNo}}</text>
+                    </view>
+                    <view class="{{styles.refund_item}}"><text class="{{styles.refund_title}}">售后类型：</text><text class="{{styles.refund_remarks}}"><block><block wx:if="{{afterInfo.afterSaleType === 1}}">{{'仅退款'}}</block><block wx:else><view></view></block></block><block><block wx:if="{{afterInfo.afterSaleType === 2}}">{{'退货退款'}}</block><block wx:else><view></view></block></block><block><block wx:if="{{afterInfo.afterSaleType === 3}}">{{'赔付'}}</block><block wx:else><view></view></block></block></text>
+                    </view>
+                    <view class="{{styles.refund_item}}"><text class="{{styles.refund_title}}">退款金额：</text><text class="{{styles.refund_remarks}}">{{afterInfo.afterSaleAmount}}</text>
+                    </view>
+                    <view class="{{styles.refund_item}}"><text class="{{styles.refund_title}}">售后原因：</text><text class="{{styles.refund_remarks}}">{{anonymousState__temp6}}{{anonymousState__temp7}}{{anonymousState__temp8}}{{anonymousState__temp9}}{{anonymousState__temp10}}</text>
+                    </view>
+                    <view class="{{styles.refund_item}}"><text class="{{styles.refund_title}}">售后说明：</text><text class="{{styles.refund_remarks}}">{{afterInfo.remarks}}</text>
+                    </view>
+                    <block wx:if="{{afterInfo.afterSaleType === 2 || afterInfo.afterSaleType === 3}}">
+                        <view class="{{styles.refund_proof}}">
+                            <view class="{{styles.title}}">售后凭证：</view>
+                            <view class="{{styles.proof_img}}">
+                                <image class="{{styles.img + ' no-loading'}}" src="{{item.$loopState__temp12}}" wx:for="{{loopArray64}}" wx:for-item="item" wx:for-index="_anonIdx2"></image>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="{{styles.button_box}}">
+            <block wx:if="{{21 <= afterInfo.afterSaleStatus && afterInfo.afterSaleStatus < 52 && afterInfo.afterSaleType === 2}}">
+                <view class="{{styles.last_button}}" bindtap="logisticsInfoClick">填写退货</view>
+            </block>
+            <view class="{{'' + styles.last_button}}" bindtap="anonymousFunc0">
+                <view class="{{'iconfont ' + styles.icon_phone}}"></view>联系客服</view>
+            <block wx:if="{{afterInfo.afterSaleStatus !== 99 && afterInfo.afterSaleStatus !== 53 && afterInfo.afterSaleStatus !== 97 && afterInfo.afterSaleStatus !== 98}}">
+                <view class="{{styles.last_button + ' ' + styles.red_button}}" bindtap="anonymousFunc1">取消售后</view>
+            </block>
+        </view>
+        <at-float-layout compid="{{$compid__152}}">
+            <view class="{{styles.popup_header}}"><text>填写退回物流</text>
+                <view class="{{styles.close}}">
+                    <view class="iconfont close_icon" bindtap="handleClose"></view>
+                </view>
+            </view>
+            <view class="{{styles.popup_body}}">
+                <view class="{{styles.item}}"><text class="{{styles.xrequired}}">快递公司 : </text>
+                    <input class="{{styles.input}}" type="text" name="text" placeholder="请填写快递公司" value="{{company}}" bindinput="getExpressCompany" />
+                </view>
+                <view class="{{styles.item}}"><text class="{{styles.xrequired}}">快递单号 : </text>
+                    <input class="{{styles.input}}" type="text" value="{{expressNumber}}" name="text" placeholder="请填写快递单号" bindinput="getExpressNumber" />
+                </view>
+            </view>
+            <view class="{{styles.bottom_tool}}"></view>
+            <view class="{{styles.popup_button}}">
+                <block wx:if="{{expressNumber && company}}">
+                    <view class="{{styles.btn}}" bindtap="anonymousFunc2">我已退回</view>
+                </block>
+                <block wx:if="{{!expressNumber || !company}}">
+                    <view class="{{styles.btn + ' ' + styles.gray_btn}}">我已退回</view>
+                </block>
+            </view>
+        </at-float-layout>
+        <at-modal compid="{{$compid__153}}"></at-modal>
+        <at-modal compid="{{$compid__154}}">
+            <at-modal-content>
+                <view class="{{styles.kefu_box}}" bindtap="tel">
+                    <view class="{{styles.title}}">平台联系电话</view>
+                    <view>{{telNo}}</view>
+                </view>
+            </at-modal-content>
+        </at-modal>
+    </view>
+</block>

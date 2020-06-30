@@ -1,0 +1,67 @@
+.login-guide-module__reset_btn___1cAB2 {
+  padding: 0;
+  background-color: transparent;
+  line-height: 1;
+  font-size: 24rpx;
+  color: #333;
+}
+.login-guide-module__reset_btn___1cAB2::after {
+  display: none;
+}
+.login-guide-module__prelogin_container___3kHLt {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.login-guide-module__prelogin_container___3kHLt .login-guide-module__logo___1CE4s {
+  width: 196rpx;
+  height: 196rpx;
+  margin: 130rpx 0 40rpx;
+}
+.login-guide-module__prelogin_container___3kHLt .login-guide-module__label___2NA-F {
+  width: 370rpx;
+  height: 38rpx;
+}
+.login-guide-module__prelogin_container___3kHLt .login-guide-module__wechat_btn___1XXF4 {
+  margin-top: 72rpx;
+  width: 686rpx;
+  height: 88rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 44rpx;
+  background-color: #f9482e;
+}
+.login-guide-module__prelogin_container___3kHLt .login-guide-module__wechat_btn___1XXF4 .login-guide-module__icon___3gjl0 {
+  font-size: 42rpx;
+  color: #fff;
+}
+.login-guide-module__prelogin_container___3kHLt .login-guide-module__wechat_btn___1XXF4 .login-guide-module__text___17toa {
+  color: #fff;
+  font-size: 32rpx;
+  margin-left: 16rpx;
+}
+.login-guide-module__guideMan___mzPuA {
+  width: 500rpx;
+  height: 521rpx;
+  display: block;
+  margin: 0 auto;
+}
+.login-guide-module__returnBtn___34Bxb {
+  color: #666;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  margin-top: 40rpx;
+}

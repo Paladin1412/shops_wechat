@@ -1,0 +1,39 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{'' + styles.edit_box}}">
+        <block wx:if="{{visiable}}">
+            <dialog compid="{{$compid__162}}"></dialog>
+        </block>
+        <at-form compid="{{$compid__163}}">
+            <at-input compid="{{$compid__164}}"></at-input>
+            <at-input compid="{{$compid__165}}"></at-input>
+            <view class="{{styles.area_content + ' last'}}">
+                <view class="{{styles.addressTitle}}">所在地区</view>
+                <view class="{{styles.area_box}}">
+                    <area-picker compid="{{$compid__166}}">
+                        <view class="{{styles.show_area_box}}">
+                            <block>
+                                <block wx:if="{{cityData.length}}">{{anonymousState__temp2}}</block>
+                                <block wx:else><text class="{{styles.grayText}}">请选择地区</text>
+                                </block>
+                            </block>
+                        </view>
+                    </area-picker>
+                </view>
+                <view class="{{'iconfont ' + styles.icon_arrow}}"></view>
+            </view>
+            <view class="{{styles.addressContainer + ' last'}}">
+                <view class="{{styles.addressTitle}}">详细地址</view>
+                <at-textarea compid="{{$compid__167}}"></at-textarea>
+            </view>
+            <view class="{{(isDefault === true ? styles.moren : styles.switch) + ' last'}}">
+                <at-switch compid="{{$compid__168}}"></at-switch>
+            </view>
+            <block wx:if="{{id}}">
+                <view class="{{styles.del_address + ' last'}}" bindtap="delAddress">删除收货地址</view>
+            </block>
+            <view class="{{styles.button_box}}">
+                <at-button compid="{{$compid__169}}">{{id ? '编辑完成' : '保存地址'}}</at-button>
+            </view>
+        </at-form>
+    </view>
+</block>

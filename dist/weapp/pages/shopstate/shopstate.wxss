@@ -1,0 +1,163 @@
+/**
+ * @Author: chunxiao.zhang
+ * @Email: chunxiao.zhang@jdxiaokang.com
+ * @Update: 2020-02-25 13:48:54
+ * @Description: 店主动态
+ */
+.shopstate-module__container___1WM1T {
+  margin: 0 24rpx;
+  padding-top: 48rpx;
+  font-size: 28rpx;
+  color: #343434;
+}
+.shopstate-module__list___2uYFQ {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.shopstate-module__date___6lJ_2 {
+  margin-right: 24rpx;
+}
+.shopstate-module__day___3AxCr {
+  height: 67rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #f9482e;
+  line-height: 67rpx;
+}
+.shopstate-module__month___19bHR {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 45rpx;
+  text-align: right;
+}
+.shopstate-module__data___1l6Tm {
+  position: relative;
+  padding-bottom: 28rpx;
+  margin-bottom: 28rpx;
+}
+.shopstate-module__data___1l6Tm::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1PX;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e1e1e1), to(transparent));
+  background-image: -webkit-linear-gradient(bottom, #e1e1e1 50%, transparent);
+  background-image: -o-linear-gradient(bottom, #e1e1e1 50%, transparent);
+  background-image: linear-gradient(0deg, #e1e1e1 50%, transparent);
+}
+.shopstate-module__head___1-lZZ {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.shopstate-module__head_img___zt_Dg {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  background: #ccc;
+  margin-right: 24rpx;
+}
+.shopstate-module__name___2KAmT {
+  font-size: 32rpx;
+  color: #1a1a1a;
+  line-height: 45rpx;
+}
+.shopstate-module__time___wyMpD {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 33rpx;
+  margin-top: 10rpx;
+}
+.shopstate-module__sell___3Q--j {
+  margin: 18rpx 0;
+}
+.shopstate-module__detail___3ExvV {
+  font-size: 28rpx;
+  color: #b2b2b2;
+}
+.shopstate-module__product___rtibN {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.shopstate-module__product_img___3Qty7 {
+  width: 178rpx;
+  height: 178rpx;
+  border-radius: 5rpx;
+  background: #ccc;
+  margin-right: 32rpx;
+}
+.shopstate-module__product_title___2UUPh {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 40rpx;
+  height: 40rpx;
+  width: 100%;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shopstate-module__price___102Th {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.shopstate-module__product_info___15AI8 {
+  position: relative;
+  width: calc(100% - 210rpx);
+}
+.shopstate-module__price___102Th {
+  height: 32rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #b3b3b3;
+  line-height: 32rpx;
+}
+.shopstate-module__price_red___-vKEr {
+  height: 47rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #f9482e;
+  line-height: 47rpx;
+  margin-right: 10rpx;
+}
+.shopstate-module__symbol___26YMd {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #f9482e;
+  display: inline-block;
+  width: 21rpx;
+}
+.shopstate-module__right___mzMjG {
+  width: calc(100% - 87rpx);
+}
+.shopstate-module__buy_btn___3rKy7 {
+  width: 115rpx;
+  height: 44rpx;
+  background: #f9482e;
+  border-radius: 24rpx;
+  text-align: center;
+  line-height: 44rpx;
+  font-size: 24rpx;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.shopstate-module__del___28tV9 {
+  text-decoration: line-through;
+}

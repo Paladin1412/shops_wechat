@@ -1,0 +1,30 @@
+.index-module__empty___1FE9c {
+  width: 92%;
+  min-height: 132rpx;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.index-module__empty___1FE9c:after {
+  content: attr(data-msg);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -40rpx;
+  text-align: center;
+  color: #666;
+  font-size: 28rpx;
+}
+.index-module__empty_img___1v460 {
+  width: 480rpx;
+  height: auto;
+}

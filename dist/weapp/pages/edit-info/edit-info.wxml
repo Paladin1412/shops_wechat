@@ -1,0 +1,10 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{styles.title}}">修改昵称</view>
+        <view class="{{styles.value}}">
+            <input class="{{styles.cellInput + ' ' + styles.singleEllipsis}}" type="text" maxlength="{{15}}" name="nickname" placeholder="请输入昵称" value="{{currentValue}}" placeholder-class="{{styles.placeholderStyle}}" bindinput="anonymousFunc0" />
+            <view bindtap="clearInput" class="{{'iconfont ' + styles.icon}}"></view>
+        </view>
+        <view class="{{styles.saveBtn}}" bindtap="onSave">保存修改</view>
+    </view>
+</block>

@@ -1,0 +1,39 @@
+<block wx:if="{{$taroCompReady}}">
+    <view style="{{anonymousState__temp}}">
+        <view class="{{styles.back}}"></view>
+        <view class="{{styles.nav_out}}">
+            <view class="{{styles.top_inner}}" style="{{anonymousState__temp2}}">
+                <view class="{{'iconfont ' + styles.go_back_icon}}" bindtap="goOrderIndex"></view>
+                <view class="{{styles.font}}">订单搜索</view>
+            </view>
+        </view>
+        <view class="{{styles.search_box}}">
+            <view class="{{styles.left}}">
+                <view class="{{styles.search_type}}" bindtap="taggleTip">{{anonymousState__temp3}}
+                    <view class="{{'iconfont ' + styles.icon + ' ' + (showList === true && styles.down)}}"></view>
+                    <block wx:if="{{showList}}">
+                        <view class="{{styles.tip_box}}">
+                            <view class="{{styles.item}}" bindtap="anonymousFunc0" wx:for="{{loopArray65}}" wx:for-item="item" wx:for-index="i" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">{{item.$original.name}}</view>
+                        </view>
+                    </block>
+                </view>
+                <input class="{{styles.input}}" placeholder="请输入" value="{{value}}" bindinput="setValue" />
+                <block wx:if="{{value}}">
+                    <view class="{{'iconfont ' + styles.delete}}" bindtap="anonymousFunc1"></view>
+                </block>
+            </view>
+            <view class="{{styles.red + ' ' + styles.search_buttton}}" bindtap="goOrder">搜索</view>
+        </view>
+        <block wx:if="{{taglist.length > 0}}">
+            <view class="{{styles.tags_box}}">
+                <view class="{{styles.title_box}}">
+                    <view>历史搜索</view>
+                    <view class="{{'iconfont ' + styles.icon}}" bindtap="clearHistory"></view>
+                </view>
+                <view class="{{styles.tags_content}}">
+                    <view class="{{styles.item}}" bindtap="anonymousFunc2" wx:for="{{loopArray66}}" wx:for-item="item" wx:for-index="i" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey2}}">{{item.$loopState__temp5}}{{item.$original.value.length > 20 ? '....' : ''}}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</block>

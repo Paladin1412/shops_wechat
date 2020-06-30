@@ -1,0 +1,17 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.out}}">
+        <view class="{{styles.red_bar}}"></view>
+        <view class="{{styles.back}}"></view>
+        <view class="{{styles.addres_box + ' ' + styles.trans_box}}">
+            <view class="{{styles.name_box}}"><text class="{{styles.name}}">{{info.expName}}</text><text class="{{styles.tel}}">{{info.number}}</text>
+                <view class="{{styles.copy_box}}" bindtap="anonymousFunc0">复制</view>
+            </view>
+            <view class="{{styles.item + ' ' + (i === 0 && styles.active) + ' '}}" wx:for="{{list}}" wx:for-item="item" wx:for-index="i">
+                <view class="{{styles.date_box}}">
+                    <view>{{item.time}}</view>
+                </view>
+                <view class="{{styles.status}}">{{item.status}}</view>
+            </view>
+        </view>
+    </view>
+</block>

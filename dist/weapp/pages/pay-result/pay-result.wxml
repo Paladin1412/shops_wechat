@@ -1,0 +1,49 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.content}}">
+        <view class="{{styles.back}}"></view>
+        <block>
+            <block wx:if="{{ret != '2'}}">
+                <view class="{{styles.pay_success}}">
+                    <view class="{{styles.icont_box}}">
+                        <view>
+                            <image class="{{styles.ret_icon}}" src="{{Assets.other.success}}"></image>
+                        </view>
+                    </view>
+                    <view class="{{styles.status}}">支付成功</view>
+                    <view class="{{styles.gray}}">卖家会在48小时内发货给您，请耐心等待！</view>
+                    <view class="{{styles.button_box}}">
+                        <view class="{{styles.button + ' ' + styles.left_button}}" bindtap="onViewOrder">查看订单</view>
+                        <view class="{{styles.button + ' ' + styles.right_button}}" bindtap="onKeep">继续逛逛</view>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="{{styles.pay_success + ' ' + styles.pay_false}}">
+                    <view class="{{styles.icont_box}}">
+                        <image class="{{styles.ret_icon}}" src="{{Assets.other.failed}}"></image>
+                    </view>
+                    <view class="{{styles.status}}">支付失败</view>
+                    <view class="{{styles.gray}}">请重新发起支付</view>
+                    <view class="{{styles.button_box}}">
+                        <view class="{{styles.button + ' ' + styles.left_button}}" bindtap="onKeep">返回首页</view>
+                        <view class="{{styles.button + ' ' + styles.right_button}}" bindtap="goPay">重新支付</view>
+                    </view>
+                </view>
+            </block>
+        </block>
+        <view class="{{styles.tj_out}}">
+            <view class="{{styles.titleGoods + ' ' + styles.tuijian_buy}}">大家都在买</view>
+            <view class="{{styles.tuijian_box}}">
+                <view class="{{styles.item}}" wx:key="$loopState__temp2" bindtap="anonymousFunc0" wx:for="{{loopArray53}}" wx:for-item="item" wx:for-index="idx" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
+                    <image class="{{styles.img}}" src="{{item.$loopState__temp4}}"></image>
+                    <view class="{{styles.bottom}}">
+                        <view class="{{styles.title}}">{{item.$original.itemTitle}}</view>
+                        <view class="{{styles.price_box}}"><text>￥</text><text class="{{styles.num}}">{{item.$original.minTradePrice || 0}}</text>
+                        </view>
+                        <view class="{{styles.tag}}">包邮</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>

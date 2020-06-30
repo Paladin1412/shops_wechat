@@ -1,0 +1,92 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.content}}">
+        <view class="{{styles.product_box}}">
+            <view class="{{styles.title}}">
+                <view class="{{'iconfont ' + styles.icon_shop}}"></view><text class="{{styles.font}}" bindtap="goIndex">{{anonymousState__temp}}</text>
+            </view>
+            <view class="{{styles.info_box}}">
+                <image class="{{styles.img}}" src="{{anonymousState__temp2}}"></image>
+                <view class="{{styles.info_right}}">
+                    <view class="{{styles.item_line}}">
+                        <view class="{{styles.info_title}}">
+                            <ellipsis compid="{{$compid__136}}">{{item.itemTitle}}</ellipsis>
+                        </view>
+                        <view class="{{styles.num}}">¥ {{item.agentUnitPrice}}</view>
+                    </view>
+                    <view class="{{styles.item_line + ' ' + styles.second}}">
+                        <view>{{item.propsValue}}</view>
+                        <view class="{{styles.count_box}}">x{{item.count}}</view>
+                    </view>
+                    <view class="{{styles.income_container}}">
+                        <block wx:if="{{shopLevel >= 2}}">
+                            <view class="{{'' + styles.item_line}}">
+                                <view class="{{styles.recv}}">预计收益￥{{item.income || 0}}</view>
+                                <view></view>
+                            </view>
+                        </block>
+                    </view>
+                    <view class="{{'' + styles.all_price}}">总计：
+                        <view class="{{styles.all_num}}">￥{{anonymousState__temp3}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="{{styles.product_box}}">
+            <view class="{{styles.transfee_box}}"><text>运费</text><text class="{{styles.gray}}"><block><block wx:if="{{item.freePostage === 1}}">{{'免运费'}}</block><block wx:else><view></view></block></block><text class="{{styles.red}}">¥ {{item.postage || 0}}</text></text>
+            </view>
+        </view>
+        <view class="{{styles.form_box}}">
+            <at-list>
+                <block wx:if="{{type === 1}}">
+                    <at-list-item compid="{{$compid__137}}"></at-list-item>
+                </block>
+                <block wx:if="{{type === 2}}">
+                    <at-list-item compid="{{$compid__138}}"></at-list-item>
+                </block>
+                <block wx:if="{{checkTuiType !== 3}}">
+                    <at-list-item compid="{{$compid__139}}"></at-list-item>
+                </block>
+                <block wx:if="{{checkTuiType === 3}}">
+                    <view class="{{styles.input_box}}">
+                        <at-list-item compid="{{$compid__140}}"></at-list-item>
+                        <view class="{{styles.inner}}">
+                            <at-input compid="{{$compid__141}}"></at-input>
+                        </view>
+                    </view>
+                </block>
+                <at-list-item compid="{{$compid__142}}"></at-list-item>
+                <view class="{{styles.line_box}}">
+                    <view class="{{styles.label}}">退款说明</view>
+                    <view class="{{styles.right}}">
+                        <at-textarea compid="{{$compid__143}}"></at-textarea>
+                    </view>
+                </view>
+                <block wx:if="{{type === 2}}">
+                    <view class="{{styles.photo_box}}">
+                        <view class="{{styles.title}}">
+                            <view class="{{styles.lable_font}}">上传凭证</view>
+                            <view>(最多可上传5张)</view>
+                        </view>
+                        <upload id="hizzz" compid="{{$compid__144}}"></upload>
+                    </view>
+                </block>
+            </at-list>
+        </view>
+        <view class="{{styles.bottom_box}}">
+            <block wx:if="{{!remarks || !(checkTuiType + ' ') || !checkReasonType || !amount || amount <= 0}}">
+                <view class="{{styles.button + ' ' + styles.gray_button + ' '}}">提交</view>
+            </block>
+            <block wx:if="{{remarks && checkTuiType + ' ' && checkReasonType && amount > 0}}">
+                <view class="{{styles.button}}" bindtap="goResult">提交</view>
+            </block>
+        </view>
+        <at-float-layout compid="{{$compid__145}}">
+            <at-radio compid="{{$compid__146}}"></at-radio>
+            <view class="{{styles.button}}" bindtap="handleClose">确定</view>
+        </at-float-layout>
+        <at-float-layout compid="{{$compid__147}}">
+            <at-radio compid="{{$compid__148}}"></at-radio>
+            <view class="{{styles.button}}" bindtap="reasonModalClose">确定</view>
+        </at-float-layout>
+    </view>
+</block>

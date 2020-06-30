@@ -1,0 +1,55 @@
+/**
+ * @Author: zhanglimin
+ * @Email: czhanglimin@126.com
+ * @Update: 2020-04-20 15:27:17
+ * @Description: 提现结果页
+ */
+page {
+  background-color: #f8f8f8;
+}
+.cashout-result-module__content___1_ZVU {
+  width: 100%;
+  padding: 64rpx 24rpx;
+  background-color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cashout-result-module__content___1_ZVU .cashout-result-module__img___13LWC {
+  width: 128rpx;
+  height: 128rpx;
+  margin-bottom: 40rpx;
+}
+.cashout-result-module__content___1_ZVU .cashout-result-module__title___2oyAP {
+  line-height: 50rpx;
+  color: #333;
+  font-size: 36rpx;
+  margin-bottom: 16rpx;
+}
+.cashout-result-module__content___1_ZVU .cashout-result-module__label___2uyVO {
+  width: 100%;
+  line-height: 37rpx;
+  color: #999;
+  font-size: 26rpx;
+  text-align: center;
+}
+.cashout-result-module__btn___3wCbh {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 40rpx auto 0;
+  width: 686rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  background-color: #f9482e;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 500;
+}

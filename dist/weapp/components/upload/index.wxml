@@ -1,0 +1,6 @@
+<block wx:if="{{$taroCompReady}}">
+    <view>
+        <at-image-picker compid="{{$compid__171}}"></at-image-picker>
+        <at-toast compid="{{$compid__172}}"></at-toast>
+    </view>
+</block>

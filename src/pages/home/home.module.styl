@@ -1,0 +1,220 @@
+/**
+ * @Author: limin.zhang
+ * @Email: limin.zhang@jdxiaokang.com
+ * @Update: 2020-04-10 12:30:50
+ * @Description: 公共页
+ */
+page 
+  background-color: rgba(247,248,250,1)
+.container
+  padding: 0 32px
+.reset_btn
+  padding: 0
+  background-color: transparent
+  line-height: 1
+  font-size: 24px
+  color: #333
+  &::after
+    display: none
+.header
+  position: relative
+  width: 100%
+  min-height: 178px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 40px 0
+  box-sizing: border-box
+  .headerLeft
+    flex: 1 1 auto
+    .headerName
+      width: 560px
+      font-size: 36px
+      color: #333333
+      line-height: 50px
+      font-weight: 600
+    .headerExtra
+      font-size: 28px
+      color: #999999
+      line-height: 40px
+      margin-top: 8px
+  .headerImg
+    flex: 0 0 auto
+    width: 88px
+    height: 88px
+    border-radius: 50%
+    background-color: #ccc
+    margin-left: 20px
+  .exit
+    width: 264px
+    background-color: #ffffff
+    box-shadow:0px 4px 8px 0px rgba(182,182,182,0.3)
+    border-radius: 6px
+    position: absolute
+    top: 152px
+    right: 0
+    z-index 50
+    .exitIcon
+      font-size: 32px
+      color: #F9482E
+    .exitLabel
+      line-height: 40px
+      font-size: 28px
+      color: #333333
+      margin-left: 16px
+
+.popup_items
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-top:15px
+  padding-bottom:15px
+
+.cleanStore
+  @extend .popup_items
+  @extend .header .exit
+
+.body
+  width: 100%
+  padding: 34px 24px 2px
+  background-color: #fff
+  border-radius: 16px
+  margin-bottom: 24px
+.bodyHeader
+  display: flex
+  align-items: center
+  padding-bottom: 26px
+  .bodyHeaderImg
+    width: 40px
+    height: 40px
+  .bodyTitle
+    line-height: 45px
+    margin-left: 16px
+    font-size: 32px
+    color: #333333
+    font-weight: 600
+.bodyContent
+  .listItem
+    position relative
+    width: 100%
+    border-radius: 16px
+    margin-bottom: 24px
+    background-color: #fff
+    overflow: hidden
+    .shopMaster
+      position: absolute
+      top: 0
+      left: 0
+      padding: 4px 12px
+      border-radius: 15px 0 15px 0
+      background-color: #F9482E
+      color: #FFFFFF
+      font-size: 20
+      font-weight: 600
+    .imgBlur
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 192px
+      filter: blur(4px)
+    .itemHeader
+      position relative
+      width: 100%
+      height: 192px
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      align-items: center
+      border-radius: 16px 16px 0 0
+      background: rgba(0,0,0,0.3)
+      .itemLogo
+        width:100px
+        height:100px
+        border: 2px solid rgba(255,255,255,1)
+        border-radius: 50%
+        margin-top: 24px
+        box-sizing: border-box
+      .itemName
+        position: relative
+        line-height: 40px
+        font-size: 28px
+        color: #ffffff
+        font-weight: 600
+        margin-top: 16px
+        display: flex
+        align-items: center
+        .shopName
+          display: inline-block
+          height: 40px
+          max-width: 450px
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+        .jdLogo
+          width: 44px
+          height: 31px
+          position: absolute
+          right: -60px
+          top: 50%
+          transform: translateY(-50%)   
+    .itemContent
+      position relative
+      border-left: 2px solid rgba(234,234,234,1)
+      border-right: 2px solid rgba(234,234,234,1)
+      border-bottom: 2px solid rgba(234,234,234,1)
+      border-radius: 0 0 16px 16px
+      background-color: #fff
+    .itemBody
+      padding: 20px 0 0 16px
+      display: flex
+      .imgContainer
+        position: relative
+      .bodyImg
+        width: 94px
+        height: 94px
+        border-radius: 4px
+        margin-right: 8px
+      .imgExtra
+        position absolute
+        top: 0
+        left: 0
+        width: 94px
+        height: 94px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        font-size: 20px
+        color: #ffffff
+        line-height: 28px
+        background:rgba(0,0,0,0.6)
+    .itemBtn
+      width:176px
+      height:56px
+      display: flex
+      justify-content: center
+      align-items: center
+      background:rgba(249,72,46,1)
+      border-radius:28px
+      color:rgba(255,255,255,1)
+      font-size: 28px
+      margin: 24px auto
+.nogoodsContainer
+  width: 100%
+  height: 70vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  .nogoodsImg
+    width: 403px
+    height: 273px
+  .nogoodsLabel
+    line-height: 40px
+    margin-top: 40px
+    color: #666666
+    font-size: 28px
+
+
+

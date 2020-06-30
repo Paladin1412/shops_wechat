@@ -1,0 +1,31 @@
+{
+	"projectname": "%E5%BA%B7%E5%B0%8F%E9%93%BAC%E7%AB%AF%E5%95%86%E9%93%BA",
+	"description": "小程序商品",
+	"appid": "wx2b9d7d5e14e53d1f",
+	"cloudfunctionRoot": "funcs/",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {}
+}

@@ -1,0 +1,73 @@
+<block wx:if="{{$taroCompReady}}">
+    <view>
+        <block>
+            <block wx:if="{{userInfo.token}}">
+                <list-view id="gbzzz" compid="{{$compid__104}}">
+                    <view style="{{anonymousState__temp3}}">
+                        <view wx:for="{{loopArray45}}" wx:for-item="v" wx:for-index="index">
+                            <block wx:if="{{v.$original && v.$original.status == 'ON_SALES'}}">
+                                <view class="{{styles.list + ' ' + styles.black}}" bindtap="anonymousFunc0" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey}}">
+                                    <view class="{{styles.store_desc}}">
+                                        <view class="{{'iconfont icondingdan-dianpuicon ' + styles.store_icon}}"></view>
+                                        <view>{{v.$original.agentShopName}}</view>
+                                        <view class="{{'iconfont icongengduo ' + styles.arrow_icon}}"></view>
+                                    </view>
+                                    <view class="{{styles.product_desc}}">
+                                        <view class="{{styles.product_img}}" style="{{v.$loopState__temp5}}"></view>
+                                        <view class="{{styles.product_info}}">
+                                            <view class="{{styles.product_title}}">{{v.$original.itemTitle}}</view>
+                                            <view class="{{styles.product_price_box}}">
+                                                <view class="{{styles.product_price}}">¥ {{v.$original.minTradePrice}}</view>
+                                                <block wx:if="{{level >= 2 && v.$original.maxShareFee > 0}}">
+                                                    <view class="{{styles.product_profit}}">预计收益 ¥ {{v.$original.maxShareFee}}</view>
+                                                </block>
+                                            </view>
+                                            <view class="{{styles.product_buy}}">抢购<text class="iconfont icongengduo"></text>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </block>
+                            <block wx:if="{{v.$original && (v.$original.status == 'DOWN_SALES' || v.$original.status == 'INVALID')}}">
+                                <view class="{{styles.list + ' ' + styles.gray}}">
+                                    <view class="{{styles.store_desc}}">
+                                        <view class="{{'iconfont icondingdan-dianpuicon ' + styles.store_icon}}"></view>
+                                        <view>{{v.$original.agentShopName}}</view>
+                                        <view class="{{'iconfont icongengduo ' + styles.arrow_icon}}"></view>
+                                    </view>
+                                    <view class="{{styles.product_desc}}">
+                                        <view class="{{styles.product_img}}" style="{{v.$loopState__temp7}}">
+                                            <view class="{{styles.mask}}" style="{{v.$loopState__temp9}}"></view>
+                                        </view>
+                                        <view class="{{styles.product_info}}">
+                                            <view class="{{styles.product_title}}">{{v.$original.itemTitle}}</view>
+                                            <view class="{{styles.product_price_box}}">
+                                                <view class="{{styles.product_price}}">¥ {{v.$original.minTradePrice}}</view>
+                                                <block wx:if="{{level >= 2 && v.$original.maxShareFee > 0}}">
+                                                    <view class="{{styles.product_profit_gray}}">预计收益 ¥ {{v.$original.maxShareFee}}</view>
+                                                </block>
+                                            </view>
+                                            <view class="{{styles.product_clear}}" bindtap="anonymousFunc1" data-e-tap-so="this" data-e-tap-a-a="{{v._$indexKey2}}">清除</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </block>
+                        </view>
+                    </view>
+                    <view slot="empty">
+                        <view class="{{styles.empty_box}}">
+                            <empty compid="{{$compid__105}}"></empty>
+                        </view>
+                    </view>
+                </list-view>
+            </block>
+            <block wx:else>
+                <view class="{{styles.nologinContainer}}">
+                    <view class="{{styles.nologinInner}}">
+                        <entry></entry>
+                    </view>
+                </view>
+            </block>
+        </block>
+    </view>
+</block>

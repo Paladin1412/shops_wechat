@@ -1,0 +1,9 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.mask_box}}">
+        <view class="{{styles.content}}">
+            <view class="{{styles.title}}">投诉建议</view>
+            <view class="{{styles.contact + ' last'}}" bindtap="tel">平台联系电话：{{telNo}}</view>
+            <view class="{{styles.close}}" bindtap="close">关闭</view>
+        </view>
+    </view>
+</block>

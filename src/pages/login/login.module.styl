@@ -1,0 +1,183 @@
+/**
+ * @Author: chunxiao.zhang
+ * @Email: chunxiao.zhang@jdxiaokang.com
+ * @Update: 2020-02-18 15:13:03
+ * @Description: 登陆页面
+ */
+.reset_btn
+  padding: 0
+  background-color: transparent
+  line-height: 1
+  font-size: 24px
+  color: #333
+  &::after
+    display: none
+.container
+  padding: 0 32px
+  :global
+    .at-input::after
+      display none
+    .at-input
+      margin 0
+      padding 0
+      -webkit-tap-highlight-color transparent
+      outline none
+      font-size 32px
+      font-weight 400
+      color rgba(77, 77, 77, 1)
+      background transparent
+    .at-input input 
+      height: 40px
+      line-height: 40px
+    .placeholder
+      color: rgba(204, 204, 204, 1)
+      font-weight: 400
+      font-size: 32px
+    .at-modal__content
+      padding-top: 0
+.store_name
+  line-height 48px
+  font-size 48px
+  font-weight 600
+  color rgba(51, 51, 51, 1)
+  margin-top: 122px
+.store_desc
+  font-size 28px
+  color rgba(153, 153, 153, 1)
+  line-height 28px
+  padding-top 32px
+.form_box
+  margin-top 135px
+.info_box
+  position relative
+  font-size 28px
+  color rgba(179, 179, 179, 1)
+  line-height 28px
+  padding-bottom 20px
+  // margin-bottom 60px
+.info_box::after
+  content ''
+  display block
+  position absolute
+  left 0
+  bottom 0
+  right 0
+  height 2px
+  background rgba(245, 243, 242, 1)
+.phone_box
+  display flex
+  align-items: center
+  width: 100%
+  .area_code
+    flex: 0 0 auto
+    padding: 0 16px 0 28px
+    font-size: 32px
+    line-height: 40px
+    color: #333
+    border-right: 1Px solid rgba(234, 234, 234, 1)
+  .phone_inner
+    flex: 1 1 auto
+.info_insert
+  font-size 32px
+  font-weight 500
+  color rgba(77, 77, 77, 1)
+  margin 30px 0 0 0
+.info_insert_phone
+  width: 100%
+  :global
+    .at-input__input 
+      padding-left: 20px
+.info_insert_code
+  width 50%
+  font-size 32px
+  font-weight 400
+  color rgba(77, 77, 77, 1)
+  .placeholder
+    color: rgba(204, 204, 204, 1)
+    font-weight: 400
+    font-size: 32px
+.btn_disable
+  height 88px
+  background rgba(249,72,46,1)
+  border-radius 44px
+  line-height 88px
+  text-align center
+  font-size 32px
+  font-weight 500
+  color rgba(255, 255, 255, 1)
+  display inline-block
+  width 100%
+  opacity:0.4
+  margin-top: 80px
+.btn_able
+  height 88px
+  background rgba(249,72,46,1)
+  border-radius 44px
+  line-height 88px
+  text-align center
+  font-size 32px
+  font-weight 500
+  color rgba(255, 255, 255, 1)
+  display inline-block
+  width 100%
+  margin-top: 80px
+.code_box
+  display flex
+  justify-content space-between
+  align-items center
+  padding 70px 24px 0 24px
+.code
+  line-height: 36px
+  padding: 8px 16px
+  border-radius: 26px
+  border: 1Px solid rgba(51,51,51,1)
+  font-size: 26px
+  color: rgba(51, 51, 51, 1)
+.time
+  height 28px
+  font-size 28px
+  color rgba(179, 179, 179, 1)
+  line-height 28px
+.wechat_btn
+  width: 100%
+  position: fixed
+  bottom: 164px
+  left: 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  .wxIcon
+    font-size: 88px
+    color: #21C064
+  .wxLabel
+    line-height: 45px
+    margin-top: 18px
+    font-size: 32px
+    font-weight: 500
+    color: #21C064
+.footerAgree
+  width: 100%
+  position: fixed
+  bottom: 92px
+  left: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  .agree_img_container
+    line-height: 1
+    padding: 0 24px
+    display: flex
+    justify-content: center
+    align-items: center
+  .agree_img
+      font-size: 34px
+      color: #F9482E
+  .disagree_img
+    font-size: 34px
+    color: #999999
+  .agreement
+    color: #999999
+    font-size: 24px
+    text-align: center
+    .agreement_btn
+      color: #333

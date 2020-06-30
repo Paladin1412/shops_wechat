@@ -1,0 +1,314 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="{{styles.container}}">
+        <view class="{{'' + styles.top_box}}">
+            <view class="{{styles.top_inner}}" style="{{anonymousState__temp}}">
+                <view class="{{'iconfont ' + styles.go_back_icon}}" bindtap="anonymousFunc0"></view>
+                <view class="{{styles.font}}">订单详情</view>
+            </view>
+        </view>
+        <view class="{{styles.back}}"></view>
+        <block wx:if="{{item.afterSale === 0}}">
+            <view class="{{styles.red_back}}">
+                <view class="{{styles.status_line}}">
+                    <block wx:if="{{item.orderStatus === 0}}">
+                        <view class="iconfont icondaizhifu"></view>
+                    </block>
+                    <block wx:if="{{item.orderStatus === 3}}">
+                        <view class="iconfont iconyiwancheng"></view>
+                    </block>
+                    <block wx:if="{{item.orderStatus === 2}}">
+                        <view class="iconfont icondaishouhuo2"></view>
+                    </block>
+                    <block wx:if="{{item.orderStatus === 1}}">
+                        <view class="iconfont iconxiangqing-daifahuo"></view>
+                    </block>
+                    <block wx:if="{{item.orderStatus === 4}}">
+                        <view class="iconfont iconguanbi"></view>
+                    </block>
+                    <block wx:if="{{item.orderStatus === 7}}">
+                        <view class="iconfont iconyiquxiao"></view>
+                    </block>
+                    <block wx:if="{{item.afterSale === 1}}">
+                        <view class="iconfont iconshouhou"></view>
+                    </block>
+                    <view>
+                        <block>
+                            <block wx:if="{{item.orderStatus === 0}}">{{'待支付'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.orderStatus === 1}}">{{'待发货'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.orderStatus === 2}}">{{'待收货'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.orderStatus === 3}}">{{'已完成'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.orderStatus === 4}}">{{'已关闭'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.orderStatus === 7}}">{{'已取消'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.afterSale === 1 && item.orderStatus === 2}}">{{'退款中'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.afterSale === 1 && item.orderStatus === 3}}">{{'售后中'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                    </view>
+                </view>
+                <view class="{{styles.desc}}">
+                    <block>
+                        <block wx:if="{{item.orderStatus === 0}}">{{'请尽快支付，给您安排发货'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>
+                    <block>
+                        <block wx:if="{{item.orderStatus === 1}}">{{'您的订单已受理，请耐心等待'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>
+                    <block>
+                        <block wx:if="{{item.orderStatus === 2}}">{{'您的订单已发货，快递小哥正在快马加鞭向您赶来…'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>
+                    <block>
+                        <block wx:if="{{item.orderStatus === 3}}">{{'您的订单已签收完成，感谢您使用康小铺购物'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>
+                    <block>
+                        <block wx:if="{{item.orderStatus === 4}}">{{'您的订单已关闭，请重新下单'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>
+                    <block>
+                        <block wx:if="{{item.orderStatus === 7}}">{{'您的订单已取消，请重新下单'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>
+                    <block>
+                        <block wx:if="{{item.afterSale === 1 && item.orderStatus === 2}}">{{'您的退款申请已提交，正在等待审核...'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>
+                    <block>
+                        <block wx:if="{{item.afterSale === 1 && item.orderStatus === 3}}">{{'您的售后申请已提交，正在等待审核...'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>
+                </view>
+            </view>
+        </block>
+        <block wx:if="{{item.afterSale === 1 && item.afterSaleStatus !== 53 && item.afterSaleStatus !== 99 && item.afterSaleStatus !== 98}}">
+            <view class="{{styles.red_back}}">
+                <view class="{{styles.status_line}}">
+                    <view class="iconfont iconshouhou"></view>
+                    <view>售后中</view>
+                </view>
+                <view class="{{styles.desc}}">您的订单有售后记录，可到售后详情里查看进度</view>
+            </view>
+        </block>
+        <block wx:if="{{item.afterSale === 1 && (item.afterSaleStatus === 53 || item.afterSaleStatus === 99)}}">
+            <view class="{{styles.red_back}}">
+                <view class="{{styles.status_line}}">
+                    <view class="iconfont iconshouhou"></view>
+                    <view>售后已完结</view>
+                </view>
+                <view class="{{styles.desc}}">您的订单已完成售后，可到售后详情里查看进度</view>
+            </view>
+        </block>
+        <block wx:if="{{item.afterSale === 1 && item.afterSaleStatus === 98}}">
+            <view class="{{styles.red_back}}">
+                <view class="{{styles.status_line}}">
+                    <view class="iconfont iconzhifushibai"></view>
+                    <view>
+                        <block>
+                            <block wx:if="{{item.orderStatus === 1}}">{{'退款驳回'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.orderStatus === 2 || item.orderStatus === 3}}">{{'退货驳回'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                    </view>
+                </view>
+                <view class="{{styles.desc}}">您的
+                    <block>
+                        <block wx:if="{{item.orderStatus === 1}}">{{'退款申请'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>
+                    <block>
+                        <block wx:if="{{item.orderStatus === 2 || item.orderStatus === 3}}">{{'退货申请'}}</block>
+                        <block wx:else>
+                            <view></view>
+                        </block>
+                    </block>已被驳回，请联系商家解决</view>
+            </view>
+        </block>
+        <scroll-view scroll-y="{{true}}" class="{{styles.scroll_box}}">
+            <view class="{{styles.addres_box}}">
+                <view class="{{styles.item}}">
+                    <view class="{{styles.left}}">
+                        <view class="{{styles.name_box}}"><text class="{{styles.name}}">{{anonymousState__temp2}}<block><block wx:if="{{item.receiveName > 10}}">{{'...'}}</block><block wx:else><view></view></block></block></text><text class="{{styles.tel}}">{{item.receivePhone}}</text>
+                        </view>
+                        <view class="{{styles.gray}}">
+                            <ellipsis compid="{{$compid__133}}">{{item.detailAddress}}</ellipsis>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <block wx:if="{{(addressInfo.expName || item.deliveryNo) && item.logisticsType === 2}}">
+                <view class="{{styles.addres_box + ' ' + styles.trans_box}}">
+                    <view class="{{styles.item}}">
+                        <view class="{{styles.left}}">
+                            <view class="{{styles.name_box}}"><text class="{{styles.name}}">{{addressInfo.expName || item.deliveryCompany}}</text>
+                                <view class="{{styles.tel}}">{{addressInfo.number || item.deliveryNo}}
+                                    <view class="{{styles.copy_box}}" bindtap="anonymousFunc1">复制</view>
+                                </view>
+                            </view>
+                            <block wx:if="{{addressInfo.list.length > 0}}">
+                                <view><text class="{{styles.gray + ' ' + styles.red}}"> {{addressInfo.list ? addressInfo.list[0].status : '--'}}</text>
+                                    <view class="{{styles.date}}">{{addressInfo.list ? addressInfo.list[0].time : '--'}}</view>
+                                </view>
+                            </block>
+                        </view>
+                        <block wx:if="{{addressInfo.list.length > 0}}">
+                            <view class="{{'iconfont ' + styles.icon}}" bindtap="goAddress"></view>
+                        </block>
+                    </view>
+                </view>
+            </block>
+            <block wx:if="{{item.logisticsType === 1 && item.orderStatus >= 2}}">
+                <view class="{{styles.product_box}}">
+                    <view class="{{styles.order_info}}">
+                        <view class="{{styles.title}}">配送方式：</view>
+                        <view>店主配送</view>
+                    </view>
+                </view>
+            </block>
+            <view class="{{styles.product_box}}">
+                <view class="{{styles.title}}">
+                    <view class="{{'iconfont ' + styles.icon_shop}}"></view><text class="{{styles.font}}" bindtap="goIndex">{{anonymousState__temp3}}</text>
+                    <view class="{{'' + styles.status_box}}"><text class="{{styles.red}}">{{anonymousState__temp4}}</text>
+                    </view>
+                </view>
+                <view class="{{styles.info_box}}" bindtap="goGoodDetail">
+                    <image class="{{styles.img}}" src="{{anonymousState__temp5}}"></image>
+                    <view class="{{styles.info_right}}">
+                        <view class="{{styles.item_line}}">
+                            <view class="{{styles.info_title}}">
+                                <ellipsis compid="{{$compid__134}}">{{item.itemTitle}}</ellipsis>
+                            </view>
+                            <view class="{{styles.num}}">¥ {{item.agentUnitPrice}}</view>
+                        </view>
+                        <view class="{{styles.item_line + ' ' + styles.second}}">
+                            <view>{{item.propsValue}}</view>
+                            <view class="{{styles.count_box}}">x{{item.count}}</view>
+                        </view>
+                        <view class="{{'' + styles.item_line_container}}">
+                            <block wx:if="{{shopLevel >= 2}}">
+                                <view class="{{'' + styles.item_line}}">
+                                    <view class="{{styles.recv}}">预计收益￥{{item.income || 0}}</view>
+                                    <view></view>
+                                </view>
+                            </block>
+                        </view>
+                        <view class="{{'' + styles.all_price}}">总计:
+                            <view class="{{styles.all_num}}">￥{{anonymousState__temp6}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="{{styles.product_box}}">
+                <view class="{{styles.order_info}}"><text class="{{styles.title}}">订单编号：</text><text>{{item.orderNo}}</text>
+                    <view class="{{styles.copy_box}}" bindtap="anonymousFunc2">复制</view>
+                </view>
+                <view class="{{styles.order_info}}"><text class="{{styles.title}}">提交时间：</text><text>{{item.gmtCreated}}</text>
+                </view>
+                <block wx:if="{{item.gmtPayment}}">
+                    <view class="{{styles.order_info}}"><text class="{{styles.title}}">支付时间：</text><text>{{item.gmtPayment}}</text>
+                    </view>
+                </block>
+                <block wx:if="{{item.gmtSend}}">
+                    <view class="{{styles.order_info}}"><text class="{{styles.title}}">发货时间：</text><text>{{item.gmtSend}}</text>
+                    </view>
+                </block>
+                <block wx:if="{{item.gmtReceive}}">
+                    <view class="{{styles.order_info}}"><text class="{{styles.title}}">完成时间：</text><text>{{item.gmtReceive}}</text>
+                    </view>
+                </block>
+            </view>
+            <view class="{{styles.product_box}}">
+                <view class="{{styles.transfee_box}}"><text class="{{styles.label}}">运费</text><text class="{{styles.gray}}"><block><block wx:if="{{item.freePostage === 1}}">{{'免运费'}}</block><block wx:else><view></view></block></block><text class="{{styles.red}}">¥ {{item.postage || '0.00'}}</text></text>
+                </view>
+            </view>
+            <view class="{{styles.product_box}}">
+                <view class="{{styles.transfee_box}}"><text class="{{styles.label}}">总金额</text><text class="{{styles.gray}}"><text class="{{styles.red}}">¥ {{anonymousState__temp7}}</text></text>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="{{styles.button_box}}">
+            <view class="{{styles.content}}">
+                <view class="{{styles.rigth}}">
+                    <block wx:if="{{item.orderStatus === 0}}">
+                        <view class="{{styles.button + ' ' + styles.red_button}}" bindtap="anonymousFunc3">立即支付</view>
+                    </block>
+                    <block wx:if="{{item.orderStatus === 1 && item.afterSale === 0 && item.settle !== 1}}">
+                        <view class="{{styles.button + ' ' + styles.gray_button}}" bindtap="anonymousFunc4">申请退款</view>
+                    </block>
+                    <block wx:if="{{(item.orderStatus === 2 || item.orderStatus === 3) && item.afterSale === 0 && item.settle !== 1}}">
+                        <view class="{{styles.button + ' ' + styles.gray_button}}" bindtap="anonymousFunc5">申请售后</view>
+                    </block>
+                    <block wx:if="{{item.orderStatus === 2 && item.afterSale === 0}}">
+                        <view class="{{styles.button + ' ' + styles.red_button}}" bindtap="anonymousFunc6">确认收货</view>
+                    </block>
+                    <block wx:if="{{item.afterSale === 1}}">
+                        <view class="{{styles.button + ' ' + styles.gray_button}}" bindtap="anonymousFunc7">查看售后</view>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <at-modal compid="{{$compid__135}}"></at-modal>
+    </view>
+</block>

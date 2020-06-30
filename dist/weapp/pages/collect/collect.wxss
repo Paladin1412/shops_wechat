@@ -1,0 +1,182 @@
+/**
+ * @Author: chunxiao.zhang
+ * @Email: chunxiao.zhang@jdxiaokang.com
+ * @Update: 2020-02-18 21:23:18
+ * @Description: 收藏夹
+ */
+body {
+  background: #f7f7f7;
+}
+body .loaded {
+  font-size: 24rpx;
+}
+.collect-module__list___1G9G0 {
+  background: #fff;
+  border-radius: 18rpx;
+  padding: 28rpx 24rpx;
+  margin: 16rpx 0 0 0;
+  position: relative;
+}
+.collect-module__store_desc___2GD8Z {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 40rpx;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.collect-module__store_icon___QfkWu {
+  line-height: 40rpx;
+  margin-right: 12rpx;
+  font-size: 24rpx;
+  color: #343434;
+}
+.collect-module__arrow_icon___1Nn-F {
+  margin-left: 20rpx;
+  font-size: 16rpx;
+}
+.collect-module__product_desc___2S15X {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 28rpx 0 0 0;
+  height: 178rpx;
+}
+.collect-module__product_img___R9dtv {
+  width: 178rpx;
+  height: 178rpx;
+  border-radius: 6rpx;
+  margin: 0 18rpx 0 0;
+  background-size: 100%;
+  position: relative;
+}
+.collect-module__product_info___1BQ2L {
+  width: calc(100% - 196rpx);
+}
+.collect-module__product_title___3GBrM {
+  height: 80rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+.collect-module__product_price___1eoQn {
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 40rpx;
+}
+.collect-module__product_profit___2xfxM {
+  height: 28rpx;
+  background: rgba(249,72,46,0.1);
+  border-radius: 2rpx;
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #f9482e;
+  line-height: 28rpx;
+  padding: 0 8rpx;
+  margin: 0 0 0 12rpx;
+}
+.collect-module__product_price_box___tuCBF {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20rpx 0 0 0;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.collect-module__product_buy___3oC-c {
+  height: 44rpx;
+  background: #f9482e;
+  border-radius: 24rpx;
+  width: 115rpx;
+  position: absolute;
+  right: 24rpx;
+  bottom: 24rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.collect-module__gray___1pWRR {
+  color: #cacaca;
+}
+.collect-module__black___yPm_M {
+  color: #323232;
+}
+.collect-module__product_clear___3Krfr {
+  width: 115rpx;
+  height: 44rpx;
+  border-radius: 24rpx;
+  border: 1rpx solid #c9c9c9;
+  position: absolute;
+  right: 24rpx;
+  bottom: 24rpx;
+  font-size: 24rpx;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #c9c9c9;
+}
+.collect-module__product_profit_gray___1eGac {
+  height: 28rpx;
+  border-radius: 2rpx;
+  font-size: 20rpx;
+  font-weight: 500;
+  line-height: 28rpx;
+  padding: 0 8rpx;
+  margin: 0 0 0 12rpx;
+}
+.collect-module__mask___2JRb_ {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.collect-module__empty___3kLGc {
+  padding: 100rpx 0 0 0;
+}
+.collect-module__empty_box___1BPcW {
+  margin: 100rpx 0 0 0;
+}
+.collect-module__nologinContainer___259Jt {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  position: fixed;
+  left: 0;
+  text-align: center;
+}
+.collect-module__nologinContainer___259Jt .collect-module__nologinInner___2aaVV {
+  width: 100%;
+}

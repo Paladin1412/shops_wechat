@@ -1,0 +1,14 @@
+<block wx:if="{{$taroCompReady}}">
+    <block>
+        <block wx:if="{{count === -1}}">
+            <view class="{{className}}">
+                <slot></slot>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="{{anonymousState__temp}}">
+                <slot></slot>
+            </view>
+        </block>
+    </block>
+</block>
